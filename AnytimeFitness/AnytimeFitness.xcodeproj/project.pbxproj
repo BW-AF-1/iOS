@@ -29,6 +29,7 @@
 		C35C7020249B0B4400A23367 /* InstructorHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35C701F249B0B4400A23367 /* InstructorHome.storyboard */; };
 		C35C7022249B0B5D00A23367 /* InstructorSchedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35C7021249B0B5D00A23367 /* InstructorSchedule.storyboard */; };
 		C35C7024249B0B6B00A23367 /* InstructorCreate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35C7023249B0B6B00A23367 /* InstructorCreate.storyboard */; };
+		C35C7027249C750700A23367 /* ClientFlowSignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35C7026249C750700A23367 /* ClientFlowSignIn.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		C35C701F249B0B4400A23367 /* InstructorHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InstructorHome.storyboard; sourceTree = "<group>"; };
 		C35C7021249B0B5D00A23367 /* InstructorSchedule.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InstructorSchedule.storyboard; sourceTree = "<group>"; };
 		C35C7023249B0B6B00A23367 /* InstructorCreate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InstructorCreate.storyboard; sourceTree = "<group>"; };
+		C35C7026249C750700A23367 /* ClientFlowSignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ClientFlowSignIn.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 			children = (
 				C35C6FF2249AF9D800A23367 /* Main.storyboard */,
 				C35C7008249B008D00A23367 /* SignUp.storyboard */,
+				C35C7026249C750700A23367 /* ClientFlowSignIn.storyboard */,
 				C35C700F249B01DC00A23367 /* Instructor */,
 				C35C700E249B01D600A23367 /* Client */,
 				C35C7005249AFE7100A23367 /* View Controllers */,
@@ -365,6 +368,7 @@
 				C35C7009249B008D00A23367 /* SignUp.storyboard in Resources */,
 				C35C7015249B084D00A23367 /* ClientMain.storyboard in Resources */,
 				C35C6FF4249AF9D800A23367 /* Main.storyboard in Resources */,
+				C35C7027249C750700A23367 /* ClientFlowSignIn.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
