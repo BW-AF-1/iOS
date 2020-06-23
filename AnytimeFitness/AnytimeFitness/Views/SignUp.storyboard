@@ -51,28 +51,33 @@
         <!--Client Sign Up-->
         <scene sceneID="bL9-Yq-hES">
             <objects>
-                <viewController id="vGW-y6-RQh" sceneMemberID="viewController">
+                <viewController id="vGW-y6-RQh" customClass="ClientSignUpViewController" customModule="AnytimeFitness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k6e-qq-4WS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="Moy-js-2xz">
-                                <rect key="frame" x="20" y="265" width="374" height="160"/>
+                                <rect key="frame" x="20" y="265" width="374" height="223"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ti0-Sm-Uaw">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ti0-Sm-Uaw">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="name"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="szN-0a-n5G">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Kh-0A-UM6">
                                         <rect key="frame" x="0.0" y="63" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="family-name"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+_(___) ___-____" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1hM-y2-BXa">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="szN-0a-n5G">
                                         <rect key="frame" x="0.0" y="126" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="email"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+_(___) ___-____" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1hM-y2-BXa">
+                                        <rect key="frame" x="0.0" y="189" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" textContentType="tel"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -90,7 +95,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="bhM-DK-EXh" kind="presentation" modalPresentationStyle="fullScreen" id="SPX-2i-hPf"/>
+                                    <segue destination="hD7-B5-0mD" kind="show" id="uT6-Uj-rIr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -117,12 +122,60 @@
                 <viewControllerPlaceholder storyboardName="ClientFlowSignIn" id="bhM-DK-EXh" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zye-HE-gyJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2498" y="-106"/>
+            <point key="canvasLocation" x="3325" y="-106"/>
+        </scene>
+        <!--Phone Verification-->
+        <scene sceneID="72X-Xg-cQ9">
+            <objects>
+                <viewController id="hD7-B5-0mD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K5p-2s-4VX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Verification Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qXZ-MG-TPG">
+                                <rect key="frame" x="20" y="215" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LrY-Rc-RCW">
+                                <rect key="frame" x="20" y="309" width="374" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="rmE-GC-9Hu"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Verify"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="bhM-DK-EXh" kind="presentation" modalPresentationStyle="fullScreen" id="2E7-em-1MR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qXZ-MG-TPG" firstAttribute="top" secondItem="bY8-hZ-ns4" secondAttribute="top" constant="75" id="GxW-Ow-JKv"/>
+                            <constraint firstItem="bY8-hZ-ns4" firstAttribute="trailing" secondItem="LrY-Rc-RCW" secondAttribute="trailing" constant="20" id="IF9-du-fw2"/>
+                            <constraint firstItem="bY8-hZ-ns4" firstAttribute="trailing" secondItem="qXZ-MG-TPG" secondAttribute="trailing" constant="20" id="Zmi-fo-URj"/>
+                            <constraint firstItem="LrY-Rc-RCW" firstAttribute="leading" secondItem="bY8-hZ-ns4" secondAttribute="leading" constant="20" id="rJm-1W-SRh"/>
+                            <constraint firstItem="qXZ-MG-TPG" firstAttribute="leading" secondItem="bY8-hZ-ns4" secondAttribute="leading" constant="20" id="u4o-0H-6DH"/>
+                            <constraint firstItem="LrY-Rc-RCW" firstAttribute="top" secondItem="qXZ-MG-TPG" secondAttribute="bottom" constant="60" id="wBp-2d-Yga"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bY8-hZ-ns4"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Phone Verification" id="uoO-2L-Po8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ln7-8s-aS7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2574" y="-106"/>
         </scene>
         <!--Instructor Sign Up-->
         <scene sceneID="Jpw-Ol-deH">
             <objects>
-                <viewController id="M1L-ZP-Wys" sceneMemberID="viewController">
+                <viewController id="M1L-ZP-Wys" customClass="InstructorSignUpViewController" customModule="AnytimeFitness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dn4-RJ-vuH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -130,22 +183,22 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="NDo-53-bRV">
                                 <rect key="frame" x="20" y="265" width="374" height="290"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ro-Dp-wOg">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ro-Dp-wOg">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WMX-eF-yFY">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ulV-vu-nvZ">
                                         <rect key="frame" x="0.0" y="64" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+_(___) ___-____" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xtz-AB-za6">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WMX-eF-yFY">
                                         <rect key="frame" x="0.0" y="128" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Authentication Code (from invite email)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dH4-On-o9O">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+_(___) ___-____" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xtz-AB-za6">
                                         <rect key="frame" x="0.0" y="192" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -171,7 +224,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="iTr-w7-u7f" kind="presentation" modalPresentationStyle="fullScreen" id="YH7-kB-LEf"/>
+                                    <segue destination="C3A-97-qas" kind="show" id="srv-zm-oj4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -192,13 +245,61 @@
             </objects>
             <point key="canvasLocation" x="1790" y="564"/>
         </scene>
+        <!--Phone Verification-->
+        <scene sceneID="4Zs-18-oqe">
+            <objects>
+                <viewController id="C3A-97-qas" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V8q-W5-d6T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YkQ-zV-rJ4">
+                                <rect key="frame" x="20" y="309" width="374" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="UVK-xR-ywe"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Verify"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="7YU-4X-WdQ" kind="show" id="aM1-nF-8HR"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Verification Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tob-zj-daL">
+                                <rect key="frame" x="20" y="215" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tob-zj-daL" firstAttribute="leading" secondItem="cZE-Z3-CUO" secondAttribute="leading" constant="20" id="2Rc-ln-Od6"/>
+                            <constraint firstItem="cZE-Z3-CUO" firstAttribute="trailing" secondItem="tob-zj-daL" secondAttribute="trailing" constant="20" id="8Xb-6e-Ngl"/>
+                            <constraint firstItem="YkQ-zV-rJ4" firstAttribute="leading" secondItem="cZE-Z3-CUO" secondAttribute="leading" constant="20" id="Ihb-78-k5N"/>
+                            <constraint firstItem="YkQ-zV-rJ4" firstAttribute="top" secondItem="tob-zj-daL" secondAttribute="bottom" constant="60" id="Zxa-C4-ObK"/>
+                            <constraint firstItem="cZE-Z3-CUO" firstAttribute="trailing" secondItem="YkQ-zV-rJ4" secondAttribute="trailing" constant="20" id="q3j-No-OTt"/>
+                            <constraint firstItem="tob-zj-daL" firstAttribute="top" secondItem="cZE-Z3-CUO" secondAttribute="top" constant="75" id="zVU-G2-rsF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cZE-Z3-CUO"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Phone Verification" id="owL-p2-y2T"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i90-CH-D8y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2574" y="564"/>
+        </scene>
         <!--InstructorSignIn-->
         <scene sceneID="WfC-gS-mVH">
             <objects>
                 <viewControllerPlaceholder storyboardName="InstructorSignIn" id="iTr-w7-u7f" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2O5-mQ-3c0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2469" y="564"/>
+            <point key="canvasLocation" x="3991" y="564"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OAK-wo-Unx">
@@ -231,6 +332,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="trl-xh-9Wd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1248" y="-230"/>
+        </scene>
+        <!--Email Verification-->
+        <scene sceneID="39f-ia-RE8">
+            <objects>
+                <viewController id="7YU-4X-WdQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qRC-Lv-I7C">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZJ-vg-Xwc">
+                                <rect key="frame" x="20" y="309" width="374" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="X2A-sv-6l9"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Verify"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="iTr-w7-u7f" kind="presentation" modalPresentationStyle="fullScreen" id="w9P-zO-cS2"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Authentication Code (from invite email)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mWg-p5-fxB">
+                                <rect key="frame" x="20" y="215" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rJc-ao-H93" firstAttribute="trailing" secondItem="mWg-p5-fxB" secondAttribute="trailing" constant="20" id="322-c4-kej"/>
+                            <constraint firstItem="rJc-ao-H93" firstAttribute="trailing" secondItem="yZJ-vg-Xwc" secondAttribute="trailing" constant="20" id="Pkl-aH-eXC"/>
+                            <constraint firstItem="mWg-p5-fxB" firstAttribute="leading" secondItem="rJc-ao-H93" secondAttribute="leading" constant="20" id="WOZ-kO-QgQ"/>
+                            <constraint firstItem="yZJ-vg-Xwc" firstAttribute="leading" secondItem="rJc-ao-H93" secondAttribute="leading" constant="20" id="mzg-QA-uNv"/>
+                            <constraint firstItem="mWg-p5-fxB" firstAttribute="top" secondItem="rJc-ao-H93" secondAttribute="top" constant="75" id="re8-G0-Rj4"/>
+                            <constraint firstItem="yZJ-vg-Xwc" firstAttribute="top" secondItem="mWg-p5-fxB" secondAttribute="bottom" constant="60" id="tKp-p7-8ko"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rJc-ao-H93"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Email Verification" id="Zp4-bz-zs2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MsE-PI-Pq9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3325" y="564"/>
         </scene>
     </scenes>
     <resources>

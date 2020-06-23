@@ -10,6 +10,10 @@
 		023344DA249D8327001BABB3 /* LocationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023344D9249D8327001BABB3 /* LocationSearchViewController.swift */; };
 		02569B69249C61F800B819EB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02569B68249C61F800B819EB /* SearchViewController.swift */; };
 		02569B6B249C737400B819EB /* SetBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02569B6A249C737400B819EB /* SetBackground.swift */; };
+		C350B70624A1915200F2FE7B /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = C350B70524A1915200F2FE7B /* Config.plist */; };
+		C350B70824A1924300F2FE7B /* ClientSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C350B70724A1924300F2FE7B /* ClientSignUpViewController.swift */; };
+		C350B70A24A1926000F2FE7B /* InstructorSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C350B70924A1926000F2FE7B /* InstructorSignUpViewController.swift */; };
+		C350B70C24A1A0A600F2FE7B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C350B70B24A1A0A600F2FE7B /* MainViewController.swift */; };
 		C35C6FED249AF9D800A23367 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35C6FEC249AF9D800A23367 /* AppDelegate.swift */; };
 		C35C6FEF249AF9D800A23367 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35C6FEE249AF9D800A23367 /* SceneDelegate.swift */; };
 		C35C6FF4249AF9D800A23367 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35C6FF2249AF9D800A23367 /* Main.storyboard */; };
@@ -36,6 +40,10 @@
 		023344D9249D8327001BABB3 /* LocationSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationSearchViewController.swift; path = "AnytimeFitness/Views/View Controllers/Client/Features/Search/LocationSearchViewController.swift"; sourceTree = SOURCE_ROOT; };
 		02569B68249C61F800B819EB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = "AnytimeFitness/Views/View Controllers/Client/Features/Search/SearchViewController.swift"; sourceTree = SOURCE_ROOT; };
 		02569B6A249C737400B819EB /* SetBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBackground.swift; sourceTree = "<group>"; };
+		C350B70524A1915200F2FE7B /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		C350B70724A1924300F2FE7B /* ClientSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSignUpViewController.swift; sourceTree = "<group>"; };
+		C350B70924A1926000F2FE7B /* InstructorSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorSignUpViewController.swift; sourceTree = "<group>"; };
+		C350B70B24A1A0A600F2FE7B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = "AnytimeFitness/Views/View Controllers/MainViewController.swift"; sourceTree = SOURCE_ROOT; };
 		C35C6FE9249AF9D800A23367 /* AnytimeFitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnytimeFitness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C35C6FEC249AF9D800A23367 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C35C6FEE249AF9D800A23367 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +82,7 @@
 		023344DB249DAB7D001BABB3 /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				C350B70724A1924300F2FE7B /* ClientSignUpViewController.swift */,
 				023344DC249DAB83001BABB3 /* Features */,
 			);
 			path = Client;
@@ -93,6 +102,7 @@
 		023344DD249DAB8D001BABB3 /* Instructor */ = {
 			isa = PBXGroup;
 			children = (
+				C350B70924A1926000F2FE7B /* InstructorSignUpViewController.swift */,
 				023344DE249DAB98001BABB3 /* Features */,
 			);
 			path = Instructor;
@@ -199,6 +209,7 @@
 				C35C7004249AFE6800A23367 /* Views */,
 				C35C7006249AFE7800A23367 /* Controllers */,
 				C35C6FFD249AF9D900A23367 /* Info.plist */,
+				C350B70524A1915200F2FE7B /* Config.plist */,
 				C35C6FF5249AF9D800A23367 /* AnytimeFitness.xcdatamodeld */,
 			);
 			path = AnytimeFitness;
@@ -227,6 +238,7 @@
 		C35C7005249AFE7100A23367 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C350B70B24A1A0A600F2FE7B /* MainViewController.swift */,
 				023344E7249DAC6F001BABB3 /* Helper */,
 				023344DD249DAB8D001BABB3 /* Instructor */,
 				023344DB249DAB7D001BABB3 /* Client */,
@@ -362,6 +374,7 @@
 				C35C701D249B09F900A23367 /* ClientFavorites.storyboard in Resources */,
 				C35C7019249B09E200A23367 /* ClientSearch.storyboard in Resources */,
 				C35C7017249B09CF00A23367 /* ClientProfile.storyboard in Resources */,
+				C350B70624A1915200F2FE7B /* Config.plist in Resources */,
 				C35C700B249B017600A23367 /* ClientSignIn.storyboard in Resources */,
 				C35C6FF9249AF9D900A23367 /* Assets.xcassets in Resources */,
 				C35C7011249B050D00A23367 /* InstructorMain.storyboard in Resources */,
@@ -380,9 +393,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C35C6FED249AF9D800A23367 /* AppDelegate.swift in Sources */,
+				C350B70A24A1926000F2FE7B /* InstructorSignUpViewController.swift in Sources */,
 				023344DA249D8327001BABB3 /* LocationSearchViewController.swift in Sources */,
 				C35C6FF7249AF9D800A23367 /* AnytimeFitness.xcdatamodeld in Sources */,
+				C350B70824A1924300F2FE7B /* ClientSignUpViewController.swift in Sources */,
 				02569B69249C61F800B819EB /* SearchViewController.swift in Sources */,
+				C350B70C24A1A0A600F2FE7B /* MainViewController.swift in Sources */,
 				02569B6B249C737400B819EB /* SetBackground.swift in Sources */,
 				C35C6FEF249AF9D800A23367 /* SceneDelegate.swift in Sources */,
 			);
