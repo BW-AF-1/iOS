@@ -8,13 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		023344DA249D8327001BABB3 /* LocationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023344D9249D8327001BABB3 /* LocationSearchViewController.swift */; };
+		023344EB249DD420001BABB3 /* CreateClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023344EA249DD420001BABB3 /* CreateClassViewController.swift */; };
+		023344ED249F17C3001BABB3 /* CreateClassNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023344EC249F17C3001BABB3 /* CreateClassNameViewController.swift */; };
+		023344EF249F17DD001BABB3 /* CreateClassScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023344EE249F17DD001BABB3 /* CreateClassScheduleViewController.swift */; };
+		023344F1249FD44E001BABB3 /* CompleteClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023344F0249FD44E001BABB3 /* CompleteClassViewController.swift */; };
+		023344F324A00EDA001BABB3 /* FitnessTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023344F224A00EDA001BABB3 /* FitnessTypeCollectionViewCell.swift */; };
+		023344F524A142CF001BABB3 /* ClassDetailSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023344F424A142CF001BABB3 /* ClassDetailSearchViewController.swift */; };
+		023344F724A152FE001BABB3 /* ClassSearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023344F624A152FE001BABB3 /* ClassSearchResultsViewController.swift */; };
+		023344F924A15E28001BABB3 /* ClassOverviewSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023344F824A15E28001BABB3 /* ClassOverviewSearchViewController.swift */; };
+		023344FB24A1659A001BABB3 /* ClassScheduleSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023344FA24A1659A001BABB3 /* ClassScheduleSearchViewController.swift */; };
+		023344FD24A17057001BABB3 /* ClassReserveSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023344FC24A17056001BABB3 /* ClassReserveSearchViewController.swift */; };
+		023344FF24A17573001BABB3 /* ConfirmClassSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023344FE24A17573001BABB3 /* ConfirmClassSearchViewController.swift */; };
+		0233450124A17914001BABB3 /* UpcomingClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233450024A17914001BABB3 /* UpcomingClassViewController.swift */; };
+		0233450324A17C42001BABB3 /* UpcomingClassesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233450224A17C42001BABB3 /* UpcomingClassesCollectionViewCell.swift */; };
+		0233450524A18842001BABB3 /* UpcomingInstructorClassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233450424A18842001BABB3 /* UpcomingInstructorClassesViewController.swift */; };
+		0233450724A188C3001BABB3 /* UpcomingInstructorClassesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233450624A188C3001BABB3 /* UpcomingInstructorClassesCollectionViewCell.swift */; };
+		0233450924A1AE5F001BABB3 /* CreateClassTimeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233450824A1AE5F001BABB3 /* CreateClassTimeDetailsViewController.swift */; };
+		0233450B24A1BD92001BABB3 /* ManageInstructorClassScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233450A24A1BD92001BABB3 /* ManageInstructorClassScheduleViewController.swift */; };
+		0233450D24A1BDB4001BABB3 /* ManageInstructorScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233450C24A1BDB4001BABB3 /* ManageInstructorScheduleTableViewCell.swift */; };
+		0233450F24A1C558001BABB3 /* EditInstructorClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233450E24A1C558001BABB3 /* EditInstructorClassViewController.swift */; };
+		0233451124A1C924001BABB3 /* ManageInstructorClassConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233451024A1C924001BABB3 /* ManageInstructorClassConfirmViewController.swift */; };
+		0233451324A28FEA001BABB3 /* ExampleClassType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233451224A28FE9001BABB3 /* ExampleClassType.swift */; };
+		0233451524A2B032001BABB3 /* idealClassType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233451424A2B032001BABB3 /* idealClassType.swift */; };
 		02569B69249C61F800B819EB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02569B68249C61F800B819EB /* SearchViewController.swift */; };
 		02569B6B249C737400B819EB /* SetBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02569B6A249C737400B819EB /* SetBackground.swift */; };
 		C35C6FED249AF9D800A23367 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35C6FEC249AF9D800A23367 /* AppDelegate.swift */; };
 		C35C6FEF249AF9D800A23367 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35C6FEE249AF9D800A23367 /* SceneDelegate.swift */; };
 		C35C6FF4249AF9D800A23367 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35C6FF2249AF9D800A23367 /* Main.storyboard */; };
 		C35C6FF7249AF9D800A23367 /* AnytimeFitness.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C35C6FF5249AF9D800A23367 /* AnytimeFitness.xcdatamodeld */; };
-		C35C6FF9249AF9D900A23367 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C35C6FF8249AF9D900A23367 /* Assets.xcassets */; };
+		C35C6FF9249AF9D900A23367 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C35C6FF8249AF9D900A23367 /* assets.xcassets */; };
 		C35C6FFC249AF9D900A23367 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35C6FFA249AF9D900A23367 /* LaunchScreen.storyboard */; };
 		C35C7009249B008D00A23367 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35C7008249B008D00A23367 /* SignUp.storyboard */; };
 		C35C700B249B017600A23367 /* ClientSignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35C700A249B017600A23367 /* ClientSignIn.storyboard */; };
@@ -34,6 +56,28 @@
 
 /* Begin PBXFileReference section */
 		023344D9249D8327001BABB3 /* LocationSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationSearchViewController.swift; path = "AnytimeFitness/Views/View Controllers/Client/Features/Search/LocationSearchViewController.swift"; sourceTree = SOURCE_ROOT; };
+		023344EA249DD420001BABB3 /* CreateClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateClassViewController.swift; sourceTree = "<group>"; };
+		023344EC249F17C3001BABB3 /* CreateClassNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateClassNameViewController.swift; sourceTree = "<group>"; };
+		023344EE249F17DD001BABB3 /* CreateClassScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateClassScheduleViewController.swift; sourceTree = "<group>"; };
+		023344F0249FD44E001BABB3 /* CompleteClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteClassViewController.swift; sourceTree = "<group>"; };
+		023344F224A00EDA001BABB3 /* FitnessTypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessTypeCollectionViewCell.swift; sourceTree = "<group>"; };
+		023344F424A142CF001BABB3 /* ClassDetailSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDetailSearchViewController.swift; sourceTree = "<group>"; };
+		023344F624A152FE001BABB3 /* ClassSearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassSearchResultsViewController.swift; sourceTree = "<group>"; };
+		023344F824A15E28001BABB3 /* ClassOverviewSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassOverviewSearchViewController.swift; sourceTree = "<group>"; };
+		023344FA24A1659A001BABB3 /* ClassScheduleSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassScheduleSearchViewController.swift; sourceTree = "<group>"; };
+		023344FC24A17056001BABB3 /* ClassReserveSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassReserveSearchViewController.swift; sourceTree = "<group>"; };
+		023344FE24A17573001BABB3 /* ConfirmClassSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmClassSearchViewController.swift; sourceTree = "<group>"; };
+		0233450024A17914001BABB3 /* UpcomingClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingClassViewController.swift; sourceTree = "<group>"; };
+		0233450224A17C42001BABB3 /* UpcomingClassesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingClassesCollectionViewCell.swift; sourceTree = "<group>"; };
+		0233450424A18842001BABB3 /* UpcomingInstructorClassesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingInstructorClassesViewController.swift; sourceTree = "<group>"; };
+		0233450624A188C3001BABB3 /* UpcomingInstructorClassesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingInstructorClassesCollectionViewCell.swift; sourceTree = "<group>"; };
+		0233450824A1AE5F001BABB3 /* CreateClassTimeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateClassTimeDetailsViewController.swift; sourceTree = "<group>"; };
+		0233450A24A1BD92001BABB3 /* ManageInstructorClassScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageInstructorClassScheduleViewController.swift; sourceTree = "<group>"; };
+		0233450C24A1BDB4001BABB3 /* ManageInstructorScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageInstructorScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		0233450E24A1C558001BABB3 /* EditInstructorClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInstructorClassViewController.swift; sourceTree = "<group>"; };
+		0233451024A1C924001BABB3 /* ManageInstructorClassConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageInstructorClassConfirmViewController.swift; sourceTree = "<group>"; };
+		0233451224A28FE9001BABB3 /* ExampleClassType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleClassType.swift; sourceTree = "<group>"; };
+		0233451424A2B032001BABB3 /* idealClassType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = idealClassType.swift; sourceTree = "<group>"; };
 		02569B68249C61F800B819EB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = "AnytimeFitness/Views/View Controllers/Client/Features/Search/SearchViewController.swift"; sourceTree = SOURCE_ROOT; };
 		02569B6A249C737400B819EB /* SetBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBackground.swift; sourceTree = "<group>"; };
 		C35C6FE9249AF9D800A23367 /* AnytimeFitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnytimeFitness.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,7 +85,7 @@
 		C35C6FEE249AF9D800A23367 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C35C6FF3249AF9D800A23367 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C35C6FF6249AF9D800A23367 /* AnytimeFitness.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AnytimeFitness.xcdatamodel; sourceTree = "<group>"; };
-		C35C6FF8249AF9D900A23367 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C35C6FF8249AF9D900A23367 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		C35C6FFB249AF9D900A23367 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C35C6FFD249AF9D900A23367 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C35C7008249B008D00A23367 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
@@ -112,6 +156,11 @@
 		023344DF249DABC5001BABB3 /* Create */ = {
 			isa = PBXGroup;
 			children = (
+				023344EA249DD420001BABB3 /* CreateClassViewController.swift */,
+				023344EC249F17C3001BABB3 /* CreateClassNameViewController.swift */,
+				023344EE249F17DD001BABB3 /* CreateClassScheduleViewController.swift */,
+				023344F0249FD44E001BABB3 /* CompleteClassViewController.swift */,
+				0233450824A1AE5F001BABB3 /* CreateClassTimeDetailsViewController.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -119,6 +168,12 @@
 		023344E0249DABC8001BABB3 /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
+				0233450424A18842001BABB3 /* UpcomingInstructorClassesViewController.swift */,
+				0233450624A188C3001BABB3 /* UpcomingInstructorClassesCollectionViewCell.swift */,
+				0233450A24A1BD92001BABB3 /* ManageInstructorClassScheduleViewController.swift */,
+				0233450C24A1BDB4001BABB3 /* ManageInstructorScheduleTableViewCell.swift */,
+				0233450E24A1C558001BABB3 /* EditInstructorClassViewController.swift */,
+				0233451024A1C924001BABB3 /* ManageInstructorClassConfirmViewController.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -140,6 +195,8 @@
 		023344E3249DABF9001BABB3 /* Upcoming */ = {
 			isa = PBXGroup;
 			children = (
+				0233450024A17914001BABB3 /* UpcomingClassViewController.swift */,
+				0233450224A17C42001BABB3 /* UpcomingClassesCollectionViewCell.swift */,
 			);
 			path = Upcoming;
 			sourceTree = "<group>";
@@ -149,6 +206,13 @@
 			children = (
 				02569B68249C61F800B819EB /* SearchViewController.swift */,
 				023344D9249D8327001BABB3 /* LocationSearchViewController.swift */,
+				023344F224A00EDA001BABB3 /* FitnessTypeCollectionViewCell.swift */,
+				023344F424A142CF001BABB3 /* ClassDetailSearchViewController.swift */,
+				023344F624A152FE001BABB3 /* ClassSearchResultsViewController.swift */,
+				023344F824A15E28001BABB3 /* ClassOverviewSearchViewController.swift */,
+				023344FA24A1659A001BABB3 /* ClassScheduleSearchViewController.swift */,
+				023344FC24A17056001BABB3 /* ClassReserveSearchViewController.swift */,
+				023344FE24A17573001BABB3 /* ConfirmClassSearchViewController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -171,6 +235,8 @@
 			isa = PBXGroup;
 			children = (
 				02569B6A249C737400B819EB /* SetBackground.swift */,
+				0233451224A28FE9001BABB3 /* ExampleClassType.swift */,
+				0233451424A2B032001BABB3 /* idealClassType.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -246,7 +312,7 @@
 			children = (
 				C35C6FEC249AF9D800A23367 /* AppDelegate.swift */,
 				C35C6FEE249AF9D800A23367 /* SceneDelegate.swift */,
-				C35C6FF8249AF9D900A23367 /* Assets.xcassets */,
+				C35C6FF8249AF9D900A23367 /* assets.xcassets */,
 				C35C6FFA249AF9D900A23367 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
@@ -363,7 +429,7 @@
 				C35C7019249B09E200A23367 /* ClientSearch.storyboard in Resources */,
 				C35C7017249B09CF00A23367 /* ClientProfile.storyboard in Resources */,
 				C35C700B249B017600A23367 /* ClientSignIn.storyboard in Resources */,
-				C35C6FF9249AF9D900A23367 /* Assets.xcassets in Resources */,
+				C35C6FF9249AF9D900A23367 /* assets.xcassets in Resources */,
 				C35C7011249B050D00A23367 /* InstructorMain.storyboard in Resources */,
 				C35C7009249B008D00A23367 /* SignUp.storyboard in Resources */,
 				C35C7015249B084D00A23367 /* ClientMain.storyboard in Resources */,
@@ -379,12 +445,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0233451124A1C924001BABB3 /* ManageInstructorClassConfirmViewController.swift in Sources */,
+				023344FB24A1659A001BABB3 /* ClassScheduleSearchViewController.swift in Sources */,
 				C35C6FED249AF9D800A23367 /* AppDelegate.swift in Sources */,
+				023344F724A152FE001BABB3 /* ClassSearchResultsViewController.swift in Sources */,
+				0233450124A17914001BABB3 /* UpcomingClassViewController.swift in Sources */,
 				023344DA249D8327001BABB3 /* LocationSearchViewController.swift in Sources */,
+				023344EB249DD420001BABB3 /* CreateClassViewController.swift in Sources */,
+				023344F1249FD44E001BABB3 /* CompleteClassViewController.swift in Sources */,
+				023344F524A142CF001BABB3 /* ClassDetailSearchViewController.swift in Sources */,
+				023344EF249F17DD001BABB3 /* CreateClassScheduleViewController.swift in Sources */,
+				0233450924A1AE5F001BABB3 /* CreateClassTimeDetailsViewController.swift in Sources */,
+				023344FD24A17057001BABB3 /* ClassReserveSearchViewController.swift in Sources */,
+				0233450F24A1C558001BABB3 /* EditInstructorClassViewController.swift in Sources */,
+				0233451324A28FEA001BABB3 /* ExampleClassType.swift in Sources */,
+				0233451524A2B032001BABB3 /* idealClassType.swift in Sources */,
 				C35C6FF7249AF9D800A23367 /* AnytimeFitness.xcdatamodeld in Sources */,
+				0233450D24A1BDB4001BABB3 /* ManageInstructorScheduleTableViewCell.swift in Sources */,
 				02569B69249C61F800B819EB /* SearchViewController.swift in Sources */,
 				02569B6B249C737400B819EB /* SetBackground.swift in Sources */,
+				0233450324A17C42001BABB3 /* UpcomingClassesCollectionViewCell.swift in Sources */,
 				C35C6FEF249AF9D800A23367 /* SceneDelegate.swift in Sources */,
+				023344ED249F17C3001BABB3 /* CreateClassNameViewController.swift in Sources */,
+				0233450724A188C3001BABB3 /* UpcomingInstructorClassesCollectionViewCell.swift in Sources */,
+				0233450B24A1BD92001BABB3 /* ManageInstructorClassScheduleViewController.swift in Sources */,
+				0233450524A18842001BABB3 /* UpcomingInstructorClassesViewController.swift in Sources */,
+				023344F924A15E28001BABB3 /* ClassOverviewSearchViewController.swift in Sources */,
+				023344F324A00EDA001BABB3 /* FitnessTypeCollectionViewCell.swift in Sources */,
+				023344FF24A17573001BABB3 /* ConfirmClassSearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

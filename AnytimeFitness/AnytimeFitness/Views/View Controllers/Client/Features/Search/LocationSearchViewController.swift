@@ -8,12 +8,20 @@
 
 import UIKit
 
-class LocationSearchViewController: UIViewController {
+class LocationSearchViewController: UIViewController, UISearchBarDelegate {
+
+    @IBOutlet weak var locationSearch: UISearchBar!
+
+    @IBOutlet weak var nextButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        locationSearch.delegate = self
+        view.setLightButtonColor(toButtonNamed: nextButton)
     }
 
+    func searchLocationClicked(_ locationSearch: UISearchBar) {
+        guard let locationSearch = locationSearch.text, locationSearch != "" else { return }
+    }
 
 }
