@@ -28,8 +28,6 @@
 		0233450D24A1BDB4001BABB3 /* ManageInstructorScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233450C24A1BDB4001BABB3 /* ManageInstructorScheduleTableViewCell.swift */; };
 		0233450F24A1C558001BABB3 /* EditInstructorClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233450E24A1C558001BABB3 /* EditInstructorClassViewController.swift */; };
 		0233451124A1C924001BABB3 /* ManageInstructorClassConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233451024A1C924001BABB3 /* ManageInstructorClassConfirmViewController.swift */; };
-		0233451324A28FEA001BABB3 /* ExampleClassType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233451224A28FE9001BABB3 /* ExampleClassType.swift */; };
-		0233451524A2B032001BABB3 /* idealClassType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233451424A2B032001BABB3 /* idealClassType.swift */; };
 		02569B69249C61F800B819EB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02569B68249C61F800B819EB /* SearchViewController.swift */; };
 		02569B6B249C737400B819EB /* SetBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02569B6A249C737400B819EB /* SetBackground.swift */; };
 		C350B70624A1915200F2FE7B /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = C350B70524A1915200F2FE7B /* Config.plist */; };
@@ -40,6 +38,10 @@
 		C350B71824A1B52D00F2FE7B /* SignUpSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C350B71724A1B52D00F2FE7B /* SignUpSelectionViewController.swift */; };
 		C350B71A24A1B91A00F2FE7B /* SelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C350B71924A1B91A00F2FE7B /* SelectionController.swift */; };
 		C350B71C24A1BA6D00F2FE7B /* Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C350B71B24A1BA6D00F2FE7B /* Selection.swift */; };
+		C350B72224A308B000F2FE7B /* AnytimeFitness+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = C350B72124A308B000F2FE7B /* AnytimeFitness+Convenience.swift */; };
+		C350B72424A308F700F2FE7B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C350B72324A308F700F2FE7B /* CoreDataStack.swift */; };
+		C350B72724A447B000F2FE7B /* idealClassType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C350B72524A447B000F2FE7B /* idealClassType.swift */; };
+		C350B72824A447B000F2FE7B /* ExampleClassType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C350B72624A447B000F2FE7B /* ExampleClassType.swift */; };
 		C35C6FED249AF9D800A23367 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35C6FEC249AF9D800A23367 /* AppDelegate.swift */; };
 		C35C6FEF249AF9D800A23367 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35C6FEE249AF9D800A23367 /* SceneDelegate.swift */; };
 		C35C6FF4249AF9D800A23367 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35C6FF2249AF9D800A23367 /* Main.storyboard */; };
@@ -84,8 +86,6 @@
 		0233450C24A1BDB4001BABB3 /* ManageInstructorScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageInstructorScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		0233450E24A1C558001BABB3 /* EditInstructorClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInstructorClassViewController.swift; sourceTree = "<group>"; };
 		0233451024A1C924001BABB3 /* ManageInstructorClassConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageInstructorClassConfirmViewController.swift; sourceTree = "<group>"; };
-		0233451224A28FE9001BABB3 /* ExampleClassType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleClassType.swift; sourceTree = "<group>"; };
-		0233451424A2B032001BABB3 /* idealClassType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = idealClassType.swift; sourceTree = "<group>"; };
 		02569B68249C61F800B819EB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = "AnytimeFitness/Views/View Controllers/Client/Features/Search/SearchViewController.swift"; sourceTree = SOURCE_ROOT; };
 		02569B6A249C737400B819EB /* SetBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBackground.swift; sourceTree = "<group>"; };
 		C350B70524A1915200F2FE7B /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
@@ -96,6 +96,10 @@
 		C350B71724A1B52D00F2FE7B /* SignUpSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSelectionViewController.swift; sourceTree = "<group>"; };
 		C350B71924A1B91A00F2FE7B /* SelectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionController.swift; sourceTree = "<group>"; };
 		C350B71B24A1BA6D00F2FE7B /* Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
+		C350B72124A308B000F2FE7B /* AnytimeFitness+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnytimeFitness+Convenience.swift"; sourceTree = "<group>"; };
+		C350B72324A308F700F2FE7B /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		C350B72524A447B000F2FE7B /* idealClassType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = idealClassType.swift; sourceTree = "<group>"; };
+		C350B72624A447B000F2FE7B /* ExampleClassType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleClassType.swift; sourceTree = "<group>"; };
 		C35C6FE9249AF9D800A23367 /* AnytimeFitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnytimeFitness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C35C6FEC249AF9D800A23367 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C35C6FEE249AF9D800A23367 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -252,9 +256,9 @@
 		023344E7249DAC6F001BABB3 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				C350B72624A447B000F2FE7B /* ExampleClassType.swift */,
+				C350B72524A447B000F2FE7B /* idealClassType.swift */,
 				02569B6A249C737400B819EB /* SetBackground.swift */,
-				0233451224A28FE9001BABB3 /* ExampleClassType.swift */,
-				0233451424A2B032001BABB3 /* idealClassType.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -293,6 +297,8 @@
 			isa = PBXGroup;
 			children = (
 				C350B71B24A1BA6D00F2FE7B /* Selection.swift */,
+				C350B72124A308B000F2FE7B /* AnytimeFitness+Convenience.swift */,
+				C350B72324A308F700F2FE7B /* CoreDataStack.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -480,18 +486,20 @@
 				0233450124A17914001BABB3 /* UpcomingClassViewController.swift in Sources */,
 				023344DA249D8327001BABB3 /* LocationSearchViewController.swift in Sources */,
 				023344EB249DD420001BABB3 /* CreateClassViewController.swift in Sources */,
+				C350B72724A447B000F2FE7B /* idealClassType.swift in Sources */,
 				023344F1249FD44E001BABB3 /* CompleteClassViewController.swift in Sources */,
 				023344F524A142CF001BABB3 /* ClassDetailSearchViewController.swift in Sources */,
 				023344EF249F17DD001BABB3 /* CreateClassScheduleViewController.swift in Sources */,
+				C350B72824A447B000F2FE7B /* ExampleClassType.swift in Sources */,
 				0233450924A1AE5F001BABB3 /* CreateClassTimeDetailsViewController.swift in Sources */,
 				023344FD24A17057001BABB3 /* ClassReserveSearchViewController.swift in Sources */,
 				0233450F24A1C558001BABB3 /* EditInstructorClassViewController.swift in Sources */,
-				0233451324A28FEA001BABB3 /* ExampleClassType.swift in Sources */,
-				0233451524A2B032001BABB3 /* idealClassType.swift in Sources */,
+				C350B72424A308F700F2FE7B /* CoreDataStack.swift in Sources */,
 				C35C6FF7249AF9D800A23367 /* AnytimeFitness.xcdatamodeld in Sources */,
 				C350B70824A1924300F2FE7B /* ClientSignUpViewController.swift in Sources */,
 				0233450D24A1BDB4001BABB3 /* ManageInstructorScheduleTableViewCell.swift in Sources */,
 				02569B69249C61F800B819EB /* SearchViewController.swift in Sources */,
+				C350B72224A308B000F2FE7B /* AnytimeFitness+Convenience.swift in Sources */,
 				C350B71824A1B52D00F2FE7B /* SignUpSelectionViewController.swift in Sources */,
 				C350B70C24A1A0A600F2FE7B /* MainViewController.swift in Sources */,
 				02569B6B249C737400B819EB /* SetBackground.swift in Sources */,

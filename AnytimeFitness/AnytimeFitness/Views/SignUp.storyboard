@@ -55,6 +55,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="createClient:" destination="vGW-y6-RQh" eventType="touchUpInside" id="Yft-fD-Gr7"/>
                                     <segue destination="hD7-B5-0mD" kind="show" id="uT6-Uj-rIr"/>
                                 </connections>
                             </button>
@@ -71,6 +72,12 @@
                         <viewLayoutGuide key="safeArea" id="nr1-u7-aUM"/>
                     </view>
                     <navigationItem key="navigationItem" title="Client Sign Up" id="Hc7-cA-hS7"/>
+                    <connections>
+                        <outlet property="email" destination="szN-0a-n5G" id="hso-hL-OzC"/>
+                        <outlet property="firstName" destination="ti0-Sm-Uaw" id="yRb-N1-hlx"/>
+                        <outlet property="lastName" destination="1Kh-0A-UM6" id="dKr-BJ-RRn"/>
+                        <outlet property="phoneNumber" destination="1hM-y2-BXa" id="on2-Zd-vkc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S8o-Vm-zWQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -82,7 +89,7 @@
                 <viewControllerPlaceholder storyboardName="ClientFlowSignIn" id="bhM-DK-EXh" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zye-HE-gyJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3325" y="-106"/>
+            <point key="canvasLocation" x="4016" y="-106"/>
         </scene>
         <!--Phone Verification-->
         <scene sceneID="72X-Xg-cQ9">
@@ -111,7 +118,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="bhM-DK-EXh" kind="presentation" modalPresentationStyle="fullScreen" id="2E7-em-1MR"/>
+                                    <segue destination="UoW-ad-BXo" kind="show" id="Val-EU-ERI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -204,8 +211,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Make Your Selection" id="2nm-Lt-ftf">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="dpI-go-G8W">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6Bg-Hb-Cf2">
-                                <rect key="frame" x="20" y="11" width="75" height="22"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6Bg-Hb-Cf2">
+                                <rect key="frame" x="20" y="5" width="79" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Instructor">
@@ -218,7 +225,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="nGY-ob-wzz">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="j7p-MT-ijH">
-                                <rect key="frame" x="-23" y="-15" width="92" height="30"/>
+                                <rect key="frame" x="302" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Client"/>
                                 <connections>
@@ -287,6 +294,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="saveInstructor:" destination="M1L-ZP-Wys" eventType="touchUpInside" id="XfP-AX-zKc"/>
                                     <segue destination="C3A-97-qas" kind="show" id="srv-zm-oj4"/>
                                 </connections>
                             </button>
@@ -303,6 +311,13 @@
                         <viewLayoutGuide key="safeArea" id="QJE-N1-3G1"/>
                     </view>
                     <navigationItem key="navigationItem" title="Instructor Sign Up" id="jxS-Il-YO2"/>
+                    <connections>
+                        <outlet property="email" destination="WMX-eF-yFY" id="1U0-vl-gyJ"/>
+                        <outlet property="firstName" destination="6ro-Dp-wOg" id="3gc-bG-OUX"/>
+                        <outlet property="lastName" destination="ulV-vu-nvZ" id="LXU-p8-UmZ"/>
+                        <outlet property="phoneNumber" destination="Xtz-AB-za6" id="aEY-Ut-mcW"/>
+                        <outlet property="website" destination="d64-8f-gkg" id="qgM-L8-WgM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sln-hJ-4cA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -359,10 +374,12 @@
         <!--InstructorSignIn-->
         <scene sceneID="WfC-gS-mVH">
             <objects>
-                <viewControllerPlaceholder storyboardName="InstructorSignIn" id="iTr-w7-u7f" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="InstructorSignIn" id="iTr-w7-u7f" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="UHb-YD-HMP"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2O5-mQ-3c0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3991" y="564"/>
+            <point key="canvasLocation" x="4622" y="564"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OAK-wo-Unx">
@@ -418,7 +435,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="iTr-w7-u7f" kind="presentation" modalPresentationStyle="fullScreen" id="w9P-zO-cS2"/>
+                                    <segue destination="4xY-23-Vk0" kind="show" id="XqT-ve-8T7"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Authentication Code (from invite email)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mWg-p5-fxB">
@@ -443,6 +460,118 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MsE-PI-Pq9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3325" y="564"/>
+        </scene>
+        <!--Create Password-->
+        <scene sceneID="Uuh-M0-Iup">
+            <objects>
+                <viewController id="UoW-ad-BXo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zk9-l8-2Xj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RZm-rh-ge2">
+                                <rect key="frame" x="20" y="215" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJC-6i-GRp">
+                                <rect key="frame" x="20" y="363" width="374" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8Hd-dp-6Lk"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Create Password"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="bhM-DK-EXh" kind="presentation" modalPresentationStyle="fullScreen" id="9EO-pH-PRz"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3xw-HU-Dyq">
+                                <rect key="frame" x="20" y="269" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Eew-wX-k1l" firstAttribute="trailing" secondItem="3xw-HU-Dyq" secondAttribute="trailing" constant="20" id="26f-X4-Mcx"/>
+                            <constraint firstItem="3xw-HU-Dyq" firstAttribute="top" secondItem="RZm-rh-ge2" secondAttribute="bottom" constant="20" id="9mK-pK-BMI"/>
+                            <constraint firstItem="RZm-rh-ge2" firstAttribute="top" secondItem="Eew-wX-k1l" secondAttribute="top" constant="75" id="KbL-DA-Fdr"/>
+                            <constraint firstItem="RZm-rh-ge2" firstAttribute="leading" secondItem="Eew-wX-k1l" secondAttribute="leading" constant="20" id="Owf-zr-e40"/>
+                            <constraint firstItem="3xw-HU-Dyq" firstAttribute="leading" secondItem="Eew-wX-k1l" secondAttribute="leading" constant="20" id="Xzc-T8-BPa"/>
+                            <constraint firstItem="Eew-wX-k1l" firstAttribute="trailing" secondItem="RZm-rh-ge2" secondAttribute="trailing" constant="20" id="eLF-eJ-Bln"/>
+                            <constraint firstItem="Eew-wX-k1l" firstAttribute="trailing" secondItem="iJC-6i-GRp" secondAttribute="trailing" constant="20" id="f3u-bx-O0U"/>
+                            <constraint firstItem="iJC-6i-GRp" firstAttribute="leading" secondItem="Eew-wX-k1l" secondAttribute="leading" constant="20" id="liM-1x-aqn"/>
+                            <constraint firstItem="iJC-6i-GRp" firstAttribute="top" secondItem="3xw-HU-Dyq" secondAttribute="bottom" constant="60" id="lyl-BX-adi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Eew-wX-k1l"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Create Password" id="7Zj-xd-9MG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mlc-03-TVc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3268" y="-106"/>
+        </scene>
+        <!--Create Password-->
+        <scene sceneID="79I-nC-poF">
+            <objects>
+                <viewController id="4xY-23-Vk0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cGR-eF-crm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4LI-iA-hfh">
+                                <rect key="frame" x="20" y="215" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VrJ-LD-tIn">
+                                <rect key="frame" x="20" y="363" width="374" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ytR-5n-jLk"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Create Password"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="iTr-w7-u7f" kind="presentation" modalPresentationStyle="fullScreen" id="N9a-Vf-3yd"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7QL-9q-Zj6">
+                                <rect key="frame" x="20" y="269" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7QL-9q-Zj6" firstAttribute="leading" secondItem="Yw9-QJ-igJ" secondAttribute="leading" constant="20" id="0fi-lc-Hbc"/>
+                            <constraint firstItem="Yw9-QJ-igJ" firstAttribute="trailing" secondItem="VrJ-LD-tIn" secondAttribute="trailing" constant="20" id="1KW-2e-wXK"/>
+                            <constraint firstItem="7QL-9q-Zj6" firstAttribute="top" secondItem="4LI-iA-hfh" secondAttribute="bottom" constant="20" id="L9L-tx-Fkr"/>
+                            <constraint firstItem="VrJ-LD-tIn" firstAttribute="top" secondItem="7QL-9q-Zj6" secondAttribute="bottom" constant="60" id="Qd5-33-6eA"/>
+                            <constraint firstItem="4LI-iA-hfh" firstAttribute="top" secondItem="Yw9-QJ-igJ" secondAttribute="top" constant="75" id="cpu-fy-ac4"/>
+                            <constraint firstItem="4LI-iA-hfh" firstAttribute="leading" secondItem="Yw9-QJ-igJ" secondAttribute="leading" constant="20" id="jsa-br-Yo2"/>
+                            <constraint firstItem="Yw9-QJ-igJ" firstAttribute="trailing" secondItem="4LI-iA-hfh" secondAttribute="trailing" constant="20" id="lCf-lR-l8X"/>
+                            <constraint firstItem="Yw9-QJ-igJ" firstAttribute="trailing" secondItem="7QL-9q-Zj6" secondAttribute="trailing" constant="20" id="uKX-au-T3Y"/>
+                            <constraint firstItem="VrJ-LD-tIn" firstAttribute="leading" secondItem="Yw9-QJ-igJ" secondAttribute="leading" constant="20" id="wbg-FR-csp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Yw9-QJ-igJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Create Password" id="E2E-PG-0DB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6oh-oP-jk6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4051" y="564"/>
         </scene>
     </scenes>
 </document>
