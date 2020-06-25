@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="18G4032" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Client" representedClassName="Client" syncable="YES" codeGenerationType="class">
         <attribute name="email" optional="YES" attributeType="String"/>
         <attribute name="firstName" optional="YES" attributeType="String"/>
@@ -14,8 +14,18 @@
         <attribute name="phoneNumber" optional="YES" attributeType="String"/>
         <attribute name="website" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="NewClass" representedClassName="NewClass" syncable="YES" codeGenerationType="class">
+        <attribute name="classDateCD" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="classDurationCD" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="classLevelCD" optional="YES" attributeType="String"/>
+        <attribute name="classLocationCD" optional="YES" attributeType="String"/>
+        <attribute name="classMaxSizeCD" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="classNameCD" optional="YES" attributeType="String"/>
+        <attribute name="classTypeCD" optional="YES" attributeType="String"/>
+    </entity>
     <elements>
         <element name="Client" positionX="-63" positionY="-18" width="128" height="118"/>
         <element name="Instructor" positionX="-54" positionY="-9" width="128" height="118"/>
+        <element name="NewClass" positionX="-54" positionY="27" width="128" height="148"/>
     </elements>
 </model>
