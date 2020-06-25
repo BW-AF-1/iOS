@@ -10,21 +10,35 @@ import UIKit
 
 class ClientSignUpViewController: UIViewController {
 
+    @IBOutlet var firstName: UITextField!
+    @IBOutlet var lastName: UITextField!
+    @IBOutlet var email: UITextField!
+    @IBOutlet var phoneNumber: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        firstName.becomeFirstResponder()
     }
     
+    @IBAction func createClient(_ sender: Any) {
+        guard let firstName = firstName.text else { return }
+        guard let lastName = lastName.text else { return }
+        guard let email = email.text else { return }
+        guard let phoneNumber = phoneNumber.text else { return }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        print(firstName, lastName, email, phoneNumber)
+        
+                Client(email: email,
+                       firstName: firstName,
+                    lastName: lastName,
+                    phoneNumber: phoneNumber,
+                    context: CoreDataStack.shared.mainContext)
+                do {
+                    try CoreDataStack.shared.mainContext.save()
+                } catch {
+                    NSLog("Error saving managed object context: \(error)")
+        
+            }
     }
-    */
 
 }

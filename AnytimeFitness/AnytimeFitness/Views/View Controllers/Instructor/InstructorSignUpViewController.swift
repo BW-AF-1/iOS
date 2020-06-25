@@ -9,22 +9,41 @@
 import UIKit
 
 class InstructorSignUpViewController: UIViewController {
+    
+    @IBOutlet var firstName: UITextField!
+    @IBOutlet var lastName: UITextField!
+    @IBOutlet var email: UITextField!
+    @IBOutlet var phoneNumber: UITextField!
+    @IBOutlet var website: UITextField!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        firstName.becomeFirstResponder()
     }
     
+    @IBAction func saveInstructor(_ sender: Any) {
+        guard let firstName = firstName.text else { return }
+        guard let lastName = lastName.text else { return }
+        guard let email = email.text else { return }
+        guard let phoneNumber = phoneNumber.text else { return }
+        guard let website = website.text else { return }
+        
+        print(firstName, lastName, email, phoneNumber, website)
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        Instructor(email: email,
+        firstName: firstName,
+            lastName: lastName,
+            phoneNumber: phoneNumber,
+            context: CoreDataStack.shared.mainContext)
+        do {
+            try CoreDataStack.shared.mainContext.save()
+        } catch {
+            NSLog("Error saving managed object context: \(error)")
+
     }
-    */
 
+
+}
 }
