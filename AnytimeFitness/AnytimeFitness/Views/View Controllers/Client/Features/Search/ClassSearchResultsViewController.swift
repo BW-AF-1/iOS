@@ -31,10 +31,7 @@ extension ClassSearchResultsViewController: UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchResultCell", for: indexPath)
 
-        cell.detailTextLabel?.setBackground(toImageNamed: "Back")
-        cell.detailTextLabel?.textColor = .white
-        cell.detailTextLabel?.highlightedTextColor = .systemGray4
-        cell.textLabel?.highlightedTextColor = .orange
+        cell.detailTextLabel?.text = "4 pm"
         cell.textLabel?.text = "Class Title Here"
 
         return cell

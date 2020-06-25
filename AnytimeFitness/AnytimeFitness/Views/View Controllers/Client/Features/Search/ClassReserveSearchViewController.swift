@@ -14,7 +14,6 @@ class ClassReserveSearchViewController: UIViewController {
     @IBOutlet weak var classDateText: UILabel!
     @IBOutlet weak var classTimeText: UILabel!
     @IBOutlet weak var classLocationText: UILabel!
-    @IBOutlet weak var needToKnowText: UITextView!
     @IBOutlet weak var reservedRatio: UILabel!
     @IBOutlet weak var remainingNumber: UILabel!
     @IBOutlet weak var reserveButton: UIButton!

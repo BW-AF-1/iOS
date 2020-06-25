@@ -9,6 +9,8 @@
 import UIKit
 
 class UpcomingInstructorClassesCollectionViewCell: UICollectionViewCell {
+    var classes: InstructorCreateClassController.ExampleClassType?
+
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var classNameText: UILabel!
     @IBOutlet weak var classDateText: UILabel!
@@ -17,8 +19,15 @@ class UpcomingInstructorClassesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var deleteButton: UIButton!
 
     @IBAction func rescheduleButtonClicked(_ sender: Any) {
+
     }
 
-    @IBAction func deleteButtonClicked(_ sender: Any) {
-    }
+    @IBAction func deleteButtonClicked(_ sender: UpcomingClassesCollectionViewCell) {
+        if classes != nil {
+            InstructorCreateClassController.sharedInstructorCreateClassController.deletedClasses(with: classes!)
+        } else {
+            return
+        }
+        print("New array after deletion is: \(InstructorCreateClassController.sharedInstructorCreateClassController.exampleClass)")
+         }
 }
