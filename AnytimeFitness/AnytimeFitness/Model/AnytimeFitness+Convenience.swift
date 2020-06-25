@@ -12,7 +12,7 @@ import CoreData
 extension Client {
     
     @discardableResult convenience init(email: String,
-                                    firstName: String,
+                                        firstName: String,
                                         lastName: String,
                                         identifier: UUID = UUID(),
                                         phoneNumber: String,
@@ -25,11 +25,11 @@ extension Client {
         self.phoneNumber = phoneNumber
     }
 }
-    
-    extension Instructor {
+
+extension Instructor {
     
     @discardableResult convenience init(email: String,
-                                    firstName: String,
+                                        firstName: String,
                                         lastName: String,
                                         identifier: UUID = UUID(),
                                         phoneNumber: String,
@@ -40,4 +40,25 @@ extension Client {
         self.firstName = firstName
         self.phoneNumber = phoneNumber
     }
+}
+
+extension NewClass {
+    @discardableResult convenience init(classDateCD: Date,
+                                        classDurationCD: Int16,
+                                        classLevelCD: String,
+                                        classLocationCD: String,
+                                        classMaxSizeCD: Int16,
+                                        classNameCD: String,
+                                        classTypeCD: String,
+                                        context: NSManagedObjectContext) {
+        self.init(context: context)
+        self.classDateCD = classDateCD
+        self.classDurationCD = classDurationCD
+        self.classLevelCD = classLevelCD
+        self.classLocationCD = classLocationCD
+        self.classMaxSizeCD = classMaxSizeCD
+        self.classNameCD = classNameCD
+        self.classTypeCD = classTypeCD
+    }
+    
 }
