@@ -21,7 +21,7 @@ class ConfirmClassSearchViewController: UIViewController {
     }
 
     @IBAction func ConfirmButtonClicked(_ sender: Any) {
-        
+        self.navigationController?.popToRootViewController(animated: true)
     }
 
 }

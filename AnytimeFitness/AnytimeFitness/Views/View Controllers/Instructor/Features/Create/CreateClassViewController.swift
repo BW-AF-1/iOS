@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateClassViewController: UIViewController {
+class CreateClassViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var classTypeSelection: UIButton!
     @IBOutlet weak var classTypeTableView: UITableView!
@@ -18,12 +18,18 @@ class CreateClassViewController: UIViewController {
     @IBOutlet weak var classLevelTableView: UITableView!
     @IBOutlet weak var nextButton: UIButton!
 
-    var fitnessTypes: [String] = ["Boxing", "Dancing", "Biking", "Pilates", "Running", "Stretch", "Weightlifting", "Yoga", "Bootcamp", "Cardio", "Functional Fitness", "Ect."]
-
-    var fitnessLevel: [String] = ["Beginner", "Intermediate", "Advanced"]
+    var classType: CreateClassType? {
+        didSet {
+            nextButton.setDarkButtonColor(toButtonNamed: nextButton)
+        }
+    }
+    var selectionType: String?
+    var selectionLevel: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        classSizeText.delegate = self
+        classLengthText.delegate = self
 
         classTypeTableView.delegate = self
         classTypeTableView.dataSource = self
@@ -34,6 +40,26 @@ class CreateClassViewController: UIViewController {
         classLevelTableView.isHidden = true
 
         view.setLightButtonColor(toButtonNamed: nextButton)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+         if classType != nil {
+                   classSizeText.text = nil
+                   classLengthText.text = nil
+            classLevelSelection.setTitle("Select Class Type", for: .normal)
+            classTypeSelection.setTitle("Select Class Level", for: .normal)
+            selectionType = nil
+            selectionLevel = nil
+            classType = nil
+            view.setLightButtonColor(toButtonNamed: nextButton)
+               }
+    }
+
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
+    {
+        let allowedCharacters = CharacterSet.decimalDigits
+        let characterSet = CharacterSet(charactersIn: string)
+        return allowedCharacters.isSuperset(of: characterSet)
 
     }
 
@@ -77,36 +103,67 @@ class CreateClassViewController: UIViewController {
             }
         }
     }
+
+    @IBAction func nextButtonClicked(_ sender: Any) {
+        guard let newType = selectionType, let newLevel = selectionLevel, let classSizeInt = classSizeText.text, !classSizeInt.isEmpty, let classLengthInt = classLengthText.text, !classLengthInt.isEmpty else { return }
+        classType = CreateClassType(classDuration: Int(classLengthInt)!, classType: newType, classLevel: newLevel, classMaxSize: Int(classSizeInt)!)
+        print("new classType Saved: \(String(describing: classType))")
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let nextVC = segue.destination as? CreateClassNameViewController, let newClassType = classType else { return }
+        nextVC.classType = newClassType
+    }
+
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+
+        if identifier == "showClassName" {
+            if classType == nil {
+                let alert = UIAlertController(
+                    title: "Alert",
+                    message: "Missing input values.",
+                    preferredStyle: .alert
+                )
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                present(alert, animated: true, completion: nil)
+                return false
+            }
+        }
+
+        return true
+    }
 }
 
 extension CreateClassViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == classTypeTableView {
-            return fitnessTypes.count }
-        else {
-            return fitnessLevel.count
+            return ClassTypeInt.allFitnessTypeKeys.count } else {
+            return ClassLevelInt.allClassLevelKeys.count
         }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == classTypeTableView {
             let typeCell = tableView.dequeueReusableCell(withIdentifier: "classTypeSelection", for: indexPath)
-            typeCell.textLabel?.text = fitnessTypes[indexPath.row]
+            typeCell.textLabel?.text = ClassTypeInt.allFitnessTypeNames[indexPath.row]
             return typeCell }
         else  {
             let levelCell = tableView.dequeueReusableCell(withIdentifier: "classLevelSelection", for: indexPath)
-            levelCell.textLabel?.text = fitnessLevel[indexPath.row]
+            levelCell.textLabel?.text = ClassLevelInt.allClassLevelNames[indexPath.row]
             return levelCell
         }
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView == classTypeTableView {
-            classTypeSelection.setTitle("\(fitnessTypes[indexPath.row])", for: .normal)
-            animateType(toggle: false) } else if tableView == classLevelTableView {
-            classLevelSelection.setTitle("\(fitnessLevel[indexPath.row])", for: .normal)
+            classTypeSelection.setTitle("\(ClassTypeInt.allFitnessTypeNames[indexPath.row])", for: .normal)
+            animateType(toggle: false)
+            selectionType = ClassTypeInt.allFitnessTypeNames[indexPath.row]
+        } else if tableView == classLevelTableView {
+            classLevelSelection.setTitle("\(ClassLevelInt.allClassLevelNames[indexPath.row])", for: .normal)
             animateLevel(toggle: false)
+            selectionLevel = ClassLevelInt.allClassLevelNames[indexPath.row]
         }
     }
 

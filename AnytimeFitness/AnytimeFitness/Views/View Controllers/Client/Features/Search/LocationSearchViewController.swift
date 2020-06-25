@@ -14,6 +14,8 @@ class LocationSearchViewController: UIViewController, UISearchBarDelegate {
 
     @IBOutlet weak var nextButton: UIButton!
 
+    @IBOutlet weak var locationTableView: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         locationSearch.delegate = self
@@ -22,6 +24,22 @@ class LocationSearchViewController: UIViewController, UISearchBarDelegate {
 
     func searchLocationClicked(_ locationSearch: UISearchBar) {
         guard let locationSearch = locationSearch.text, locationSearch != "" else { return }
+        
+
     }
+
+}
+
+extension LocationSearchViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        InstructorCreateClassController.sharedInstructorCreateClassController.exampleClass.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LocationCell", for: indexPath)
+        cell.textLabel?.text = InstructorCreateClassController.sharedInstructorCreateClassController.exampleClass[indexPath.row].classLocation
+        return cell
+    }
+
 
 }

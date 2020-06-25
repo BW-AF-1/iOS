@@ -12,8 +12,6 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var fitnessCollection: UICollectionView!
     @IBOutlet weak var nextButton: UIButton!
 
-    var fitnessTypes: [String] = ["Boxing", "Dancing", "Biking", "Pilates", "Running", "Stretch", "Weightlifting", "Yoga", "Bootcamp", "Cardio", "Functional Fitness", "Ect."]
-
     var selectedFitnessTypes: [String] = [] {
         didSet{
             if selectedFitnessTypes.isEmpty {
@@ -41,13 +39,13 @@ class SearchViewController: UIViewController {
 extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        fitnessTypes.count
+        ClassTypeInt.allFitnessTypeKeys.count
     }
 
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "fitnessType", for: indexPath) as? FitnessTypeCollectionViewCell else { return UICollectionViewCell() }
-        cell.fitnessImageView.image = UIImage(named: fitnessTypes[indexPath.item])
+        cell.fitnessImageView.image = UIImage(named: ClassTypeInt.allFitnessTypeNames[indexPath.item])
         return cell
     }
 
@@ -56,10 +54,9 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
-        if selectedFitnessTypes.contains(fitnessTypes[indexPath.item]) { selectedFitnessTypes.removeAll{ $0 == fitnessTypes[indexPath.item]}
+        if selectedFitnessTypes.contains(ClassTypeInt.allFitnessTypeNames [indexPath.item]) { selectedFitnessTypes.removeAll{ $0 == ClassTypeInt.allFitnessTypeNames[indexPath.item]}
         } else {
-            selectedFitnessTypes.append(fitnessTypes[indexPath.item])
+            selectedFitnessTypes.append(ClassTypeInt.allFitnessTypeNames[indexPath.item])
         }
         
         print("New added array: \(selectedFitnessTypes)")
