@@ -18,9 +18,9 @@ class UpcomingInstructorClassesViewController: UIViewController {
            UpcomingInstructorClassesCollectionView.delegate = self
        }
 
-    override func viewWillAppear(_ animated: Bool) {
-        viewDidLoad()
-    }
+   // override func viewWillAppear(_ animated: Bool) {
+  //      viewDidLoad()
+ //   }
 
     func prepare(for segue: UIStoryboardSegue, sender: UICollectionView) {
         if segue.identifier == "manageInstructorClass" {
