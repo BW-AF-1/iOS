@@ -102,7 +102,7 @@
                                             <constraint firstAttribute="width" constant="374" id="NQS-1f-VBG"/>
                                             <constraint firstAttribute="height" constant="34" id="pdF-87-4Dj"/>
                                         </constraints>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
@@ -283,7 +283,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="F8E-0A-8NB">
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="F8E-0A-8NB">
                                                 <rect key="frame" x="0.0" y="31.5" width="374" height="216"/>
                                             </datePicker>
                                         </subviews>

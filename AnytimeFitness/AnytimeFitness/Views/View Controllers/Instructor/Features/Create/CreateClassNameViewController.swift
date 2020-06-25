@@ -26,12 +26,12 @@ class CreateClassNameViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-         if className != nil {
-                   classNameText.text = nil
-                   classLocationText.text = nil
+        if className != nil {
+            classNameText.text = nil
+            classLocationText.text = nil
             className = nil
             view.setLightButtonColor(toButtonNamed: finishButton)
-               }
+        }
     }
 
     @IBAction func finishButtonClicked(_ sender: Any) {
@@ -40,6 +40,13 @@ class CreateClassNameViewController: UIViewController {
         print("new className Saved: \(String(describing: className))")
         let instructorClass = InstructorCreateClassController.ExampleClassType(className: name, classDate: classDatePicker.date, classLocation: address, classDuration: existingClassType.classDuration, classType: existingClassType.classType, classLevel: existingClassType.classLevel, classMaxSize: existingClassType.classMaxSize)
         InstructorCreateClassController.sharedInstructorCreateClassController.createClass(with: instructorClass)
+        NewClass(classDateCD: classDatePicker.date, classDurationCD: Int16(existingClassType.classDuration), classLevelCD: existingClassType.classLevel, classLocationCD: address, classMaxSizeCD: Int16(existingClassType.classMaxSize), classNameCD: name, classTypeCD: existingClassType.classType, context: CoreDataStack.shared.mainContext)
+        do {
+            try CoreDataStack.shared.mainContext.save()
+        } catch {
+            NSLog("Error saving managed object context: \(error)")
+        }
+
         print("Newly created class: \(instructorClass)")
     }
 

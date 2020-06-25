@@ -21,6 +21,7 @@
 		0233450524A18842001BABB3 /* UpcomingInstructorClassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233450424A18842001BABB3 /* UpcomingInstructorClassesViewController.swift */; };
 		0233450724A188C3001BABB3 /* UpcomingInstructorClassesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233450624A188C3001BABB3 /* UpcomingInstructorClassesCollectionViewCell.swift */; };
 		0233451124A1C924001BABB3 /* ManageInstructorClassConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233451024A1C924001BABB3 /* ManageInstructorClassConfirmViewController.swift */; };
+		023B14DF24A51F2C003BCD29 /* ClassManagementController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023B14DE24A51F2C003BCD29 /* ClassManagementController.swift */; };
 		02569B69249C61F800B819EB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02569B68249C61F800B819EB /* SearchViewController.swift */; };
 		02569B6B249C737400B819EB /* SetBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02569B6A249C737400B819EB /* SetBackground.swift */; };
 		0288ED1124A3147000819E3E /* UpcomingClientClassDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0288ED1024A3147000819E3E /* UpcomingClientClassDetailViewController.swift */; };
@@ -74,6 +75,7 @@
 		0233450424A18842001BABB3 /* UpcomingInstructorClassesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingInstructorClassesViewController.swift; sourceTree = "<group>"; };
 		0233450624A188C3001BABB3 /* UpcomingInstructorClassesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingInstructorClassesCollectionViewCell.swift; sourceTree = "<group>"; };
 		0233451024A1C924001BABB3 /* ManageInstructorClassConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageInstructorClassConfirmViewController.swift; sourceTree = "<group>"; };
+		023B14DE24A51F2C003BCD29 /* ClassManagementController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassManagementController.swift; sourceTree = "<group>"; };
 		02569B68249C61F800B819EB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = "AnytimeFitness/Views/View Controllers/Client/Features/Search/SearchViewController.swift"; sourceTree = SOURCE_ROOT; };
 		02569B6A249C737400B819EB /* SetBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBackground.swift; sourceTree = "<group>"; };
 		0288ED1024A3147000819E3E /* UpcomingClientClassDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingClientClassDetailViewController.swift; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				C350B71924A1B91A00F2FE7B /* SelectionController.swift */,
+				023B14DE24A51F2C003BCD29 /* ClassManagementController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				C35C6FF7249AF9D800A23367 /* AnytimeFitness.xcdatamodeld in Sources */,
 				C350B70824A1924300F2FE7B /* ClientSignUpViewController.swift in Sources */,
 				023344FD24A17057001BABB3 /* ClassReserveSearchViewController.swift in Sources */,
+				023B14DF24A51F2C003BCD29 /* ClassManagementController.swift in Sources */,
 				C350B72424A308F700F2FE7B /* CoreDataStack.swift in Sources */,
 				C35C6FF7249AF9D800A23367 /* AnytimeFitness.xcdatamodeld in Sources */,
 				C350B70824A1924300F2FE7B /* ClientSignUpViewController.swift in Sources */,

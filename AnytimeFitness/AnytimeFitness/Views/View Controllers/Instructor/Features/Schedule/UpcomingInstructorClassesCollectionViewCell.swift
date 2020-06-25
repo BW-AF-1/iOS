@@ -10,6 +10,14 @@ import UIKit
 
 class UpcomingInstructorClassesCollectionViewCell: UICollectionViewCell {
     var classes: InstructorCreateClassController.ExampleClassType?
+    var newClasses: NewClass? {
+        didSet {
+            imageView.image = UIImage(contentsOfFile: newClasses?.classTypeCD ?? "MainFitness")
+            classNameText.text = newClasses?.classNameCD
+            classDateText.text = newClasses?.classDateCD?.description
+            classTimeText.text = newClasses?.classDateCD?.description
+        }
+    }
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var classNameText: UILabel!
