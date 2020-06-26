@@ -60,6 +60,7 @@
 		C35C7027249C750700A23367 /* ClientFlowSignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35C7026249C750700A23367 /* ClientFlowSignIn.storyboard */; };
 		C36DBDF524A58F3F00B5AB69 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C36DBDF424A58F3F00B5AB69 /* GoogleService-Info.plist */; };
 		C36DBDF724A590CB00B5AB69 /* ClientSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36DBDF624A590CB00B5AB69 /* ClientSignInViewController.swift */; };
+		C36DBDF924A5B64400B5AB69 /* InstructorSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36DBDF824A5B64400B5AB69 /* InstructorSignInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,6 +121,7 @@
 		C35C7026249C750700A23367 /* ClientFlowSignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ClientFlowSignIn.storyboard; sourceTree = "<group>"; };
 		C36DBDF424A58F3F00B5AB69 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C36DBDF624A590CB00B5AB69 /* ClientSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClientSignInViewController.swift; path = "AnytimeFitness/Views/View Controllers/Client/ClientSignInViewController.swift"; sourceTree = SOURCE_ROOT; };
+		C36DBDF824A5B64400B5AB69 /* InstructorSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorSignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				C350B70924A1926000F2FE7B /* InstructorSignUpViewController.swift */,
+				C36DBDF824A5B64400B5AB69 /* InstructorSignInViewController.swift */,
 				023344DE249DAB98001BABB3 /* Features */,
 			);
 			path = Instructor;
@@ -566,6 +569,7 @@
 				0288ED1324A31F8500819E3E /* InstructorCreateClassController.swift in Sources */,
 				C36DBDF724A590CB00B5AB69 /* ClientSignInViewController.swift in Sources */,
 				023344F1249FD44E001BABB3 /* CompleteClassViewController.swift in Sources */,
+				C36DBDF924A5B64400B5AB69 /* InstructorSignInViewController.swift in Sources */,
 				0288ED1124A3147000819E3E /* UpcomingClientClassDetailViewController.swift in Sources */,
 				023344F524A142CF001BABB3 /* ClassDetailSearchViewController.swift in Sources */,
 				023344FD24A17057001BABB3 /* ClassReserveSearchViewController.swift in Sources */,
