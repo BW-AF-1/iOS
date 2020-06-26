@@ -10,6 +10,10 @@
 		023344DA249D8327001BABB3 /* LocationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023344D9249D8327001BABB3 /* LocationSearchViewController.swift */; };
 		02569B69249C61F800B819EB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02569B68249C61F800B819EB /* SearchViewController.swift */; };
 		02569B6B249C737400B819EB /* SetBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02569B6A249C737400B819EB /* SetBackground.swift */; };
+		5276FC2524A4346C00EF4DC8 /* InstructorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276FC2424A4346C00EF4DC8 /* InstructorProfileViewController.swift */; };
+		5276FC2724A4355600EF4DC8 /* ClientFavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276FC2624A4355600EF4DC8 /* ClientFavoritesViewController.swift */; };
+		5276FC2924A4357100EF4DC8 /* ClientProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276FC2824A4357100EF4DC8 /* ClientProfileViewController.swift */; };
+		5276FC2B24A58B0F00EF4DC8 /* ClientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276FC2A24A58B0F00EF4DC8 /* ClientTableViewController.swift */; };
 		C35C6FED249AF9D800A23367 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35C6FEC249AF9D800A23367 /* AppDelegate.swift */; };
 		C35C6FEF249AF9D800A23367 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35C6FEE249AF9D800A23367 /* SceneDelegate.swift */; };
 		C35C6FF4249AF9D800A23367 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35C6FF2249AF9D800A23367 /* Main.storyboard */; };
@@ -36,6 +40,10 @@
 		023344D9249D8327001BABB3 /* LocationSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationSearchViewController.swift; path = "AnytimeFitness/Views/View Controllers/Client/Features/Search/LocationSearchViewController.swift"; sourceTree = SOURCE_ROOT; };
 		02569B68249C61F800B819EB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = "AnytimeFitness/Views/View Controllers/Client/Features/Search/SearchViewController.swift"; sourceTree = SOURCE_ROOT; };
 		02569B6A249C737400B819EB /* SetBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBackground.swift; sourceTree = "<group>"; };
+		5276FC2424A4346C00EF4DC8 /* InstructorProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InstructorProfileViewController.swift; path = AnytimeFitness/InstructorProfileViewController.swift; sourceTree = SOURCE_ROOT; };
+		5276FC2624A4355600EF4DC8 /* ClientFavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClientFavoritesViewController.swift; path = AnytimeFitness/ClientFavoritesViewController.swift; sourceTree = SOURCE_ROOT; };
+		5276FC2824A4357100EF4DC8 /* ClientProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClientProfileViewController.swift; path = AnytimeFitness/ClientProfileViewController.swift; sourceTree = SOURCE_ROOT; };
+		5276FC2A24A58B0F00EF4DC8 /* ClientTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClientTableViewController.swift; path = AnytimeFitness/ClientTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		C35C6FE9249AF9D800A23367 /* AnytimeFitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnytimeFitness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C35C6FEC249AF9D800A23367 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C35C6FEE249AF9D800A23367 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +141,7 @@
 		023344E2249DABD5001BABB3 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				5276FC2424A4346C00EF4DC8 /* InstructorProfileViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -156,6 +165,7 @@
 		023344E5249DAC00001BABB3 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				5276FC2824A4357100EF4DC8 /* ClientProfileViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -163,6 +173,8 @@
 		023344E6249DAC03001BABB3 /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
+				5276FC2624A4355600EF4DC8 /* ClientFavoritesViewController.swift */,
+				5276FC2A24A58B0F00EF4DC8 /* ClientTableViewController.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -383,8 +395,12 @@
 				023344DA249D8327001BABB3 /* LocationSearchViewController.swift in Sources */,
 				C35C6FF7249AF9D800A23367 /* AnytimeFitness.xcdatamodeld in Sources */,
 				02569B69249C61F800B819EB /* SearchViewController.swift in Sources */,
+				5276FC2B24A58B0F00EF4DC8 /* ClientTableViewController.swift in Sources */,
+				5276FC2524A4346C00EF4DC8 /* InstructorProfileViewController.swift in Sources */,
 				02569B6B249C737400B819EB /* SetBackground.swift in Sources */,
 				C35C6FEF249AF9D800A23367 /* SceneDelegate.swift in Sources */,
+				5276FC2724A4355600EF4DC8 /* ClientFavoritesViewController.swift in Sources */,
+				5276FC2924A4357100EF4DC8 /* ClientProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
