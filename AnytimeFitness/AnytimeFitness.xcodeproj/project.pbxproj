@@ -23,6 +23,12 @@
 		0233451124A1C924001BABB3 /* ManageInstructorClassConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233451024A1C924001BABB3 /* ManageInstructorClassConfirmViewController.swift */; };
 		02569B69249C61F800B819EB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02569B68249C61F800B819EB /* SearchViewController.swift */; };
 		02569B6B249C737400B819EB /* SetBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02569B6A249C737400B819EB /* SetBackground.swift */; };
+
+		5276FC2524A4346C00EF4DC8 /* InstructorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276FC2424A4346C00EF4DC8 /* InstructorProfileViewController.swift */; };
+		5276FC2724A4355600EF4DC8 /* ClientFavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276FC2624A4355600EF4DC8 /* ClientFavoritesViewController.swift */; };
+		5276FC2924A4357100EF4DC8 /* ClientProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276FC2824A4357100EF4DC8 /* ClientProfileViewController.swift */; };
+		5276FC2B24A58B0F00EF4DC8 /* ClientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276FC2A24A58B0F00EF4DC8 /* ClientTableViewController.swift */; };
+
 		0288ED1124A3147000819E3E /* UpcomingClientClassDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0288ED1024A3147000819E3E /* UpcomingClientClassDetailViewController.swift */; };
 		0288ED1324A31F8500819E3E /* InstructorCreateClassController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0288ED1224A31F8500819E3E /* InstructorCreateClassController.swift */; };
 		0288ED1524A401AF00819E3E /* ClientClassSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0288ED1424A401AF00819E3E /* ClientClassSearchController.swift */; };
@@ -37,6 +43,7 @@
 		C350B72224A308B000F2FE7B /* AnytimeFitness+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = C350B72124A308B000F2FE7B /* AnytimeFitness+Convenience.swift */; };
 		C350B72424A308F700F2FE7B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C350B72324A308F700F2FE7B /* CoreDataStack.swift */; };
 		C350B73424A455D400F2FE7B /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = C350B73324A455D400F2FE7B /* HTTPMethod.swift */; };
+
 		C35C6FED249AF9D800A23367 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35C6FEC249AF9D800A23367 /* AppDelegate.swift */; };
 		C35C6FEF249AF9D800A23367 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35C6FEE249AF9D800A23367 /* SceneDelegate.swift */; };
 		C35C6FF4249AF9D800A23367 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35C6FF2249AF9D800A23367 /* Main.storyboard */; };
@@ -76,6 +83,12 @@
 		0233451024A1C924001BABB3 /* ManageInstructorClassConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageInstructorClassConfirmViewController.swift; sourceTree = "<group>"; };
 		02569B68249C61F800B819EB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = "AnytimeFitness/Views/View Controllers/Client/Features/Search/SearchViewController.swift"; sourceTree = SOURCE_ROOT; };
 		02569B6A249C737400B819EB /* SetBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBackground.swift; sourceTree = "<group>"; };
+
+		5276FC2424A4346C00EF4DC8 /* InstructorProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InstructorProfileViewController.swift; path = AnytimeFitness/InstructorProfileViewController.swift; sourceTree = SOURCE_ROOT; };
+		5276FC2624A4355600EF4DC8 /* ClientFavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClientFavoritesViewController.swift; path = AnytimeFitness/ClientFavoritesViewController.swift; sourceTree = SOURCE_ROOT; };
+		5276FC2824A4357100EF4DC8 /* ClientProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClientProfileViewController.swift; path = AnytimeFitness/ClientProfileViewController.swift; sourceTree = SOURCE_ROOT; };
+		5276FC2A24A58B0F00EF4DC8 /* ClientTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClientTableViewController.swift; path = AnytimeFitness/ClientTableViewController.swift; sourceTree = SOURCE_ROOT; };
+
 		0288ED1024A3147000819E3E /* UpcomingClientClassDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingClientClassDetailViewController.swift; sourceTree = "<group>"; };
 		0288ED1224A31F8500819E3E /* InstructorCreateClassController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorCreateClassController.swift; sourceTree = "<group>"; };
 		0288ED1424A401AF00819E3E /* ClientClassSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientClassSearchController.swift; sourceTree = "<group>"; };
@@ -90,6 +103,7 @@
 		C350B72124A308B000F2FE7B /* AnytimeFitness+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnytimeFitness+Convenience.swift"; sourceTree = "<group>"; };
 		C350B72324A308F700F2FE7B /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		C350B73324A455D400F2FE7B /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+
 		C35C6FE9249AF9D800A23367 /* AnytimeFitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnytimeFitness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C35C6FEC249AF9D800A23367 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C35C6FEE249AF9D800A23367 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -196,6 +210,7 @@
 		023344E2249DABD5001BABB3 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				5276FC2424A4346C00EF4DC8 /* InstructorProfileViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -228,6 +243,7 @@
 		023344E5249DAC00001BABB3 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				5276FC2824A4357100EF4DC8 /* ClientProfileViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -235,6 +251,8 @@
 		023344E6249DAC03001BABB3 /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
+				5276FC2624A4355600EF4DC8 /* ClientFavoritesViewController.swift */,
+				5276FC2A24A58B0F00EF4DC8 /* ClientTableViewController.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -483,19 +501,29 @@
 				C350B70824A1924300F2FE7B /* ClientSignUpViewController.swift in Sources */,
 				C350B73424A455D400F2FE7B /* HTTPMethod.swift in Sources */,
 				02569B69249C61F800B819EB /* SearchViewController.swift in Sources */,
+
+				5276FC2B24A58B0F00EF4DC8 /* ClientTableViewController.swift in Sources */,
+				5276FC2524A4346C00EF4DC8 /* InstructorProfileViewController.swift in Sources */,
+
 				C350B72224A308B000F2FE7B /* AnytimeFitness+Convenience.swift in Sources */,
 				C350B71824A1B52D00F2FE7B /* SignUpSelectionViewController.swift in Sources */,
 				C350B70C24A1A0A600F2FE7B /* MainViewController.swift in Sources */,
+
 				02569B6B249C737400B819EB /* SetBackground.swift in Sources */,
 				C350B71624A1B4BA00F2FE7B /* CellSignUpCollectionViewCell.swift in Sources */,
 				0233450324A17C42001BABB3 /* UpcomingClassesCollectionViewCell.swift in Sources */,
 				0288ED1524A401AF00819E3E /* ClientClassSearchController.swift in Sources */,
 				C35C6FEF249AF9D800A23367 /* SceneDelegate.swift in Sources */,
+
+				5276FC2724A4355600EF4DC8 /* ClientFavoritesViewController.swift in Sources */,
+				5276FC2924A4357100EF4DC8 /* ClientProfileViewController.swift in Sources */,
+
 				023344ED249F17C3001BABB3 /* CreateClassNameViewController.swift in Sources */,
 				0233450724A188C3001BABB3 /* UpcomingInstructorClassesCollectionViewCell.swift in Sources */,
 				0233450524A18842001BABB3 /* UpcomingInstructorClassesViewController.swift in Sources */,
 				023344F324A00EDA001BABB3 /* FitnessTypeCollectionViewCell.swift in Sources */,
 				023344FF24A17573001BABB3 /* ConfirmClassSearchViewController.swift in Sources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
