@@ -25,7 +25,7 @@
                                     <constraint firstAttribute="height" constant="35" id="36U-LH-Qg5"/>
                                     <constraint firstAttribute="width" constant="175" id="KHT-ft-dND"/>
                                 </constraints>
-                                <state key="normal" title="For Clients">
+                                <state key="normal" title="Client Sign In">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -44,7 +44,7 @@
                                     <constraint firstAttribute="height" constant="35" id="DnS-LG-2Zo"/>
                                     <constraint firstAttribute="width" constant="175" id="I0R-sb-uDR"/>
                                 </constraints>
-                                <state key="normal" title="For Instructors">
+                                <state key="normal" title="Instructor Sign In">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -146,7 +146,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="4DB-sI-OOi" kind="presentation" modalPresentationStyle="fullScreen" id="ayo-ZE-UMP"/>
+                                    <segue destination="4DB-sI-OOi" kind="presentation" id="ayo-ZE-UMP"/>
                                 </connections>
                             </button>
                         </subviews>

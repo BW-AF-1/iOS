@@ -365,16 +365,6 @@
             </objects>
             <point key="canvasLocation" x="-57.971014492753625" y="155.35714285714286"/>
         </scene>
-        <!--Main-->
-        <scene sceneID="45u-7n-LtT">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="aq2-QO-7gj" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="LzT-Xx-Ybp"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="trl-xh-9Wd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="787" y="-284"/>
-        </scene>
         <!--Email Verification-->
         <scene sceneID="39f-ia-RE8">
             <objects>
