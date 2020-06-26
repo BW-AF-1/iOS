@@ -10,7 +10,7 @@
         <!--Client Sign In-->
         <scene sceneID="D5i-bk-0ZL">
             <objects>
-                <viewController id="1Ld-kf-BNe" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1Ld-kf-BNe" customClass="ClientSignInViewController" customModule="AnytimeFitness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fnp-dA-62s">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,7 +29,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="oBj-mL-loY" kind="presentation" modalPresentationStyle="fullScreen" id="QEn-P6-sws"/>
+                                    <action selector="signInTapped:" destination="1Ld-kf-BNe" eventType="touchUpInside" id="V1w-UJ-VbI"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="kYG-0l-eHI">
@@ -51,21 +51,37 @@
                                 <rect key="frame" x="145.5" y="735" width="123" height="30"/>
                                 <state key="normal" title="Forgot Password?"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email and/or Password wrong" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwf-p1-mak">
+                                <rect key="frame" x="20" y="392" width="374" height="16"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="S66-gU-wXJ" firstAttribute="centerX" secondItem="Fnp-dA-62s" secondAttribute="centerX" id="3jb-zP-c8C"/>
+                            <constraint firstItem="kVX-Ii-6F8" firstAttribute="trailing" secondItem="fwf-p1-mak" secondAttribute="trailing" constant="20" id="BH7-Vr-IBY"/>
                             <constraint firstItem="FdZ-XE-oXP" firstAttribute="leading" secondItem="kVX-Ii-6F8" secondAttribute="leading" constant="20" id="LxZ-jw-N01"/>
                             <constraint firstItem="kVX-Ii-6F8" firstAttribute="trailing" secondItem="kYG-0l-eHI" secondAttribute="trailing" constant="20" id="TLN-om-F8o"/>
                             <constraint firstItem="kVX-Ii-6F8" firstAttribute="bottom" secondItem="FdZ-XE-oXP" secondAttribute="bottom" constant="137" id="TWn-CD-aDT"/>
                             <constraint firstItem="kYG-0l-eHI" firstAttribute="top" secondItem="kVX-Ii-6F8" secondAttribute="top" constant="125" id="U2A-8t-BPt"/>
                             <constraint firstItem="kYG-0l-eHI" firstAttribute="leading" secondItem="kVX-Ii-6F8" secondAttribute="leading" constant="20" id="dQ8-8M-wnN"/>
                             <constraint firstItem="S66-gU-wXJ" firstAttribute="top" secondItem="FdZ-XE-oXP" secondAttribute="bottom" constant="10" id="mSu-EP-GCe"/>
+                            <constraint firstItem="fwf-p1-mak" firstAttribute="top" secondItem="kYG-0l-eHI" secondAttribute="bottom" constant="30" id="mjL-zC-Glu"/>
                             <constraint firstItem="kVX-Ii-6F8" firstAttribute="trailing" secondItem="FdZ-XE-oXP" secondAttribute="trailing" constant="20" id="rn4-zv-dQN"/>
+                            <constraint firstItem="fwf-p1-mak" firstAttribute="leading" secondItem="kVX-Ii-6F8" secondAttribute="leading" constant="20" id="vAa-Ne-Sk9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kVX-Ii-6F8"/>
                     </view>
                     <navigationItem key="navigationItem" title="Client Sign In" id="yn7-ue-aR8"/>
+                    <connections>
+                        <outlet property="email" destination="CSr-6E-uCW" id="51p-Rp-8OA"/>
+                        <outlet property="errorLabel" destination="fwf-p1-mak" id="vdd-NI-hz6"/>
+                        <outlet property="password" destination="b8i-9Q-sbY" id="mCa-pq-WQv"/>
+                        <segue destination="oBj-mL-loY" kind="presentation" identifier="clientHome" modalPresentationStyle="fullScreen" id="wPX-wd-vf3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJE-yb-D29" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -87,6 +103,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="1fH-wa-I7t">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.96971672769999995" green="0.61454814670000002" blue="0.14207831030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

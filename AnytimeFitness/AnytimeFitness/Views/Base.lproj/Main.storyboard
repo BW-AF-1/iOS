@@ -34,7 +34,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="9sw-TH-q7r" kind="presentation" modalPresentationStyle="fullScreen" id="5GC-Nz-A96"/>
+                                    <segue destination="9sw-TH-q7r" kind="presentation" id="5GC-Nz-A96"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xkk-bX-Nz5">
@@ -53,7 +53,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="jXR-Pn-rwa" kind="presentation" modalPresentationStyle="fullScreen" id="doi-jC-InF"/>
+                                    <segue destination="jXR-Pn-rwa" kind="presentation" id="doi-jC-InF"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="USu-8s-1w8">
