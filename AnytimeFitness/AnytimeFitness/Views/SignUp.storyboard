@@ -216,7 +216,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwE-1V-0Kh">
-                                <rect key="frame" x="20" y="637" width="374" height="50"/>
+                                <rect key="frame" x="20" y="612" width="374" height="50"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="kNf-mG-L2X"/>
@@ -241,7 +241,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="QJE-N1-3G1" firstAttribute="bottom" secondItem="lwE-1V-0Kh" secondAttribute="bottom" constant="175" id="DrY-Ac-GMf"/>
+                            <constraint firstItem="QJE-N1-3G1" firstAttribute="bottom" secondItem="lwE-1V-0Kh" secondAttribute="bottom" constant="200" id="DrY-Ac-GMf"/>
                             <constraint firstItem="NDo-53-bRV" firstAttribute="top" secondItem="QJE-N1-3G1" secondAttribute="top" constant="125" id="UBJ-5r-Oug"/>
                             <constraint firstItem="u8e-Ms-VTD" firstAttribute="top" secondItem="NDo-53-bRV" secondAttribute="bottom" constant="30" id="VZM-OO-Kol"/>
                             <constraint firstItem="QJE-N1-3G1" firstAttribute="trailing" secondItem="u8e-Ms-VTD" secondAttribute="trailing" constant="20" id="Y6b-W4-CmT"/>
@@ -256,10 +256,10 @@
                     <navigationItem key="navigationItem" title="Instructor Sign Up" id="jxS-Il-YO2"/>
                     <connections>
                         <outlet property="email" destination="WMX-eF-yFY" id="1U0-vl-gyJ"/>
-                        <outlet property="errorLabel" destination="Xtz-AB-za6" id="7Sy-42-5ZE"/>
+                        <outlet property="errorLabel" destination="u8e-Ms-VTD" id="1aP-sP-uAr"/>
                         <outlet property="firstName" destination="6ro-Dp-wOg" id="3gc-bG-OUX"/>
                         <outlet property="lastName" destination="ulV-vu-nvZ" id="LXU-p8-UmZ"/>
-                        <outlet property="password" destination="Xtz-AB-za6" id="cpb-wq-v3A"/>
+                        <outlet property="password" destination="Xtz-AB-za6" id="HzH-S5-QOQ"/>
                         <segue destination="iTr-w7-u7f" kind="presentation" identifier="instructorSignIn" id="c7Y-jm-Hen"/>
                     </connections>
                 </viewController>

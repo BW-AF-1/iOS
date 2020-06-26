@@ -16,7 +16,7 @@ class InstructorSignUpViewController: UIViewController {
     @IBOutlet var lastName: UITextField!
     @IBOutlet var email: UITextField!
     @IBOutlet var password: UITextField!
-    @IBOutlet var errorLabel: UITextField!
+    @IBOutlet var errorLabel: UILabel!
     
 
     override func viewDidLoad() {
