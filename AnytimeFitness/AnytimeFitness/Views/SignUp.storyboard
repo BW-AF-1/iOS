@@ -96,8 +96,8 @@
         <!--ClientSignIn-->
         <scene sceneID="Ja6-rY-0sZ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zye-HE-gyJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="ClientSignIn" id="bhM-DK-EXh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zye-HE-gyJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2414" y="-106"/>
         </scene>
@@ -171,33 +171,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="COt-le-gPN"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Make Your Selection" id="2nm-Lt-ftf">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="dpI-go-G8W">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6Bg-Hb-Cf2">
-                                <rect key="frame" x="20" y="5" width="79" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Instructor">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="M1L-ZP-Wys" kind="show" id="gct-FH-Cj5"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="nGY-ob-wzz">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="j7p-MT-ijH">
-                                <rect key="frame" x="302" y="7" width="92" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Client"/>
-                                <connections>
-                                    <segue destination="vGW-y6-RQh" kind="show" id="RUY-JR-AxD"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Make Your Selection" id="2nm-Lt-ftf"/>
                     <connections>
                         <outlet property="collectionView" destination="LrE-0c-wTp" id="y4g-Wi-BvW"/>
+                        <segue destination="vGW-y6-RQh" kind="show" identifier="clientSignUp" id="Ukj-vq-rkD"/>
+                        <segue destination="M1L-ZP-Wys" kind="show" identifier="instructorSignUp" id="1Be-VY-8Pl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gWc-0b-fkm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -238,7 +216,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwE-1V-0Kh">
-                                <rect key="frame" x="20" y="612" width="374" height="50"/>
+                                <rect key="frame" x="20" y="637" width="374" height="50"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="kNf-mG-L2X"/>
@@ -263,9 +241,9 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="u8e-Ms-VTD" firstAttribute="top" secondItem="NDo-53-bRV" secondAttribute="bottom" constant="30" id="9xd-q0-aFO"/>
-                            <constraint firstItem="QJE-N1-3G1" firstAttribute="bottom" secondItem="lwE-1V-0Kh" secondAttribute="bottom" constant="200" id="DrY-Ac-GMf"/>
+                            <constraint firstItem="QJE-N1-3G1" firstAttribute="bottom" secondItem="lwE-1V-0Kh" secondAttribute="bottom" constant="175" id="DrY-Ac-GMf"/>
                             <constraint firstItem="NDo-53-bRV" firstAttribute="top" secondItem="QJE-N1-3G1" secondAttribute="top" constant="125" id="UBJ-5r-Oug"/>
+                            <constraint firstItem="u8e-Ms-VTD" firstAttribute="top" secondItem="NDo-53-bRV" secondAttribute="bottom" constant="30" id="VZM-OO-Kol"/>
                             <constraint firstItem="QJE-N1-3G1" firstAttribute="trailing" secondItem="u8e-Ms-VTD" secondAttribute="trailing" constant="20" id="Y6b-W4-CmT"/>
                             <constraint firstItem="u8e-Ms-VTD" firstAttribute="leading" secondItem="QJE-N1-3G1" secondAttribute="leading" constant="20" id="bq3-aZ-nzH"/>
                             <constraint firstItem="QJE-N1-3G1" firstAttribute="trailing" secondItem="lwE-1V-0Kh" secondAttribute="trailing" constant="20" id="gfb-7E-zJH"/>
