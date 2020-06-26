@@ -16,10 +16,6 @@
 		023344F724A152FE001BABB3 /* ClassSearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023344F624A152FE001BABB3 /* ClassSearchResultsViewController.swift */; };
 		023344FD24A17057001BABB3 /* ClassReserveSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023344FC24A17056001BABB3 /* ClassReserveSearchViewController.swift */; };
 		023344FF24A17573001BABB3 /* ConfirmClassSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023344FE24A17573001BABB3 /* ConfirmClassSearchViewController.swift */; };
-		0233450124A17914001BABB3 /* UpcomingClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233450024A17914001BABB3 /* UpcomingClassViewController.swift */; };
-		0233450324A17C42001BABB3 /* UpcomingClassesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233450224A17C42001BABB3 /* UpcomingClassesCollectionViewCell.swift */; };
-		0233450524A18842001BABB3 /* UpcomingInstructorClassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233450424A18842001BABB3 /* UpcomingInstructorClassesViewController.swift */; };
-		0233450724A188C3001BABB3 /* UpcomingInstructorClassesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233450624A188C3001BABB3 /* UpcomingInstructorClassesCollectionViewCell.swift */; };
 		0233451124A1C924001BABB3 /* ManageInstructorClassConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233451024A1C924001BABB3 /* ManageInstructorClassConfirmViewController.swift */; };
 		023B14DF24A51F2C003BCD29 /* ClassManagementController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023B14DE24A51F2C003BCD29 /* ClassManagementController.swift */; };
 		02569B69249C61F800B819EB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02569B68249C61F800B819EB /* SearchViewController.swift */; };
@@ -34,7 +30,8 @@
 		02E6EBA524A53F2A00E0FE25 /* Client+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E6EB9F24A53F2A00E0FE25 /* Client+CoreDataClass.swift */; };
 		02E6EBA624A53F2A00E0FE25 /* Client+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E6EBA024A53F2A00E0FE25 /* Client+CoreDataProperties.swift */; };
 		02E6EBA824A55F0A00E0FE25 /* RichFetchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E6EBA724A55F0A00E0FE25 /* RichFetchRequest.swift */; };
-		02E6EBAA24A56B9F00E0FE25 /* CollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E6EBA924A56B9F00E0FE25 /* CollectionViewDelegate.swift */; };
+		02E6EBAC24A596D900E0FE25 /* UpcomingInstructorClassesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E6EBAB24A596D900E0FE25 /* UpcomingInstructorClassesTableViewController.swift */; };
+		02E6EBAE24A5C38700E0FE25 /* UpcomingClientClassesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E6EBAD24A5C38700E0FE25 /* UpcomingClientClassesTableViewController.swift */; };
 		C350B70624A1915200F2FE7B /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = C350B70524A1915200F2FE7B /* Config.plist */; };
 		C350B70824A1924300F2FE7B /* ClientSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C350B70724A1924300F2FE7B /* ClientSignUpViewController.swift */; };
 		C350B70A24A1926000F2FE7B /* InstructorSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C350B70924A1926000F2FE7B /* InstructorSignUpViewController.swift */; };
@@ -78,10 +75,6 @@
 		023344F624A152FE001BABB3 /* ClassSearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassSearchResultsViewController.swift; sourceTree = "<group>"; };
 		023344FC24A17056001BABB3 /* ClassReserveSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassReserveSearchViewController.swift; sourceTree = "<group>"; };
 		023344FE24A17573001BABB3 /* ConfirmClassSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmClassSearchViewController.swift; sourceTree = "<group>"; };
-		0233450024A17914001BABB3 /* UpcomingClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingClassViewController.swift; sourceTree = "<group>"; };
-		0233450224A17C42001BABB3 /* UpcomingClassesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingClassesCollectionViewCell.swift; sourceTree = "<group>"; };
-		0233450424A18842001BABB3 /* UpcomingInstructorClassesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingInstructorClassesViewController.swift; sourceTree = "<group>"; };
-		0233450624A188C3001BABB3 /* UpcomingInstructorClassesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingInstructorClassesCollectionViewCell.swift; sourceTree = "<group>"; };
 		0233451024A1C924001BABB3 /* ManageInstructorClassConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageInstructorClassConfirmViewController.swift; sourceTree = "<group>"; };
 		023B14DE24A51F2C003BCD29 /* ClassManagementController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassManagementController.swift; sourceTree = "<group>"; };
 		02569B68249C61F800B819EB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = "AnytimeFitness/Views/View Controllers/Client/Features/Search/SearchViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -97,7 +90,8 @@
 		02E6EB9F24A53F2A00E0FE25 /* Client+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Client+CoreDataClass.swift"; path = "AnytimeFitness/Client+CoreDataClass.swift"; sourceTree = "<group>"; };
 		02E6EBA024A53F2A00E0FE25 /* Client+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Client+CoreDataProperties.swift"; path = "AnytimeFitness/Client+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		02E6EBA724A55F0A00E0FE25 /* RichFetchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichFetchRequest.swift; sourceTree = "<group>"; };
-		02E6EBA924A56B9F00E0FE25 /* CollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDelegate.swift; sourceTree = "<group>"; };
+		02E6EBAB24A596D900E0FE25 /* UpcomingInstructorClassesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingInstructorClassesTableViewController.swift; sourceTree = "<group>"; };
+		02E6EBAD24A5C38700E0FE25 /* UpcomingClientClassesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingClientClassesTableViewController.swift; sourceTree = "<group>"; };
 		C350B70524A1915200F2FE7B /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		C350B70724A1924300F2FE7B /* ClientSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSignUpViewController.swift; sourceTree = "<group>"; };
 		C350B70924A1926000F2FE7B /* InstructorSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorSignUpViewController.swift; sourceTree = "<group>"; };
@@ -198,9 +192,8 @@
 		023344E0249DABC8001BABB3 /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
-				0233450424A18842001BABB3 /* UpcomingInstructorClassesViewController.swift */,
-				0233450624A188C3001BABB3 /* UpcomingInstructorClassesCollectionViewCell.swift */,
 				0233451024A1C924001BABB3 /* ManageInstructorClassConfirmViewController.swift */,
+				02E6EBAB24A596D900E0FE25 /* UpcomingInstructorClassesTableViewController.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -222,9 +215,8 @@
 		023344E3249DABF9001BABB3 /* Upcoming */ = {
 			isa = PBXGroup;
 			children = (
-				0233450024A17914001BABB3 /* UpcomingClassViewController.swift */,
-				0233450224A17C42001BABB3 /* UpcomingClassesCollectionViewCell.swift */,
 				0288ED1024A3147000819E3E /* UpcomingClientClassDetailViewController.swift */,
+				02E6EBAD24A5C38700E0FE25 /* UpcomingClientClassesTableViewController.swift */,
 			);
 			path = Upcoming;
 			sourceTree = "<group>";
@@ -263,7 +255,6 @@
 			children = (
 				02569B6A249C737400B819EB /* SetBackground.swift */,
 				02E6EBA724A55F0A00E0FE25 /* RichFetchRequest.swift */,
-				02E6EBA924A56B9F00E0FE25 /* CollectionViewDelegate.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -496,10 +487,10 @@
 				0233451124A1C924001BABB3 /* ManageInstructorClassConfirmViewController.swift in Sources */,
 				C35C6FED249AF9D800A23367 /* AppDelegate.swift in Sources */,
 				023344F724A152FE001BABB3 /* ClassSearchResultsViewController.swift in Sources */,
-				0233450124A17914001BABB3 /* UpcomingClassViewController.swift in Sources */,
 				02E6EBA224A53F2A00E0FE25 /* NewClass+CoreDataProperties.swift in Sources */,
 				023344DA249D8327001BABB3 /* LocationSearchViewController.swift in Sources */,
 				023344EB249DD420001BABB3 /* CreateClassViewController.swift in Sources */,
+				02E6EBAC24A596D900E0FE25 /* UpcomingInstructorClassesTableViewController.swift in Sources */,
 				0288ED1324A31F8500819E3E /* InstructorCreateClassController.swift in Sources */,
 				023344F1249FD44E001BABB3 /* CompleteClassViewController.swift in Sources */,
 				0288ED1124A3147000819E3E /* UpcomingClientClassDetailViewController.swift in Sources */,
@@ -510,8 +501,8 @@
 				C35C6FF7249AF9D800A23367 /* AnytimeFitness.xcdatamodeld in Sources */,
 				C350B70824A1924300F2FE7B /* ClientSignUpViewController.swift in Sources */,
 				023344FD24A17057001BABB3 /* ClassReserveSearchViewController.swift in Sources */,
-				02E6EBAA24A56B9F00E0FE25 /* CollectionViewDelegate.swift in Sources */,
 				023B14DF24A51F2C003BCD29 /* ClassManagementController.swift in Sources */,
+				02E6EBAE24A5C38700E0FE25 /* UpcomingClientClassesTableViewController.swift in Sources */,
 				C350B72424A308F700F2FE7B /* CoreDataStack.swift in Sources */,
 				C35C6FF7249AF9D800A23367 /* AnytimeFitness.xcdatamodeld in Sources */,
 				02E6EBA124A53F2A00E0FE25 /* NewClass+CoreDataClass.swift in Sources */,
@@ -524,13 +515,10 @@
 				C350B70C24A1A0A600F2FE7B /* MainViewController.swift in Sources */,
 				02569B6B249C737400B819EB /* SetBackground.swift in Sources */,
 				C350B71624A1B4BA00F2FE7B /* CellSignUpCollectionViewCell.swift in Sources */,
-				0233450324A17C42001BABB3 /* UpcomingClassesCollectionViewCell.swift in Sources */,
 				0288ED1524A401AF00819E3E /* ClientClassSearchController.swift in Sources */,
 				C35C6FEF249AF9D800A23367 /* SceneDelegate.swift in Sources */,
 				023344ED249F17C3001BABB3 /* CreateClassNameViewController.swift in Sources */,
-				0233450724A188C3001BABB3 /* UpcomingInstructorClassesCollectionViewCell.swift in Sources */,
 				02E6EBA324A53F2A00E0FE25 /* Instructor+CoreDataClass.swift in Sources */,
-				0233450524A18842001BABB3 /* UpcomingInstructorClassesViewController.swift in Sources */,
 				023344F324A00EDA001BABB3 /* FitnessTypeCollectionViewCell.swift in Sources */,
 				023344FF24A17573001BABB3 /* ConfirmClassSearchViewController.swift in Sources */,
 			);

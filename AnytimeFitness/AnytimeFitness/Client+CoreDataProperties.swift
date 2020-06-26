@@ -22,7 +22,7 @@ extension Client {
     @NSManaged public var identifier: UUID
     @NSManaged public var lastName: String?
     @NSManaged public var phoneNumber: String?
-    @NSManaged public var registeredClasses: NSSet
+    @NSManaged public var registeredClasses: NSSet?
 
 }
 

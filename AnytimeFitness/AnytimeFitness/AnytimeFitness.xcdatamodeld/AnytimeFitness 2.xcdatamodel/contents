@@ -6,7 +6,7 @@
         <attribute name="identifier" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="lastName" optional="YES" attributeType="String"/>
         <attribute name="phoneNumber" optional="YES" attributeType="String"/>
-        <relationship name="registeredClasses" toMany="YES" deletionRule="Nullify" destinationEntity="NewClass" inverseName="registeredClients" inverseEntity="NewClass"/>
+        <relationship name="registeredClasses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NewClass" inverseName="registeredClients" inverseEntity="NewClass"/>
     </entity>
     <entity name="Instructor" representedClassName="Instructor" syncable="YES">
         <attribute name="email" optional="YES" attributeType="String"/>
@@ -15,20 +15,20 @@
         <attribute name="lastName" optional="YES" attributeType="String"/>
         <attribute name="phoneNumber" optional="YES" attributeType="String"/>
         <attribute name="website" optional="YES" attributeType="String"/>
-        <relationship name="createdClasses" toMany="YES" deletionRule="Nullify" destinationEntity="NewClass" inverseName="classInstructor" inverseEntity="NewClass"/>
+        <relationship name="createdClasses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NewClass" inverseName="classInstructor" inverseEntity="NewClass"/>
     </entity>
     <entity name="NewClass" representedClassName="NewClass" syncable="YES">
         <attribute name="classCurrentSizeCD" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="classDateCD" attributeType="Date" defaultDateTimeInterval="614809560" usesScalarValueType="NO"/>
         <attribute name="classDurationCD" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="classIdentifierCD" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="classIdentifierCD" attributeType="UUID" defaultValueString="A4B00212-0BC8-47AE-9FD9-ADBED148D269" usesScalarValueType="NO"/>
         <attribute name="classLevelCD" attributeType="String" defaultValueString="&quot;Beginner&quot;"/>
         <attribute name="classLocationCD" attributeType="String" defaultValueString="&quot;New York, NY&quot;"/>
         <attribute name="classMaxSizeCD" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="classNameCD" attributeType="String" defaultValueString="&quot;No Class Name&quot;"/>
         <attribute name="classTypeCD" attributeType="String" defaultValueString="&quot;Cardio&quot;"/>
-        <relationship name="classInstructor" maxCount="1" deletionRule="Nullify" destinationEntity="Instructor" inverseName="createdClasses" inverseEntity="Instructor"/>
-        <relationship name="registeredClients" toMany="YES" deletionRule="Nullify" destinationEntity="Client" inverseName="registeredClasses" inverseEntity="Client"/>
+        <relationship name="classInstructor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Instructor" inverseName="createdClasses" inverseEntity="Instructor"/>
+        <relationship name="registeredClients" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Client" inverseName="registeredClasses" inverseEntity="Client"/>
     </entity>
     <elements>
         <element name="Client" positionX="-63" positionY="-18" width="128" height="133"/>

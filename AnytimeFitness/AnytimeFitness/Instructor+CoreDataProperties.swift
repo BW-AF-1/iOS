@@ -22,7 +22,7 @@ extension Instructor {
     @NSManaged public var lastName: String?
     @NSManaged public var phoneNumber: String?
     @NSManaged public var website: String?
-    @NSManaged public var createdClasses: NSSet
+    @NSManaged public var createdClasses: NSSet?
 
 }
 

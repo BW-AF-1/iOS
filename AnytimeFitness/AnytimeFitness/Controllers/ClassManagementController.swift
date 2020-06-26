@@ -81,4 +81,33 @@ enum ClassTypeInt: Int, TableViewSelectable, Codable {
 
 class ClassManagementController {
 
+    func formatClassTime(with newClass: NewClass) -> String {
+        let timeString = newClass.classDateCD
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm a"
+        formatter.timeZone = TimeZone(secondsFromGMT: 0)
+        return formatter.string(from: timeString)
+    }
+
+    func formatClassDate(with newClass: NewClass) -> String {
+        let dateString = newClass.classDateCD
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEE MMM d, yyyy"
+        return formatter.string(from: dateString)
+    }
+
+
+    func updateInstructorClass(with newClass: NewClass, name: String, address: String, newDate: Date) {
+        newClass.classNameCD = name
+        newClass.classLocationCD = address
+        newClass.classDateCD = newDate
+        let moc = CoreDataStack.shared.mainContext
+        do {
+            try moc.save()
+        } catch {
+            moc.reset()
+            NSLog("Error saving managed object context: \(error)")
+        }
+    }
+
 }

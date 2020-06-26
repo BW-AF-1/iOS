@@ -27,7 +27,7 @@ extension NewClass {
     @NSManaged public var classCurrentSizeCD: Int16
     @NSManaged public var classIdentifierCD: UUID
     @NSManaged public var registeredClients: NSSet
-    @NSManaged public var classInstructor: Instructor
+    @NSManaged public var classInstructor: Instructor?
 
 }
 
