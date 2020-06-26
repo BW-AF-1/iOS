@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class UpcomingInstructorClassesViewController: UIViewController {
+class UpcomingInstructorClassesViewController: UIViewController,  CollectionViewFetchedResultsControllerDelegate {
 
     @IBOutlet weak var UpcomingInstructorClassesCollectionView: UICollectionView!
 
