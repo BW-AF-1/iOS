@@ -9,13 +9,13 @@
 import UIKit
 
 class UpcomingInstructorClassesCollectionViewCell: UICollectionViewCell {
-    var classes: InstructorCreateClassController.ExampleClassType?
+
     var newClasses: NewClass? {
         didSet {
             imageView.image = UIImage(contentsOfFile: newClasses?.classTypeCD ?? "MainFitness")
             classNameText.text = newClasses?.classNameCD
-            classDateText.text = newClasses?.classDateCD?.description
-            classTimeText.text = newClasses?.classDateCD?.description
+            classDateText.text = newClasses?.classDateCD.description
+            classTimeText.text = newClasses?.classDateCD.description
         }
     }
 
@@ -31,8 +31,8 @@ class UpcomingInstructorClassesCollectionViewCell: UICollectionViewCell {
     }
 
     @IBAction func deleteButtonClicked(_ sender: UpcomingClassesCollectionViewCell) {
-        if classes != nil {
-            InstructorCreateClassController.sharedInstructorCreateClassController.deletedClasses(with: classes!)
+        if newClasses != nil {
+          //  InstructorCreateClassController.sharedInstructorCreateClassController.deletedClasses(with: newClasses!)
         } else {
             return
         }

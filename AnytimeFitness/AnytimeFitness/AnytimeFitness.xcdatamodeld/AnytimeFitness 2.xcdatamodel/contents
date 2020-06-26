@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Client" representedClassName="Client" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="identifier" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="String"/>
+        <relationship name="registeredClasses" toMany="YES" deletionRule="Nullify" destinationEntity="NewClass" inverseName="registeredClients" inverseEntity="NewClass"/>
+    </entity>
+    <entity name="Instructor" representedClassName="Instructor" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="identifier" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="String"/>
+        <attribute name="website" optional="YES" attributeType="String"/>
+        <relationship name="createdClasses" toMany="YES" deletionRule="Nullify" destinationEntity="NewClass" inverseName="classInstructor" inverseEntity="NewClass"/>
+    </entity>
+    <entity name="NewClass" representedClassName="NewClass" syncable="YES">
+        <attribute name="classCurrentSizeCD" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="classDateCD" attributeType="Date" defaultDateTimeInterval="614809560" usesScalarValueType="NO"/>
+        <attribute name="classDurationCD" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="classIdentifierCD" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="classLevelCD" attributeType="String" defaultValueString="&quot;Beginner&quot;"/>
+        <attribute name="classLocationCD" attributeType="String" defaultValueString="&quot;New York, NY&quot;"/>
+        <attribute name="classMaxSizeCD" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="classNameCD" attributeType="String" defaultValueString="&quot;No Class Name&quot;"/>
+        <attribute name="classTypeCD" attributeType="String" defaultValueString="&quot;Cardio&quot;"/>
+        <relationship name="classInstructor" maxCount="1" deletionRule="Nullify" destinationEntity="Instructor" inverseName="createdClasses" inverseEntity="Instructor"/>
+        <relationship name="registeredClients" toMany="YES" deletionRule="Nullify" destinationEntity="Client" inverseName="registeredClasses" inverseEntity="Client"/>
+    </entity>
+    <elements>
+        <element name="Client" positionX="-63" positionY="-18" width="128" height="133"/>
+        <element name="Instructor" positionX="-54" positionY="-9" width="128" height="148"/>
+        <element name="NewClass" positionX="-54" positionY="27" width="128" height="208"/>
+    </elements>
+</model>

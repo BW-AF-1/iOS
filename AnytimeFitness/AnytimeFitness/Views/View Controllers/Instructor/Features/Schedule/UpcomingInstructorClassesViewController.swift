@@ -7,10 +7,25 @@
 //
 
 import UIKit
+import CoreData
 
 class UpcomingInstructorClassesViewController: UIViewController {
 
     @IBOutlet weak var UpcomingInstructorClassesCollectionView: UICollectionView!
+
+    lazy var fetchedResultsController: NSFetchedResultsController<NewClass> = {
+        let fetchRequest = NSFetchRequest<NewClass>(entityName: "NewClass")
+        let moc = CoreDataStack.shared.mainContext
+        let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
+        frc.delegate = CollectionViewFetchedResultsControllerDelegate()
+        do {
+            try frc.performFetch()
+        } catch {
+            NSLog("error fetching NewClass objects")
+        }
+        return frc
+
+    }()
 
        override func viewDidLoad() {
            super.viewDidLoad()
@@ -26,8 +41,7 @@ class UpcomingInstructorClassesViewController: UIViewController {
         if segue.identifier == "manageInstructorClass" {
             guard let indexPath = UpcomingInstructorClassesCollectionView.indexPathsForSelectedItems?.first else { return }
             let destinatonVC = segue.destination as? ManageInstructorClassConfirmViewController
-           // destinatonVC?.updateClass = InstructorCreateClassController.sharedInstructorCreateClassController.exampleClass[indexPath.item]
-           // destinatonVC?.updateClass = NewClass[indexPath.item]
+
         }
     }
    }
@@ -35,30 +49,25 @@ class UpcomingInstructorClassesViewController: UIViewController {
 
 extension UpcomingInstructorClassesViewController: UICollectionViewDataSource, UICollectionViewDelegate {
        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-       // return newClassArray?.count ?? 1
 
-        InstructorCreateClassController.sharedInstructorCreateClassController.exampleClass.count
+        return fetchedResultsController.sections?[section].numberOfObjects ?? 0
        }
 
        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
          guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UpcomingInstructorClasses", for: indexPath) as?
            UpcomingInstructorClassesCollectionViewCell else { return UICollectionViewCell() }
-       // let upcomingClass = newClassArray?[indexPath.item]
-            let upcomingClass = InstructorCreateClassController.sharedInstructorCreateClassController.exampleClass[indexPath.item]
-       //  cell.newClasses = upcomingClass
+        cell.newClasses = fetchedResultsController.object(at: indexPath) as? NewClass
            cell.rescheduleButton.setDarkButtonColor(toButtonNamed: cell.rescheduleButton)
            cell.deleteButton.setDarkButtonColor(toButtonNamed: cell.deleteButton)
            cell.layer.borderColor = UIColor.black.cgColor
            cell.layer.borderWidth = 3
            cell.layer.cornerRadius = 5
 
-       // cell.imageView.image = UIImage(named: InstructorCreateClassController.sharedInstructorCreateClassController.exampleClass[indexPath.item].classType)
-       // cell.classDateText.text = InstructorCreateClassController.sharedInstructorCreateClassController.exampleClass[indexPath.item].classDate.description
-       // cell.classNameText.text = InstructorCreateClassController.sharedInstructorCreateClassController.exampleClass[indexPath.item].className
-       // cell.classTimeText.text = InstructorCreateClassController.sharedInstructorCreateClassController.exampleClass[indexPath.item].classDate.description
            return cell
        }
 
+
    }
+
 
 

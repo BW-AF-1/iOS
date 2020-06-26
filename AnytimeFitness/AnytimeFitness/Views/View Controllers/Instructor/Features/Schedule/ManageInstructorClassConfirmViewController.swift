@@ -23,13 +23,13 @@ class ManageInstructorClassConfirmViewController: UIViewController {
         super.viewDidLoad()
         guard let toUpdate = updateClass else { return }
         classNameText.text = toUpdate.classNameCD
-        classDatePicker.date = toUpdate.classDateCD ?? Date()
+        classDatePicker.date = toUpdate.classDateCD 
         classLocationText.text = toUpdate.classLocationCD
         confirmButton.setDarkButtonColor(toButtonNamed: confirmButton)
     }
 
     @IBAction func confirmButtonClicked(_ sender: Any) {
-        guard let name = classNameText.text, !name.isEmpty, let address = classLocationText.text, !address.isEmpty, let toUpdateClass = updateClass else { return }
+        guard let name = classNameText.text, !name.isEmpty, let address = classLocationText.text, !address.isEmpty, let _ = updateClass else { return }
         //InstructorCreateClassController.sharedInstructorCreateClassController.updateClass(with: toUpdateClass, newName: name, newDate: classDatePicker.date, newLocation: address)
         self.navigationController?.popToRootViewController(animated: true)
     }
