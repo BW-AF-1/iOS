@@ -102,7 +102,7 @@
                                             <constraint firstAttribute="width" constant="374" id="NQS-1f-VBG"/>
                                             <constraint firstAttribute="height" constant="34" id="pdF-87-4Dj"/>
                                         </constraints>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
@@ -283,7 +283,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="F8E-0A-8NB">
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="F8E-0A-8NB">
                                                 <rect key="frame" x="0.0" y="31.5" width="374" height="216"/>
                                             </datePicker>
                                         </subviews>
@@ -453,10 +453,10 @@
             </objects>
             <point key="canvasLocation" x="2548" y="139"/>
         </scene>
-        <!--InstructorScheduleViewController-->
+        <!--InstructorScheduleTableViewController-->
         <scene sceneID="Aeu-13-h0n">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="InstructorScheduleViewController" storyboardName="InstructorSchedule" referencedIdentifier="InstructorScheduleViewController" id="gcz-NY-oIs" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="InstructorScheduleViewController" storyboardName="InstructorSchedule" referencedIdentifier="InstructorScheduleTableViewController" id="gcz-NY-oIs" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="tcx-V0-vLA"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bam-1k-xhL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
