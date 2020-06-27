@@ -27,11 +27,18 @@ extension SignUpSelectionViewController: UICollectionViewDataSource, UICollectio
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SelectionCell", for: indexPath) as? CellSignUpCollectionViewCell else { return UICollectionViewCell()}
-
+        
         let selectionCard = selectionController.selections[indexPath.item]
         cell.selection = selectionCard
         return cell
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView,
+    didSelectItemAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            self.performSegue(withIdentifier: "instructorSignUp", sender: self)
+        } else if indexPath.row == 1 {
+            self.performSegue(withIdentifier: "clientSignUp", sender: self)
+        }
+    }
 }
