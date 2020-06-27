@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>327641892884-68qn0ud8gr4me2ke5b3r6h3q9on1sg2l.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.327641892884-68qn0ud8gr4me2ke5b3r6h3q9on1sg2l</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBGEIrisbm1LY2hJfI6c2D0onh_kziknE4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>327641892884</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.morgan.AnytimeFitness</string>
+	<key>PROJECT_ID</key>
+	<string>anytimefitnessapp-eade4</string>
+	<key>STORAGE_BUCKET</key>
+	<string>anytimefitnessapp-eade4.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:327641892884:ios:6632de46ea99a26284bf01</string>
+	<key>DATABASE_URL</key>
+	<string>https://anytimefitnessapp-eade4.firebaseio.com</string>
+</dict>
+</plist>

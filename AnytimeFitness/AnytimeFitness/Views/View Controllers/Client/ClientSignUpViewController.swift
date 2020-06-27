@@ -7,38 +7,48 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
 
 class ClientSignUpViewController: UIViewController {
-
+    
     @IBOutlet var firstName: UITextField!
     @IBOutlet var lastName: UITextField!
     @IBOutlet var email: UITextField!
-    @IBOutlet var phoneNumber: UITextField!
+    @IBOutlet var password: UITextField!
+    @IBOutlet var errorLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         firstName.becomeFirstResponder()
+        errorLabel.alpha = 0
     }
     
     @IBAction func createClient(_ sender: Any) {
         guard let firstName = firstName.text else { return }
         guard let lastName = lastName.text else { return }
         guard let email = email.text else { return }
-        guard let phoneNumber = phoneNumber.text else { return }
-
-        print(firstName, lastName, email, phoneNumber)
+        guard let password = password.text else { return }
         
-                Client(email: email,
-                       firstName: firstName,
-                    lastName: lastName,
-                    phoneNumber: phoneNumber,
-                    context: CoreDataStack.shared.mainContext)
-                do {
-                    try CoreDataStack.shared.mainContext.save()
-                } catch {
-                    NSLog("Error saving managed object context: \(error)")
         
+        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+            
+            if error != nil {
+                self.errorLabel.alpha = 1
+                print(error)
+            } else {
+                
+                let db = Firestore.firestore()
+                
+                db.collection("clients").addDocument(data: ["first_name": firstName, "last_name": lastName, "uid": result!.user.uid]) { (error) in
+                    
+                    if error != nil {
+                        print(error)
+                    }
+                    self.errorLabel.alpha = 0
+                    self.performSegue(withIdentifier: "clientSignIn", sender: self)
+                }
             }
+        }
     }
-
 }

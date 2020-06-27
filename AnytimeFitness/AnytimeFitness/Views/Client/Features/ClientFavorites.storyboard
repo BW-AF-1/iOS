@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,7 +14,19 @@
                     <view key="view" contentMode="scaleToFill" id="t0E-wW-b2q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PEv-u8-pqz">
+                                <rect key="frame" x="0.0" y="160" width="414" height="633"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="PEv-u8-pqz" firstAttribute="top" secondItem="IvA-jZ-O7e" secondAttribute="top" constant="20" id="E38-wr-edh"/>
+                            <constraint firstItem="IvA-jZ-O7e" firstAttribute="trailing" secondItem="PEv-u8-pqz" secondAttribute="trailing" id="FbQ-a5-6BT"/>
+                            <constraint firstItem="IvA-jZ-O7e" firstAttribute="bottom" secondItem="PEv-u8-pqz" secondAttribute="bottom" constant="20" id="Nxt-ic-fvA"/>
+                            <constraint firstItem="PEv-u8-pqz" firstAttribute="leading" secondItem="IvA-jZ-O7e" secondAttribute="leading" id="na6-Fe-YHG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="IvA-jZ-O7e"/>
                     </view>
                     <navigationItem key="navigationItem" title="Favorites" id="fvZ-Yp-Xx8"/>
@@ -33,6 +45,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="8D9-ck-z3C">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -45,6 +58,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="star.fill" catalog="system" width="64" height="58"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
     </resources>
 </document>
