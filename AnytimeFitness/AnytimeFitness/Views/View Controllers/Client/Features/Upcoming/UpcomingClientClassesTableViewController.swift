@@ -14,15 +14,15 @@ class UpcomingClientClassesTableViewController: UITableViewController {
 var classManagementController = ClassManagementController()
 
     lazy var fetchedResultsController: NSFetchedResultsController<NewClass> = {
+        let moc = CoreDataStack.shared.mainContext
         let fetchRequest = NSFetchRequest<NewClass>(entityName: "NewClass")
-      // let fetchClient = NSFetchRequest<Client>(entityName: "Client")
+
         fetchRequest.sortDescriptors = [
             NSSortDescriptor(key: "classDateCD", ascending: true)
         ]
-        //let clientName = Client
-       // fetchRequest.predicate = NSPredicate(format: "ANY registedClients.firstName IN %@", identifier)
 
-        let moc = CoreDataStack.shared.mainContext
+      // fetchRequest.predicate = NSPredicate(format: "ANY registeredClients.firstName IN %@", "morgan")
+
         let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
         do {
             try frc.performFetch()
