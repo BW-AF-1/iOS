@@ -14,10 +14,18 @@ class ConfirmClassSearchViewController: UIViewController {
     @IBOutlet weak var classTimeText: UILabel!
     @IBOutlet weak var confirmButton: UIButton!
 
+    var confirmClass: NewClass?
+    var classManagementController = ClassManagementController()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         confirmButton.setDarkButtonColor(toButtonNamed: confirmButton)
         view.setDarkBackground()
+
+        guard let confirmClass = confirmClass else { return }
+        classTitleText.text = confirmClass.classNameCD
+        classTimeText.text = classManagementController.formatClassTime(with: confirmClass)
+        classDateText.text = classManagementController.formatClassDate(with: confirmClass)
     }
 
     @IBAction func ConfirmButtonClicked(_ sender: Any) {

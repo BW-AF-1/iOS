@@ -18,11 +18,35 @@ class ClassReserveSearchViewController: UIViewController {
     @IBOutlet weak var remainingNumber: UILabel!
     @IBOutlet weak var reserveButton: UIButton!
 
+    var classManagementController = ClassManagementController()
+
+    var finalClass: NewClass? {
+        didSet {
+            print("this is the final class: \(String(describing: finalClass))")
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         reserveButton.setDarkButtonColor(toButtonNamed: reserveButton)
-        classImageView.setBackground()
+        guard let finalClass = finalClass else { return }
+        classImageView.image = UIImage(named: finalClass.classTypeCD)
+        classNameText.text = finalClass.classNameCD
+        classDateText.text = classManagementController.formatClassDate(with: finalClass)
+        classTimeText.text = classManagementController.formatClassTime(with: finalClass)
+        classLocationText.text = finalClass.classLocationCD
+        reservedRatio.text = "\(finalClass.classCurrentSizeCD)/ \(finalClass.classMaxSizeCD)"
+        remainingNumber.text = "\(finalClass.classMaxSizeCD - finalClass.classCurrentSizeCD) spot(s)"
+
+        if finalClass.classMaxSizeCD == finalClass.classCurrentSizeCD {
+            reserveButton.setLightButtonColor(toButtonNamed: reserveButton)
+            reserveButton.isEnabled = false
+        }
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+              guard let nextVC = segue.destination as? ConfirmClassSearchViewController else { return }
+          nextVC.confirmClass = finalClass
+          }
 
 }

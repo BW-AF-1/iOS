@@ -23,7 +23,7 @@
                                 </constraints>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <segue destination="YiK-Kr-tG3" kind="show" id="M2s-cP-nPf"/>
+                                    <segue destination="YiK-Kr-tG3" kind="show" identifier="ShowSearchLocation" id="M2s-cP-nPf"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="v6p-K2-eyB">
@@ -98,7 +98,7 @@
         <!--Class Search-->
         <scene sceneID="vLL-ub-uam">
             <objects>
-                <viewController id="YiK-Kr-tG3" customClass="LocationSearchViewController" customModule="AnytimeFitness" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="YiK-Kr-tG3" customClass="LocationSearchViewController" customModule="AnytimeFitness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vpz-m4-quX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -110,7 +110,7 @@
                                 </constraints>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <segue destination="RW0-78-Pa2" kind="show" id="uqf-28-rWM"/>
+                                    <segue destination="RW0-78-Pa2" kind="show" identifier="ShowClassLevel" id="uqf-28-rWM"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EOm-Ud-KY0">
@@ -120,7 +120,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </searchBar>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t7d-a2-HkJ">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t7d-a2-HkJ">
                                         <rect key="frame" x="0.0" y="56" width="414" height="464"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
@@ -160,9 +160,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Class Search" id="SeK-xZ-Wii"/>
                     <connections>
-                        <outlet property="locationSearch" destination="fcw-0M-4oy" id="tPe-IJ-dYQ"/>
                         <outlet property="locationTableView" destination="t7d-a2-HkJ" id="sKf-Mi-c2l"/>
                         <outlet property="nextButton" destination="Ase-Mb-Z3S" id="Bhx-oj-qh1"/>
+                        <outlet property="searchBar" destination="fcw-0M-4oy" id="bqU-Lf-QMx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AGD-0w-yRu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

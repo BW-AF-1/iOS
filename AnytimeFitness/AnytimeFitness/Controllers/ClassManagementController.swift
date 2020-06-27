@@ -110,4 +110,17 @@ class ClassManagementController {
         }
     }
 
+    func createClientClass(with newClass: NewClass) {
+        let clientClass = NewClass(classDateCD: newClass.classDateCD, classDurationCD: newClass.classDurationCD, classLevelCD: newClass.classLevelCD, classLocationCD: newClass.classLocationCD, classMaxSizeCD: newClass.classMaxSizeCD, classCurrentSizeCD: newClass.classCurrentSizeCD, classNameCD: newClass.classNameCD, classTypeCD: newClass.classTypeCD, classIdentifierCD: newClass.classIdentifierCD, context: CoreDataStack.shared.mainContext)
+        let moc = CoreDataStack.shared.mainContext
+        do {
+            try moc.save()
+        } catch {
+            moc.reset()
+            NSLog("Error saving managed object context: \(error)")
+        }
+    }
+
+
+
 }

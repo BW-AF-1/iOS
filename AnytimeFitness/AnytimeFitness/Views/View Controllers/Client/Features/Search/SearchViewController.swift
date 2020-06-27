@@ -34,6 +34,10 @@ class SearchViewController: UIViewController {
         fitnessCollection.reloadData()
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let nextVC = segue.destination as? LocationSearchViewController else { return }
+        nextVC.selectedFitness = selectedFitnessTypes
+    }
 }
 
 extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource {

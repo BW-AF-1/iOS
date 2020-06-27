@@ -18,6 +18,13 @@ class ClassDetailSearchViewController: UIViewController {
 
     @IBOutlet weak var classDurationLabel: UILabel!
 
+    var selectedLocations: [NewClass] = []
+    var selectedDetail: [NewClass] = [] {
+        didSet {
+            print("final selection: \(selectedDetail)")
+        }
+    }
+
     var fitnessLevel: [String] = ["Beginner", "Intermediate", "Advanced"]
     var classSize: [String] = ["Small (1-5)", "Medium (5-15)", "Large (16+)"]
     var classDuration: [String] = ["Short (less than 30 min)", "Average (30 - 45 min)", "Long (more than 45 min)"]
@@ -71,9 +78,62 @@ class ClassDetailSearchViewController: UIViewController {
     }
 
     @IBAction func nextButtonClicked(_ sender: UIButton) {
+        var classLevel: [NewClass] = []
+        var classSize: [NewClass] = []
+        var classDuration: [NewClass] = []
 
+        for element in selectedLocations {
+            for item in selectedFitnessLevel {
+                if element.classLevelCD.contains(find: item) {
+                    classLevel.append(element)
+                }
+            }
+            for size in selectedClassSize {
+                if size.containsIgnoringCase(find: "small") {
+                    if element.classMaxSizeCD < 6 {
+                        classSize.append(element)
+                    }
+                } else if size.containsIgnoringCase(find: "medium") {
+                    if element.classMaxSizeCD > 5 && element.classMaxSizeCD < 16 {
+                        classSize.append(element)
+                    } else if size.containsIgnoringCase(find: "large") {
+                        if element.classMaxSizeCD > 15 {
+                            classSize.append(element)
+                        }
+                    }
+                }
+            }
+            for time in selectedClassDuration {
+                if time.containsIgnoringCase(find: "short") {
+                    if element.classDurationCD < 31 {
+                        classDuration.append(element)
+                    }
+                } else if time.containsIgnoringCase(find: "average") {
+                    if element.classDurationCD > 30 && element.classDurationCD < 46 {
+                        classDuration.append(element)
+                    } else if time.containsIgnoringCase(find: "long") {
+                        if element.classDurationCD > 45 {
+                            classDuration.append(element)
+                        }
+                    }
+                }
+
+            }
+        }
+        for everything in selectedLocations {
+            if classLevel.contains(everything) && classSize.contains(everything) && classDuration.contains(everything){
+                selectedDetail.append(everything)
+            }
+        }
+        viewDidLoad()
+        print("selected details: \(selectedDetail)")
+        print("class level detail: \(classLevel)")
+        print ("class duration details: \(classDuration)")
     }
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            guard let nextVC = segue.destination as? ClassSearchResultsViewController else { return }
+            nextVC.searchedClasses = selectedDetail
+        }
 }
 
 extension ClassDetailSearchViewController: UITableViewDelegate, UITableViewDataSource {
@@ -99,8 +159,8 @@ extension ClassDetailSearchViewController: UITableViewDelegate, UITableViewDataS
             return sizeCell
         } else {
             let durationCell = tableView.dequeueReusableCell(withIdentifier: "ClassDurationCell", for: indexPath)
-                      durationCell.textLabel?.text = classDuration[indexPath.row]
-                      return durationCell
+            durationCell.textLabel?.text = classDuration[indexPath.row]
+            return durationCell
         }
     }
 
