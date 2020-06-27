@@ -29,6 +29,8 @@ class ConfirmClassSearchViewController: UIViewController {
     }
 
     @IBAction func ConfirmButtonClicked(_ sender: Any) {
+        guard let confirmClass = confirmClass else { return }
+        classManagementController.createClientClass(with: confirmClass)
         self.navigationController?.popToRootViewController(animated: true)
     }
 

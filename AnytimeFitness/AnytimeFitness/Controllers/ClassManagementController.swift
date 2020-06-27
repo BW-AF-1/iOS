@@ -112,6 +112,8 @@ class ClassManagementController {
 
     func createClientClass(with newClass: NewClass) {
         let clientClass = NewClass(classDateCD: newClass.classDateCD, classDurationCD: newClass.classDurationCD, classLevelCD: newClass.classLevelCD, classLocationCD: newClass.classLocationCD, classMaxSizeCD: newClass.classMaxSizeCD, classCurrentSizeCD: newClass.classCurrentSizeCD, classNameCD: newClass.classNameCD, classTypeCD: newClass.classTypeCD, classIdentifierCD: newClass.classIdentifierCD, context: CoreDataStack.shared.mainContext)
+        let client = Client(context: CoreDataStack.shared.mainContext)
+        client.registeredClasses?.adding(clientClass)
         let moc = CoreDataStack.shared.mainContext
         do {
             try moc.save()

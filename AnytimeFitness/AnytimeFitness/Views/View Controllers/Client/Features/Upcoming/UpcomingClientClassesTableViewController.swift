@@ -15,13 +15,15 @@ var classManagementController = ClassManagementController()
 
     lazy var fetchedResultsController: NSFetchedResultsController<NewClass> = {
         let fetchRequest = NSFetchRequest<NewClass>(entityName: "NewClass")
+      // let fetchClient = NSFetchRequest<Client>(entityName: "Client")
         fetchRequest.sortDescriptors = [
             NSSortDescriptor(key: "classDateCD", ascending: true)
         ]
+        //let clientName = Client
+       // fetchRequest.predicate = NSPredicate(format: "ANY registedClients.firstName IN %@", identifier)
 
         let moc = CoreDataStack.shared.mainContext
         let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
-        frc.delegate = self
         do {
             try frc.performFetch()
         } catch {
