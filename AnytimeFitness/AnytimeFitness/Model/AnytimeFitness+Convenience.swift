@@ -42,14 +42,17 @@ extension Instructor {
     }
 }
 
+
 extension NewClass {
     @discardableResult convenience init(classDateCD: Date,
                                         classDurationCD: Int16,
                                         classLevelCD: String,
                                         classLocationCD: String,
                                         classMaxSizeCD: Int16,
+                                        classCurrentSizeCD: Int16 = 0,
                                         classNameCD: String,
                                         classTypeCD: String,
+                                        classIdentifierCD: UUID = UUID(),
                                         context: NSManagedObjectContext) {
         self.init(context: context)
         self.classDateCD = classDateCD
@@ -57,8 +60,11 @@ extension NewClass {
         self.classLevelCD = classLevelCD
         self.classLocationCD = classLocationCD
         self.classMaxSizeCD = classMaxSizeCD
+        self.classCurrentSizeCD = classCurrentSizeCD
         self.classNameCD = classNameCD
         self.classTypeCD = classTypeCD
+        self.classIdentifierCD = classIdentifierCD
     }
     
 }
+
