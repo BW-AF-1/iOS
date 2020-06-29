@@ -16,16 +16,6 @@
             </objects>
             <point key="canvasLocation" x="917" y="-74"/>
         </scene>
-        <!--ClientFavorites-->
-        <scene sceneID="Zzo-55-7ek">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ClientFavorites" referencedIdentifier="ClientFavorites" id="BqX-ab-mYu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Wfy-I8-U2z"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xHl-l8-8m7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="917" y="-119"/>
-        </scene>
         <!--ClientSearch-->
         <scene sceneID="Z0f-rS-y7F">
             <objects>
@@ -52,11 +42,11 @@
                 <tabBarController storyboardIdentifier="ClientMain" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Sqx-nP-NFT" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="R1d-6g-IsV">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BqX-ab-mYu" kind="relationship" relationship="viewControllers" id="PLl-Jb-ecU"/>
                         <segue destination="gyB-6t-jD8" kind="relationship" relationship="viewControllers" id="Oyx-4G-vYo"/>
                         <segue destination="ONx-8E-VcG" kind="relationship" relationship="viewControllers" id="doa-fB-5Uv"/>
                         <segue destination="SlE-yU-7dC" kind="relationship" relationship="viewControllers" id="s4Z-Y8-3uh"/>

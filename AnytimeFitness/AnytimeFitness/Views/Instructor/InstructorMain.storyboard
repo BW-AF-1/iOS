@@ -14,7 +14,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uJK-Kc-aVr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="912" y="230"/>
+            <point key="canvasLocation" x="886" y="157"/>
         </scene>
         <!--InstructorCreate-->
         <scene sceneID="PGN-ik-H8X">
@@ -24,7 +24,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="utH-Vm-0me" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="912" y="-39"/>
+            <point key="canvasLocation" x="886" y="13"/>
         </scene>
         <!--InstructorSchedule-->
         <scene sceneID="Nda-vX-nUn">
@@ -34,17 +34,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q3P-FD-P1l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="912" y="47"/>
-        </scene>
-        <!--InstructorHome-->
-        <scene sceneID="7UM-3C-KmW">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="StoryboardProfile" storyboardName="InstructorHome" referencedIdentifier="InstructorHome" id="6rY-Og-S7A" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="3gy-nN-t0i"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uUw-fa-hxY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="912" y="141"/>
+            <point key="canvasLocation" x="886" y="76"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="FD2-Yt-Ggb">
@@ -52,11 +42,11 @@
                 <tabBarController storyboardIdentifier="InstructorMain" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Uyf-U1-fPd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kIh-Qw-LYZ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="6rY-Og-S7A" kind="relationship" relationship="viewControllers" id="fUq-ZK-csO"/>
                         <segue destination="1l7-ia-mte" kind="relationship" relationship="viewControllers" id="zBZ-Xy-1Fm"/>
                         <segue destination="TW4-VI-eZO" kind="relationship" relationship="viewControllers" id="fOa-f5-ybv"/>
                         <segue destination="Lvu-wA-ekf" kind="relationship" relationship="viewControllers" id="Rst-Mh-WvL"/>

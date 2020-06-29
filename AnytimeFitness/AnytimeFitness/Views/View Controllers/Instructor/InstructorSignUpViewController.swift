@@ -42,7 +42,7 @@ class InstructorSignUpViewController: UIViewController {
                 
                 let db = Firestore.firestore()
                 
-                db.collection("instructors").addDocument(data: ["first_name": firstName, "last_name": lastName, "uid": result!.user.uid]) { (error) in
+                db.collection("instructors").addDocument(data: ["first_name": firstName, "last_name": lastName, "email": email, "uid": result!.user.uid]) { (error) in
                     
                     if error != nil {
                         print(error)

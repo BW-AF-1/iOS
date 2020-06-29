@@ -27,6 +27,8 @@ class InstructorSignInViewController: UIViewController {
                 return
             } else {
                 self.errorLabel.alpha = 0
+                UserController.currentUserUUID = "\(result!.user.uid)"
+                print("\(result!.user.uid)")
                 self.performSegue(withIdentifier: "instructorMain", sender: self)
             }
         }
