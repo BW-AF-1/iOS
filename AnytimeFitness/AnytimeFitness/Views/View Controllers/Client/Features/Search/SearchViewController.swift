@@ -37,11 +37,11 @@ class SearchViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let nextVC = segue.destination as? LocationSearchViewController else { return }
         if selectedFitnessTypes.count > 1 {
-        nextVC.selectedFitness = selectedFitnessTypes
+            nextVC.selectedFitness = selectedFitnessTypes
         } else {
             nextVC.selectedFitness = ClassTypeInt.allFitnessTypeNames
         }
-}
+    }
 }
 
 extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -53,7 +53,12 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "fitnessType", for: indexPath) as? FitnessTypeCollectionViewCell else { return UICollectionViewCell() }
-        cell.fitnessImageView.image = UIImage(named: ClassTypeInt.allFitnessTypeNames[indexPath.item])
+        let imageView = UIImage(named: ClassTypeInt.allFitnessTypeNames[indexPath.item])
+        let blackCover: UIView = UIView(frame: cell.contentView.frame)
+        blackCover.backgroundColor = UIColor.black
+        blackCover.layer.opacity = 0.3
+        cell.backgroundView = UIImageView(image: imageView)
+        cell.backgroundView?.addSubview(blackCover)
         return cell
     }
 
@@ -62,7 +67,9 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if selectedFitnessTypes.contains(ClassTypeInt.allFitnessTypeNames [indexPath.item]) { selectedFitnessTypes.removeAll{ $0 == ClassTypeInt.allFitnessTypeNames[indexPath.item]}
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "fitnessType", for: indexPath) as? FitnessTypeCollectionViewCell else { return }
+        cell.fitnessImageView.setDarkBackground(toImageNamed: ClassTypeInt.allFitnessTypeNames[indexPath.item])
+        if selectedFitnessTypes.contains(ClassTypeInt.allFitnessTypeNames[indexPath.item]) { selectedFitnessTypes.removeAll{ $0 == ClassTypeInt.allFitnessTypeNames[indexPath.item]}
         } else {
             selectedFitnessTypes.append(ClassTypeInt.allFitnessTypeNames[indexPath.item])
         }

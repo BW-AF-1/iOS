@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import FirebaseAuth
+import CoreData
 
 class ClientSignInViewController: UIViewController {
     
@@ -15,12 +15,10 @@ class ClientSignInViewController: UIViewController {
     @IBOutlet var password: UITextField!
     @IBOutlet var errorLabel: UILabel!
 
-    var clientAuth: ClientRepresentation?
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         errorLabel.alpha = 0
+        NetworkController.sharedNetworkController.fetchAllClients()
     }
     
     @IBAction func signInTapped(_ sender: Any) {
@@ -28,22 +26,15 @@ class ClientSignInViewController: UIViewController {
 
         let clientAuth = ClientRepresentation(email: email, password: password)
 
-        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
-            if error != nil{
-                self.errorLabel.alpha = 1
-                return
-            } else {
+        NetworkController.sharedNetworkController.loginClient(with: clientAuth) { (error) in
+            if let error = error {
+                print("Error for client logging in: \(error)")
+            }
+            DispatchQueue.main.async {
                 self.errorLabel.alpha = 0
-                NetworkController.sharedNetworkController.loginClient(with: clientAuth) { (error) in
-                if let error = error {
-                    print("Error for client logging in: \(error)")
-                }
-                 DispatchQueue.main.async {
                 self.performSegue(withIdentifier: "clientHome", sender: self)
-                }
             }
         }
-        
+
     }
-}
 }

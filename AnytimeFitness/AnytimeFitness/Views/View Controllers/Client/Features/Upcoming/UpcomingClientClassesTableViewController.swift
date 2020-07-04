@@ -15,21 +15,20 @@ var classManagementController = ClassManagementController()
 let currentClient = NetworkController.sharedNetworkController.currentCDClient
 var currentClientClasses: [NewClass] = [] {
         didSet {
-            print("list of currentClientClasses: \(currentClientClasses)")
+          //  print("list of currentClientClasses: \(currentClientClasses)")
         }
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-             guard let currentClient = currentClient else { return }
-                if let classArray = currentClient.registeredClasses!.allObjects as? [NewClass], !classArray.isEmpty {
-                    for element in classArray {
-                       if currentClientClasses.contains(element) { return } else {
-                        currentClientClasses.append(element)
-                       }
+        let currentClientInit = NetworkController.sharedNetworkController.currentCDClient
+        guard let currentClients = currentClientInit else { return }
+        if let classArray = currentClients.registeredClasses!.allObjects as? [NewClass], !classArray.isEmpty, classArray.count > 0 {
+                        currentClientClasses = classArray
                         tableView.reloadData()
-                    }
-                }
+                } else {
+                    return
+        }
     }
 
     @IBAction func refreshData(_ sender: Any) {
@@ -57,7 +56,12 @@ var currentClientClasses: [NewClass] = [] {
 
         cell.textLabel?.text = newClass.classNameCD
         cell.detailTextLabel?.text = classManagementController.formatClassTime(with: newClass)
-        cell.setDarkBackground(toImageNamed: newClass.classTypeCD)
+        let imageView = UIImage(named: newClass.classTypeCD)
+        let blackCover: UIView = UIView(frame: cell.contentView.frame)
+        blackCover.backgroundColor = UIColor.black
+        blackCover.layer.opacity = 0.75
+        cell.backgroundView = UIImageView(image: imageView)
+        cell.backgroundView?.addSubview(blackCover)
         return cell
     }
 
@@ -67,13 +71,17 @@ var currentClientClasses: [NewClass] = [] {
                     let moc = CoreDataStack.shared.mainContext
             currentClient?.removeFromRegisteredClasses(newClass)
             classManagementController.deleteClassCount(with: newClass)
+            classManagementController.deleteClientClass(with: newClass)
+            currentClientClasses.removeAll{ $0 == newClass }
                     do {
                         try moc.save()
-                        tableView.reloadData()
                     } catch {
                         moc.reset()
                         NSLog("Error saving managed object context: \(error)")
                     }
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
                 }
             }
 

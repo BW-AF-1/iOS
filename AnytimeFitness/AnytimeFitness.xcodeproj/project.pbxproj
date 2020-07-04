@@ -32,7 +32,6 @@
 		02569B6B249C737400B819EB /* SetBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02569B6A249C737400B819EB /* SetBackground.swift */; };
 		0288ED1124A3147000819E3E /* UpcomingClientClassDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0288ED1024A3147000819E3E /* UpcomingClientClassDetailViewController.swift */; };
 		0288ED1324A31F8500819E3E /* InstructorCreateClassController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0288ED1224A31F8500819E3E /* InstructorCreateClassController.swift */; };
-		0288ED1524A401AF00819E3E /* ClientClassSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0288ED1424A401AF00819E3E /* ClientClassSearchController.swift */; };
 		02E6EBA824A55F0A00E0FE25 /* RichFetchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E6EBA724A55F0A00E0FE25 /* RichFetchRequest.swift */; };
 		02E6EBAC24A596D900E0FE25 /* UpcomingInstructorClassesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E6EBAB24A596D900E0FE25 /* UpcomingInstructorClassesTableViewController.swift */; };
 		02E6EBAE24A5C38700E0FE25 /* UpcomingClientClassesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E6EBAD24A5C38700E0FE25 /* UpcomingClientClassesTableViewController.swift */; };
@@ -98,7 +97,6 @@
 		02569B6A249C737400B819EB /* SetBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBackground.swift; sourceTree = "<group>"; };
 		0288ED1024A3147000819E3E /* UpcomingClientClassDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingClientClassDetailViewController.swift; sourceTree = "<group>"; };
 		0288ED1224A31F8500819E3E /* InstructorCreateClassController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorCreateClassController.swift; sourceTree = "<group>"; };
-		0288ED1424A401AF00819E3E /* ClientClassSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientClassSearchController.swift; sourceTree = "<group>"; };
 		02E6EB9A24A539D200E0FE25 /* AnytimeFitness 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "AnytimeFitness 2.xcdatamodel"; sourceTree = "<group>"; };
 		02E6EBA724A55F0A00E0FE25 /* RichFetchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichFetchRequest.swift; sourceTree = "<group>"; };
 		02E6EBAB24A596D900E0FE25 /* UpcomingInstructorClassesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingInstructorClassesTableViewController.swift; sourceTree = "<group>"; };
@@ -242,7 +240,6 @@
 				023344F624A152FE001BABB3 /* ClassSearchResultsViewController.swift */,
 				023344FC24A17056001BABB3 /* ClassReserveSearchViewController.swift */,
 				023344FE24A17573001BABB3 /* ConfirmClassSearchViewController.swift */,
-				0288ED1424A401AF00819E3E /* ClientClassSearchController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -609,7 +606,6 @@
 				02569B6B249C737400B819EB /* SetBackground.swift in Sources */,
 				C350B71624A1B4BA00F2FE7B /* CellSignUpCollectionViewCell.swift in Sources */,
 				0255180924AC32210068DEF0 /* Instructor+CoreDataClass copy.swift in Sources */,
-				0288ED1524A401AF00819E3E /* ClientClassSearchController.swift in Sources */,
 				C35C6FEF249AF9D800A23367 /* SceneDelegate.swift in Sources */,
 				5276FC2724A4355600EF4DC8 /* ClientFavoritesViewController.swift in Sources */,
 				023344ED249F17C3001BABB3 /* CreateClassNameViewController.swift in Sources */,

@@ -25,6 +25,12 @@ class ClassReserveSearchViewController: UIViewController {
             print("this is the final class: \(String(describing: finalClass))")
         }
     }
+    let currentClient = NetworkController.sharedNetworkController.currentCDClient
+    var currentClientClasses: [NewClass] = [] {
+            didSet {
+                print("list of currentClientClasses: \(currentClientClasses)")
+            }
+        }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,10 +44,32 @@ class ClassReserveSearchViewController: UIViewController {
         reservedRatio.text = "\(finalClass.classCurrentSizeCD)/ \(finalClass.classMaxSizeCD)"
         remainingNumber.text = "\(finalClass.classMaxSizeCD - finalClass.classCurrentSizeCD) spot(s)"
 
+        guard let currentClient = currentClient else { return }
+                      if let classArray = currentClient.registeredClasses!.allObjects as? [NewClass], !classArray.isEmpty {
+                          for element in classArray {
+                             if currentClientClasses.contains(element) { return } else {
+                              currentClientClasses.append(element)
+                             }
+                              viewDidLoad()
+                          }
+                      }
+        if currentClientClasses.contains(finalClass) {
+            reserveButton.setLightButtonColor(toButtonNamed: reserveButton)
+            reserveButton.isEnabled = false
+            let alert = UIAlertController(
+                              title: "Alert",
+                              message: "You have already signed up for this class.",
+                              preferredStyle: .alert
+                          )
+                          alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                          present(alert, animated: true, completion: nil)
+        }
+
         if finalClass.classMaxSizeCD == finalClass.classCurrentSizeCD {
             reserveButton.setLightButtonColor(toButtonNamed: reserveButton)
             reserveButton.isEnabled = false
         }
+
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

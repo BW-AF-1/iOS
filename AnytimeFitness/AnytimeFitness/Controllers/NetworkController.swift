@@ -96,12 +96,12 @@ class NetworkController {
                 completion(error)
                 return
             }
+            self.fetchAllClients()
             completion(nil)
         }.resume()
     }
 
     func loginClient(with client: ClientRepresentation, completion: @escaping CompletionHandler = { _ in }) {
-
         guard let requestURL = baseURL?.appendingPathComponent("clients/login") else {
             completion(nil)
             return
@@ -188,6 +188,7 @@ class NetworkController {
                 completion(error)
                 return
             }
+            self.fetchAllInstructors()
             completion(nil)
         }.resume()
     }

@@ -53,7 +53,7 @@ enum ClassTypeInt: Int, TableViewSelectable, Codable {
         case .boxing:
             return "Boxing"
         case .dancing:
-            return "Dancing"
+            return "Biking"
         case .biking:
             return "Dancing"
         case .pilates:
@@ -93,7 +93,7 @@ class ClassManagementController {
         let timeString = newClass.classDateCD
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm a"
-        formatter.timeZone = TimeZone(secondsFromGMT: 0)
+        //formatter.timeZone = TimeZone(secondsFromGMT: 0)
         return formatter.string(from: timeString)
     }
 
