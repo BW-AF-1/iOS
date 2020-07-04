@@ -14,6 +14,8 @@ class InstructorSignInViewController: UIViewController {
     @IBOutlet var email: UITextField!
     @IBOutlet var password: UITextField!
     @IBOutlet var errorLabel: UILabel!
+
+    var instructorAuth: InstructorRepresentation?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,15 +23,26 @@ class InstructorSignInViewController: UIViewController {
     }
     
     @IBAction func signInTapped(_ sender: Any){
-        Auth.auth().signIn(withEmail: email.text!, password: password.text!) { (result, error) in
+        guard let email = email.text, let password = password.text else { return }
+
+        let instructorAuth = InstructorRepresentation(email: email, password: password)
+        
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             if error != nil{
                 self.errorLabel.alpha = 1
                 return
             } else {
                 self.errorLabel.alpha = 0
-                self.performSegue(withIdentifier: "instructorMain", sender: self)
+                NetworkController.sharedNetworkController.loginInstructor(with: instructorAuth) { (error) in
+                    if let error = error {
+                        print("Error for instructor logging in: \(error)")
+                    }
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "instructorMain", sender: self)
+                    }
+                }
             }
+
         }
-        
     }
 }

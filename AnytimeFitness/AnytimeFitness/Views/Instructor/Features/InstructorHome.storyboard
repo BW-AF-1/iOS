@@ -10,35 +10,66 @@
         <!--Home-->
         <scene sceneID="vhf-ke-FXd">
             <objects>
-                <viewController id="LbX-83-ri0" sceneMemberID="viewController">
+                <viewController id="LbX-83-ri0" customClass="InstructorHomeViewController" customModule="AnytimeFitness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9uR-Hq-CvQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMS-Us-1eZ">
-                                <rect key="frame" x="185" y="228" width="44" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Profile"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dB9-ei-vPO">
-                                <rect key="frame" x="175" y="266" width="64" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Schedule"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6S-s3-8ri">
-                                <rect key="frame" x="185" y="304" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Create"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guc-Tc-Yja">
+                                <rect key="frame" x="20" y="278" width="374" height="60"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Select the icons below to create or view your classes." textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxu-Iq-8JO">
+                                <rect key="frame" x="83" y="374" width="247" height="48"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDi-iZ-iLP">
+                                <rect key="frame" x="319" y="160" width="75" height="30"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutClicked:" destination="LbX-83-ri0" eventType="touchUpInside" id="lBc-oV-brc"/>
+                                    <segue destination="RKV-uJ-EJA" kind="showDetail" identifier="InstructorLogout" id="vAf-7V-Ij2"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="SDi-iZ-iLP" firstAttribute="top" secondItem="gt4-Ng-BDx" secondAttribute="top" constant="20" id="0Jw-Df-A3C"/>
+                            <constraint firstItem="SDi-iZ-iLP" firstAttribute="leading" secondItem="gt4-Ng-BDx" secondAttribute="leading" constant="319" id="8kF-7R-cYU"/>
+                            <constraint firstItem="gt4-Ng-BDx" firstAttribute="trailing" secondItem="SDi-iZ-iLP" secondAttribute="trailing" constant="20" id="EAa-lo-DvX"/>
+                            <constraint firstItem="gt4-Ng-BDx" firstAttribute="trailing" secondItem="mxu-Iq-8JO" secondAttribute="trailing" constant="84" id="I7b-Ch-2fm"/>
+                            <constraint firstItem="mxu-Iq-8JO" firstAttribute="leading" secondItem="gt4-Ng-BDx" secondAttribute="leading" constant="83" id="OkK-qd-wY1"/>
+                            <constraint firstItem="gt4-Ng-BDx" firstAttribute="trailing" secondItem="guc-Tc-Yja" secondAttribute="trailing" constant="20" id="Rg4-bt-CVh"/>
+                            <constraint firstItem="mxu-Iq-8JO" firstAttribute="top" secondItem="guc-Tc-Yja" secondAttribute="bottom" constant="36" id="dfo-gI-aEP"/>
+                            <constraint firstItem="guc-Tc-Yja" firstAttribute="leading" secondItem="gt4-Ng-BDx" secondAttribute="leading" constant="20" id="tQw-4Z-NEe"/>
+                            <constraint firstItem="guc-Tc-Yja" firstAttribute="top" secondItem="SDi-iZ-iLP" secondAttribute="bottom" constant="88" id="xu4-Cl-DSR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gt4-Ng-BDx"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="kOh-So-E2Q"/>
+                    <connections>
+                        <outlet property="logoutButton" destination="SDi-iZ-iLP" id="XyL-of-Frb"/>
+                        <outlet property="welcomeDes" destination="mxu-Iq-8JO" id="E0g-Ak-TXO"/>
+                        <outlet property="welcomeText" destination="guc-Tc-Yja" id="5C7-6l-JO5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="srb-XK-Woq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="984.05797101449286" y="102.45535714285714"/>
+        </scene>
+        <!--MainStoryboard-->
+        <scene sceneID="OLP-k3-SIz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="MainStoryboard" id="RKV-uJ-EJA" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="2rI-CY-xVG"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fEa-7V-JGq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1662" y="-92"/>
         </scene>
         <!--Home-->
         <scene sceneID="80U-7o-cVs">

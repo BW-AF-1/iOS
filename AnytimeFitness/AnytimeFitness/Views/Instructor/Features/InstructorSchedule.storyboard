@@ -74,9 +74,10 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Upcoming Classes" id="thU-U0-P5x"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="kkg-VV-SxE">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <connections>
-                            <action selector="refreshData:" destination="BgY-2h-awq" eventType="valueChanged" id="9pl-WA-s6K"/>
+                            <action selector="refreshData:" destination="BgY-2h-awq" eventType="valueChanged" id="CBY-pA-xoK"/>
                         </connections>
                     </refreshControl>
                 </tableViewController>
@@ -163,6 +164,7 @@
                                 <state key="normal" title="Confirm"/>
                                 <connections>
                                     <action selector="confirmButtonClicked:" destination="Wyl-lf-4T4" eventType="touchUpInside" id="QQA-nK-Blq"/>
+                                    <segue destination="5nS-A8-Afm" kind="show" identifier="showUpcomingClass" id="F1d-49-5YD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -189,6 +191,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="seG-yg-3k2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1849" y="120"/>
+        </scene>
+        <!--InstructorScheduleTableViewController-->
+        <scene sceneID="fJG-n1-F2S">
+            <objects>
+                <viewControllerPlaceholder storyboardName="InstructorSchedule" referencedIdentifier="InstructorScheduleTableViewController" id="5nS-A8-Afm" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="kb7-os-MeW"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pih-T3-zFQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2495" y="72"/>
         </scene>
     </scenes>
     <resources>

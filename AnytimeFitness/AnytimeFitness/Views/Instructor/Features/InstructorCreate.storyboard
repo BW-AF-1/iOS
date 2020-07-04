@@ -456,7 +456,7 @@
         <!--InstructorScheduleTableViewController-->
         <scene sceneID="Aeu-13-h0n">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="InstructorScheduleViewController" storyboardName="InstructorSchedule" referencedIdentifier="InstructorScheduleTableViewController" id="gcz-NY-oIs" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="InstructorSchedule" referencedIdentifier="InstructorScheduleTableViewController" id="gcz-NY-oIs" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="tcx-V0-vLA"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bam-1k-xhL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

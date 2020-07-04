@@ -12,53 +12,49 @@ import CoreData
 class UpcomingClientClassesTableViewController: UITableViewController {
 
 var classManagementController = ClassManagementController()
-
-    lazy var fetchedResultsController: NSFetchedResultsController<NewClass> = {
-        let moc = CoreDataStack.shared.mainContext
-        let fetchRequest = NSFetchRequest<NewClass>(entityName: "NewClass")
-
-        fetchRequest.sortDescriptors = [
-            NSSortDescriptor(key: "classDateCD", ascending: true)
-        ]
-
-      // fetchRequest.predicate = NSPredicate(format: "ANY registeredClients.firstName IN %@", "morgan")
-
-        let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
-        do {
-            try frc.performFetch()
-        } catch {
-            NSLog("error fetching NewClass objects")
+let currentClient = NetworkController.sharedNetworkController.currentCDClient
+var currentClientClasses: [NewClass] = [] {
+        didSet {
+            print("list of currentClientClasses: \(currentClientClasses)")
         }
-        return frc
+    }
 
-    }()
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        tableView.reloadData()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+             guard let currentClient = currentClient else { return }
+                if let classArray = currentClient.registeredClasses!.allObjects as? [NewClass], !classArray.isEmpty {
+                    for element in classArray {
+                       if currentClientClasses.contains(element) { return } else {
+                        currentClientClasses.append(element)
+                       }
+                        tableView.reloadData()
+                    }
+                }
     }
 
     @IBAction func refreshData(_ sender: Any) {
+        tableView.reloadData()
+        self.refreshControl?.endRefreshing()
     }
 
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-
-        return fetchedResultsController.sections?.count ?? 0
-    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-         return fetchedResultsController.sections?[section].numberOfObjects ?? 0
+        if currentClientClasses.count > 0 {
+        return currentClientClasses.count
+        } else {
+            return 0
+        }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UpcomingClientClass", for: indexPath)
 
-       let newClass = fetchedResultsController.object(at: indexPath)
+      // let newClass = fetchedResultsController.object(at: indexPath)
+        let newClass = currentClientClasses[indexPath.row]
+
         cell.textLabel?.text = newClass.classNameCD
         cell.detailTextLabel?.text = classManagementController.formatClassTime(with: newClass)
         cell.setDarkBackground(toImageNamed: newClass.classTypeCD)
@@ -67,9 +63,10 @@ var classManagementController = ClassManagementController()
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let newClass = fetchedResultsController.object(at: indexPath)
+            let newClass = currentClientClasses[indexPath.row]
                     let moc = CoreDataStack.shared.mainContext
-                    moc.delete(newClass)
+            currentClient?.removeFromRegisteredClasses(newClass)
+            classManagementController.deleteClassCount(with: newClass)
                     do {
                         try moc.save()
                         tableView.reloadData()
@@ -84,59 +81,9 @@ var classManagementController = ClassManagementController()
            if segue.identifier == "showClientDetailClass" {
                if let detailVC = segue.destination as? UpcomingClientClassDetailViewController,
                    let indexPath = tableView.indexPathForSelectedRow {
-                   detailVC.updateClass = fetchedResultsController.object(at: indexPath)
+                detailVC.updateClass = currentClientClasses[indexPath.row]
                }
            }
     }
 
 }
-
-extension UpcomingClientClassesTableViewController: NSFetchedResultsControllerDelegate {
-        func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-            tableView.beginUpdates()
-        }
-
-        func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-            tableView.endUpdates()
-        }
-
-        func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>,
-                        didChange sectionInfo: NSFetchedResultsSectionInfo,
-                        atSectionIndex sectionIndex: Int,
-                        for type: NSFetchedResultsChangeType) {
-            switch type {
-            case .insert:
-                tableView.insertSections(IndexSet(integer: sectionIndex), with: .automatic)
-            case .delete:
-                tableView.deleteSections(IndexSet(integer: sectionIndex), with: .automatic)
-            default:
-                break
-            }
-        }
-
-        func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>,
-                        didChange anObject: Any,
-                        at indexPath: IndexPath?,
-                        for type: NSFetchedResultsChangeType,
-                        newIndexPath: IndexPath?) {
-            switch type {
-            case .insert:
-                guard let newIndexPath = newIndexPath else { return }
-                tableView.insertRows(at: [newIndexPath], with: .automatic)
-            case .update:
-                guard let indexPath = indexPath else { return }
-                tableView.reloadRows(at: [indexPath], with: .automatic)
-            case .move:
-                guard let oldIndexPath = indexPath,
-                    let newIndexPath = newIndexPath else { return }
-                tableView.deleteRows(at: [oldIndexPath], with: .automatic)
-                tableView.insertRows(at: [newIndexPath], with: .automatic)
-            case .delete:
-                guard let indexPath = indexPath else { return }
-                tableView.deleteRows(at: [indexPath], with: .automatic)
-            @unknown default:
-                break
-            }
-        }
-}
-

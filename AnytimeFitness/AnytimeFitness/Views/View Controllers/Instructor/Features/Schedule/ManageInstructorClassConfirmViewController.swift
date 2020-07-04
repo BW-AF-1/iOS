@@ -33,7 +33,7 @@ class ManageInstructorClassConfirmViewController: UIViewController {
     @IBAction func confirmButtonClicked(_ sender: Any) {
         guard let name = classNameText.text, !name.isEmpty, let address = classLocationText.text, !address.isEmpty, let updateClass = updateClass else { return }
         classManagementController.updateInstructorClass(with: updateClass, name: name, address: address, newDate: classDatePicker.date)
-        self.navigationController?.popToRootViewController(animated: true)
+        self.performSegue(withIdentifier: "showUpcomingClass", sender: self)
     }
 
 }

@@ -9,15 +9,6 @@
 import UIKit
 import CoreData
 
-extension String {
-    func contains(find: String) -> Bool{
-        return self.range(of: find) != nil
-    }
-    func containsIgnoringCase(find: String) -> Bool{
-        return self.range(of: find, options: .caseInsensitive) != nil
-    }
-}
-
 class LocationSearchViewController: UIViewController, UISearchBarDelegate {
 
     @IBOutlet weak var searchBar: UISearchBar!
@@ -50,7 +41,11 @@ class LocationSearchViewController: UIViewController, UISearchBarDelegate {
 
     var searchedClassLocations: [String] = []
 
-    var typeLocationClass: [NewClass] = []
+    var typeLocationClass: [NewClass] = [] {
+        didSet {
+            print("class table view selected: \(typeLocationClass)")
+        }
+    }
 
     var tableViewSelected: [NewClass] = [] {
         didSet {
@@ -96,9 +91,13 @@ class LocationSearchViewController: UIViewController, UISearchBarDelegate {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             guard let nextVC = segue.destination as? ClassDetailSearchViewController else { return }
-            nextVC.selectedLocations = tableViewSelected
+        if tableViewSelected.isEmpty {
+            nextVC.selectedLocations = typeLocationClass
+        } else {
+           nextVC.selectedLocations = tableViewSelected
         }
     }
+}
 
 
 extension LocationSearchViewController: UITableViewDelegate, UITableViewDataSource {

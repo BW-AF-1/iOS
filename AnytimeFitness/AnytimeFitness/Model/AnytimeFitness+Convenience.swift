@@ -10,40 +10,51 @@ import Foundation
 import CoreData
 
 extension Client {
+
+    var clientRepresentation: ClientRepresentation? {
+        return ClientRepresentation(email: email, password: password)
+    }
     
     @discardableResult convenience init(email: String,
-                                        firstName: String,
-                                        lastName: String,
-                                        identifier: UUID = UUID(),
-                                        phoneNumber: String,
-                                        context: NSManagedObjectContext) {
+                                        password: String,
+                                        clientID: Int16,
+                                        context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
         self.init(context: context)
-        self.identifier = identifier
         self.email = email
-        self.lastName = lastName
-        self.firstName = firstName
-        self.phoneNumber = phoneNumber
+        self.password = password
+        self.clientID = clientID
+    }
+    @discardableResult convenience init?(clientRepresentation: ClientRepresentation, context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
+        self.init(email: clientRepresentation.email, password: clientRepresentation.password, clientID: Int16(clientRepresentation.clientID ?? 0))
     }
 }
 
 extension Instructor {
+    var instructorRepresentation: InstructorRepresentation? {
+        return InstructorRepresentation(email: email, password: password)
+    }
     
     @discardableResult convenience init(email: String,
-                                        firstName: String,
-                                        lastName: String,
-                                        identifier: UUID = UUID(),
-                                        phoneNumber: String,
-                                        context: NSManagedObjectContext) {
+                                        password: String,
+                                        instructorID: Int16,
+                                        context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
         self.init(context: context)
         self.email = email
-        self.lastName = lastName
-        self.firstName = firstName
-        self.phoneNumber = phoneNumber
+        self.password = password
+        self.instructorID = instructorID
     }
+    @discardableResult convenience init?(instructorRepresentation: InstructorRepresentation, context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
+       self.init(email: instructorRepresentation.email, password: instructorRepresentation.password, instructorID: Int16(instructorRepresentation.instructorID ?? 0))
+     }
 }
 
 
 extension NewClass {
+    var classRepresentation: ClassRepresentation? {
+
+        return ClassRepresentation(classDateCD: classDateCD.description, classDurationCD: String(classDurationCD), classLevelCD: classLevelCD, classLocationCD: classLocationCD, classMaxSizeCD: Int(classMaxSizeCD), classCurrentSizeCD: Int(classCurrentSizeCD), classNameCD: classNameCD, classTypeCD: classTypeCD, instructorID: Int(instructorID))
+
+    }
     @discardableResult convenience init(classDateCD: Date,
                                         classDurationCD: Int16,
                                         classLevelCD: String,
@@ -53,7 +64,9 @@ extension NewClass {
                                         classNameCD: String,
                                         classTypeCD: String,
                                         classIdentifierCD: UUID = UUID(),
-                                        context: NSManagedObjectContext) {
+                                        instructorID: Int16,
+                                        classID: Int16? = Int16(UUID().uuidString) ?? 0,
+                                        context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
         self.init(context: context)
         self.classDateCD = classDateCD
         self.classDurationCD = classDurationCD
@@ -64,7 +77,19 @@ extension NewClass {
         self.classNameCD = classNameCD
         self.classTypeCD = classTypeCD
         self.classIdentifierCD = classIdentifierCD
+        self.instructorID = instructorID
+        self.classID = classID ?? 0
     }
-    
+
+    @discardableResult convenience init?(classRepresentation: ClassRepresentation, context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
+        let isoDate = classRepresentation.classDateCD
+        let dateFormatter = ISO8601DateFormatter()
+        let classDate = dateFormatter.date(from:isoDate)!
+        let instructorID = classRepresentation.instructorID ?? 0
+        let classID = classRepresentation.classID ?? 0
+
+        self.init(classDateCD: classDate, classDurationCD: Int16(classRepresentation.classDurationCD) ?? 0, classLevelCD: classRepresentation.classLevelCD, classLocationCD: classRepresentation.classLocationCD, classMaxSizeCD: Int16(classRepresentation.classMaxSizeCD), classCurrentSizeCD: Int16(classRepresentation.classCurrentSizeCD), classNameCD: classRepresentation.classNameCD, classTypeCD: classRepresentation.classTypeCD, classIdentifierCD: classRepresentation.classIdentifierCD ?? UUID(), instructorID: Int16(instructorID), classID: Int16(classID))
+    }
 }
+
 

@@ -18,8 +18,10 @@ class UpcomingInstructorClassesTableViewController: UITableViewController {
         fetchRequest.sortDescriptors = [
             NSSortDescriptor(key: "classDateCD", ascending: true)
         ]
-
         let moc = CoreDataStack.shared.mainContext
+        let instructor = NetworkController.sharedNetworkController.currentCDInstructor
+        let classIDCD = instructor?.instructorID
+        fetchRequest.predicate = NSPredicate(format: "instructorID == %i", classIDCD ?? 0)
         let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
         frc.delegate = self
         do {
@@ -33,11 +35,13 @@ class UpcomingInstructorClassesTableViewController: UITableViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
         tableView.reloadData()
     }
 
     @IBAction func refreshData(_ sender: Any) {
+        viewDidLoad()
+        tableView.reloadData()
+        refreshControl?.endRefreshing()
     }
 
 

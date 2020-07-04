@@ -17,6 +17,8 @@ class InstructorSignUpViewController: UIViewController {
     @IBOutlet var email: UITextField!
     @IBOutlet var password: UITextField!
     @IBOutlet var errorLabel: UILabel!
+
+    let networkController = NetworkController()
     
 
     override func viewDidLoad() {
@@ -31,7 +33,7 @@ class InstructorSignUpViewController: UIViewController {
         guard let email = email.text else { return }
         guard let password = password.text else { return }
 
-        
+        let instructor = InstructorRepresentation(email: email, password: password)
         
         Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
             
@@ -48,11 +50,18 @@ class InstructorSignUpViewController: UIViewController {
                         print(error)
                     }
                     self.errorLabel.alpha = 0
-                    self.performSegue(withIdentifier: "instructorSignIn", sender: self)
+                    self.networkController.registerInstructor(with: instructor) { (error) in
+                        if let error = error {
+                            print("Error for instructor registering: \(error)")
+                        }
+                        DispatchQueue.main.async {
+                            self.performSegue(withIdentifier: "instructorSignIn", sender: self)
+                        }
+                    }
                 }
             }
+
+
         }
-
-
-}
+    }
 }

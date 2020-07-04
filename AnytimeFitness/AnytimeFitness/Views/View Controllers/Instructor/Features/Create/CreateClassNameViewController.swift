@@ -20,6 +20,7 @@ class CreateClassNameViewController: UIViewController {
     }
     var classType: CreateClassType?
     var classCreated: NewClass?
+    var currentInstructor = NetworkController.sharedNetworkController.currentCDInstructor
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,13 +40,17 @@ class CreateClassNameViewController: UIViewController {
         guard let name = classNameText.text, !name.isEmpty, let address = classLocationText.text, !address.isEmpty, let existingClassType = classType else { return }
         className = CreateClassName(className: name, classDate: classDatePicker.date, classLocation: address)
         print("new className Saved: \(String(describing: className))")
-        classCreated = NewClass(classDateCD: classDatePicker.date, classDurationCD: Int16(existingClassType.classDuration), classLevelCD: existingClassType.classLevel, classLocationCD: address, classMaxSizeCD: Int16(existingClassType.classMaxSize), classNameCD: name, classTypeCD: existingClassType.classType, context: CoreDataStack.shared.mainContext)
+        guard let currentInstructor = currentInstructor else { return }
+        classCreated = NewClass(classDateCD: classDatePicker.date, classDurationCD: Int16(existingClassType.classDuration), classLevelCD: existingClassType.classLevel, classLocationCD: address, classMaxSizeCD: Int16(existingClassType.classMaxSize), classNameCD: name, classTypeCD: existingClassType.classType, instructorID: currentInstructor.instructorID, context: CoreDataStack.shared.mainContext)
+        guard let classCreated = classCreated else { return }
+        NetworkController.sharedNetworkController.createClass(with: currentInstructor, newClass: classCreated)
+        classCreated.classInstructor = currentInstructor
+        currentInstructor.addToCreatedClasses(classCreated)
         do {
             try CoreDataStack.shared.mainContext.save()
         } catch {
             NSLog("Error saving managed object context: \(error)")
         }
-
         print("Newly created class: \(String(describing: classCreated))")
     }
 

@@ -36,8 +36,12 @@ class SearchViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let nextVC = segue.destination as? LocationSearchViewController else { return }
+        if selectedFitnessTypes.count > 1 {
         nextVC.selectedFitness = selectedFitnessTypes
-    }
+        } else {
+            nextVC.selectedFitness = ClassTypeInt.allFitnessTypeNames
+        }
+}
 }
 
 extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource {

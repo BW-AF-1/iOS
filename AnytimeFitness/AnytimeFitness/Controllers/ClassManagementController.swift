@@ -78,6 +78,14 @@ enum ClassTypeInt: Int, TableViewSelectable, Codable {
     }
 
 }
+extension String {
+    func contains(find: String) -> Bool{
+        return self.range(of: find) != nil
+    }
+    func containsIgnoringCase(find: String) -> Bool{
+        return self.range(of: find, options: .caseInsensitive) != nil
+    }
+}
 
 class ClassManagementController {
 
@@ -101,6 +109,11 @@ class ClassManagementController {
         newClass.classNameCD = name
         newClass.classLocationCD = address
         newClass.classDateCD = newDate
+        NetworkController.sharedNetworkController.updateClass(for: newClass) { (error) in
+            if let error = error {
+                print("Error for updating Instructor class: \(error)")
+            }
+        }
         let moc = CoreDataStack.shared.mainContext
         do {
             try moc.save()
@@ -111,20 +124,15 @@ class ClassManagementController {
     }
 
     func updateClassCount(with newClass: NewClass) {
+        if newClass.classMaxSizeCD == newClass.classCurrentSizeCD {
+            return
+        }
         newClass.classCurrentSizeCD += 1
-        let moc = CoreDataStack.shared.mainContext
-              do {
-                  try moc.save()
-              } catch {
-                  moc.reset()
-                  NSLog("Error saving managed object context: \(error)")
-              }
-    }
-
-    func createClientClass(with newClass: NewClass) {
-        let clientClass = NewClass(classDateCD: newClass.classDateCD, classDurationCD: newClass.classDurationCD, classLevelCD: newClass.classLevelCD, classLocationCD: newClass.classLocationCD, classMaxSizeCD: newClass.classMaxSizeCD, classCurrentSizeCD: newClass.classCurrentSizeCD, classNameCD: newClass.classNameCD, classTypeCD: newClass.classTypeCD, classIdentifierCD: newClass.classIdentifierCD, context: CoreDataStack.shared.mainContext)
-        let client = Client(context: CoreDataStack.shared.mainContext)
-        client.registeredClasses?.adding(clientClass)
+        NetworkController.sharedNetworkController.updateClass(for: newClass) { (error) in
+            if let error = error {
+                print("Error for adding Instructor class count: \(error)")
+            }
+        }
         let moc = CoreDataStack.shared.mainContext
         do {
             try moc.save()
@@ -134,6 +142,54 @@ class ClassManagementController {
         }
     }
 
+    func deleteClassCount(with newClass: NewClass) {
+        if newClass.classCurrentSizeCD < 1 {
+            return
+        } else {
+            newClass.classCurrentSizeCD -= 1
+        }
+        NetworkController.sharedNetworkController.updateClass(for: newClass) { (error) in
+            if let error = error {
+                print("Error for subtracting Instructor class count: \(error)")
+            }
+        }
+        let moc = CoreDataStack.shared.mainContext
+        do {
+            try moc.save()
+        } catch {
+            moc.reset()
+            NSLog("Error saving managed object context: \(error)")
+        }
+    }
 
+    func createClientClass(with newClass: NewClass) {
+        let currentClient = NetworkController.sharedNetworkController.currentCDClient
+        guard let currentClients = currentClient else {
+            return
+        }
+        newClass.addToRegisteredClients(currentClients)
+        let moc = CoreDataStack.shared.mainContext
+        do {
+            try moc.save()
+        } catch {
+            moc.reset()
+            NSLog("Error saving client to the class: \(error)")
+        }
+    }
+
+    func deleteClientClass(with newClass: NewClass) {
+        let currentClient = NetworkController.sharedNetworkController.currentCDClient
+        guard let currentClients = currentClient else {
+            return
+        }
+        newClass.removeFromRegisteredClients(currentClients)
+        let moc = CoreDataStack.shared.mainContext
+        do {
+            try moc.save()
+        } catch {
+            moc.reset()
+            NSLog("Error deleting client from the class: \(error)")
+        }
+    }
 
 }

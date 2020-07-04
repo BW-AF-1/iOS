@@ -20,10 +20,17 @@ class ClassSearchResultsViewController: UIViewController {
         }
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
+         super.viewDidAppear(animated)
+        viewDidLoad()
+        ClassSearchResultTableView.reloadData()
         ClassSearchResultTableView.delegate = self
         ClassSearchResultTableView.dataSource = self
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewDidLoad()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -32,7 +32,10 @@ class ConfirmClassSearchViewController: UIViewController {
         guard let confirmClass = confirmClass else { return }
         classManagementController.createClientClass(with: confirmClass)
         classManagementController.updateClassCount(with: confirmClass)
-        self.navigationController?.popToRootViewController(animated: true)
+        print("this is confirmed class with added client: \(confirmClass)")
+        DispatchQueue.main.async {
+            self.navigationController?.popToRootViewController(animated: true)
+        }
     }
 
 }
