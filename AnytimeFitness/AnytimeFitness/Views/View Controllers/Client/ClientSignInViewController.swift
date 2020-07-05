@@ -29,6 +29,10 @@ class ClientSignInViewController: UIViewController {
         NetworkController.sharedNetworkController.loginClient(with: clientAuth) { (error) in
             if let error = error {
                 print("Error for client logging in: \(error)")
+                DispatchQueue.main.async {
+                    self.errorLabel.alpha = 1
+                }
+                return
             }
             DispatchQueue.main.async {
                 self.errorLabel.alpha = 0

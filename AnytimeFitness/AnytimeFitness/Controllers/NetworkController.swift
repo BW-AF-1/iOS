@@ -26,6 +26,9 @@ class NetworkController {
     var token: Token?
     var allInstructors: [InstructorRepresentation] = []
     var allClients: [ClientRepresentation] = []
+    var allClasses: [ClassRepresentation] = []
+    var allCDInstructors: [Instructor] = []
+    var allCDClients: [Client] = []
 
     var currentInstructor: InstructorRepresentation? {
         didSet{
@@ -54,6 +57,9 @@ class NetworkController {
     init() {
         fetchAllInstructors()
         fetchAllClients()
+        fetchCDClient()
+        fetchCDInstructor()
+        fetchAllClasses()
     }
 
     //Client Register/login
@@ -245,9 +251,9 @@ class NetworkController {
 
     //Instructor Create Class
 
-    func createClass(with instructor: Instructor, newClass: NewClass, completion: @escaping CompletionHandler = { _ in }) {
+    func createClass(newClass: NewClass, completion: @escaping ClassCompletionHandler = { _ in }) {
 
-        guard let token = token, let id = instructor.instructorRepresentation?.instructorID, let createURL = baseURL?.appendingPathComponent("instructors/\(id)/classes") else { return }
+        guard let token = token, let id = newClass.classRepresentation?.instructorID, let createURL = baseURL?.appendingPathComponent("instructors/\(id)/classes") else { return }
 
         var request = URLRequest(url: createURL)
         request.httpMethod = HTTPMethod.post.rawValue
@@ -256,34 +262,28 @@ class NetworkController {
 
         let jsonEncoder = JSONEncoder()
 
-        do {
-            guard let representation = newClass.classRepresentation else {
-                return
-            }
-            let jsonData = try jsonEncoder.encode(representation)
-            request.httpBody = jsonData
-        } catch {
-            print("Error encoding class object: \(error)")
-            completion(error)
-            return
-        }
+               do {
+                guard let representation = newClass.classRepresentation else { return }
+                let jsonData = try jsonEncoder.encode(representation)
+                   request.httpBody = jsonData
+               } catch {
+                   print("Error encoding class object: \(error)")
+                completion(.failure(.noDecode))
+                   return
+               }
 
-        URLSession.shared.dataTask(with: request) { _, response, error in
-            if let response = response as? HTTPURLResponse,
-                response.statusCode != 200 {
-                completion(NSError(domain: "", code: response.statusCode, userInfo: nil))
-                return
-            }
-
+        URLSession.shared.dataTask(with: request) { _, _, error in
             if let error = error {
-                completion(error)
+                print("Error fetching current class: \(error)")
+                DispatchQueue.main.async {
+                    completion(.failure(.otherError))
+                }
                 return
             }
-            
-            completion(nil)
+            completion(.success(true))
         }.resume()
     }
-
+    
     func updateClass(for newClass: NewClass, completion: @escaping CompletionHandler = { _ in }) {
         guard let id = newClass.classRepresentation?.classID, let token = token, let updateURL = baseURL?.appendingPathComponent("classes/\(id)") else { return }
 
@@ -368,6 +368,50 @@ class NetworkController {
                 }
             } catch {
                 print("Error decoding instructor representations: \(error)")
+                DispatchQueue.main.async {
+                    completion(.failure(.noDecode))
+                }
+                return
+            }
+        }.resume()
+    }
+
+    func fetchAllClasses(completion: @escaping ClassCompletionHandler = { _ in }) {
+
+        guard let requestURL = baseURL?.appendingPathComponent("classes") else { return }
+
+        var request = URLRequest(url: requestURL)
+        request.httpMethod = HTTPMethod.get.rawValue
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        URLSession.shared.dataTask(with: requestURL) { (data, _, error) in
+            if let error = error {
+                print("Error fetching all classes: \(error)")
+                DispatchQueue.main.async {
+                    completion(.failure(.otherError))
+                }
+                return
+            }
+
+            guard let data = data else {
+                print("No data returned by data all classes")
+                DispatchQueue.main.async {
+                    completion(.failure(.badData))
+                }
+                return
+            }
+
+            let decoder = JSONDecoder()
+
+            do {
+                let allClasses = try decoder.decode([ClassRepresentation].self, from: data)
+                self.allClasses = allClasses
+                print("successfully decoded allClasses from networkController \(allClasses)")
+                DispatchQueue.main.async {
+                    completion(.success(true))
+                }
+            } catch {
+                print("Error decoding class representations: \(error)")
                 DispatchQueue.main.async {
                     completion(.failure(.noDecode))
                 }
@@ -530,6 +574,16 @@ class NetworkController {
         }
     }
 
+    private func addClassID(with newClass: NewClass, representation: ClassRepresentation) {
+        guard let newID = representation.classID else { return }
+        newClass.classID = Int16(newID)
+        do {
+            try CoreDataStack.shared.save(context: CoreDataStack.shared.mainContext)
+        } catch {
+            print("error saving new class ID to core data)")
+        }
+    }
+
     private func fetchClient(with representation: ClientRepresentation) {
         let fetchRequestClient: [Client]? = {
             let fetchRequest: NSFetchRequest<Client> = Client.fetchRequest()
@@ -573,6 +627,40 @@ class NetworkController {
             self.currentCDInstructor = filtered
         } else {
             print("error matching server instructor to core data")
+        }
+    }
+
+    func fetchCDInstructor() {
+        let fetchRequestInstructor: [Instructor]? = {
+            let fetchRequest: NSFetchRequest<Instructor> = Instructor.fetchRequest()
+            let moc = CoreDataStack.shared.mainContext
+            var fetchedInstructor: [Instructor] = []
+            do {
+                fetchedInstructor = try moc.fetch(fetchRequest)
+            } catch {
+                NSLog("error fetching Instructor objects")
+            }
+            return fetchedInstructor
+        }()
+        if let fetch = fetchRequestInstructor {
+            allCDInstructors = fetch
+        }
+    }
+
+    func fetchCDClient() {
+        let fetchRequestClient: [Client]? = {
+            let fetchRequest: NSFetchRequest<Client> = Client.fetchRequest()
+            let moc = CoreDataStack.shared.mainContext
+            var fetchedClient: [Client] = []
+            do {
+                fetchedClient = try moc.fetch(fetchRequest)
+            } catch {
+                NSLog("error fetching Client objects")
+            }
+            return fetchedClient
+        }()
+        if let fetch = fetchRequestClient {
+            allCDClients = fetch
         }
     }
 

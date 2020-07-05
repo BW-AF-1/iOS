@@ -19,7 +19,7 @@ struct ClassRepresentation: Equatable, Codable {
    var classCurrentSizeCD: Int
    var classNameCD: String
    var classTypeCD: String
-   var instructorID: Int?
+   var instructorID: Int
 
 
     enum CodingKeys: String, CodingKey {

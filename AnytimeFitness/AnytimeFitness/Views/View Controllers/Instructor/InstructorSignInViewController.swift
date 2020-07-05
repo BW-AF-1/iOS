@@ -20,6 +20,7 @@ class InstructorSignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         NetworkController.sharedNetworkController.fetchAllInstructors()
+        NetworkController.sharedNetworkController.fetchCDInstructor()
         errorLabel.alpha = 0
     }
     
@@ -33,6 +34,10 @@ class InstructorSignInViewController: UIViewController {
         NetworkController.sharedNetworkController.loginInstructor(with: instructorAuth) { (error) in
             if let error = error {
                 print("Error for instructor logging in: \(error)")
+                DispatchQueue.main.async {
+                self.errorLabel.alpha = 1
+                }
+                return
             }
             DispatchQueue.main.async {
                 self.errorLabel.alpha = 0

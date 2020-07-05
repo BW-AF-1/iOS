@@ -12,7 +12,7 @@ import CoreData
 extension Client {
 
     var clientRepresentation: ClientRepresentation? {
-        return ClientRepresentation(email: email, password: password)
+        return ClientRepresentation(email: email, password: password, clientID: Int(clientID))
     }
     
     @discardableResult convenience init(email: String,
@@ -31,7 +31,7 @@ extension Client {
 
 extension Instructor {
     var instructorRepresentation: InstructorRepresentation? {
-        return InstructorRepresentation(email: email, password: password)
+        return InstructorRepresentation(email: email, password: password, instructorID: Int(instructorID))
     }
     
     @discardableResult convenience init(email: String,
@@ -65,7 +65,7 @@ extension NewClass {
                                         classTypeCD: String,
                                         classIdentifierCD: UUID = UUID(),
                                         instructorID: Int16,
-                                        classID: Int16? = Int16(UUID().uuidString) ?? 0,
+                                        classID: Int16? = 0,
                                         context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
         self.init(context: context)
         self.classDateCD = classDateCD
@@ -85,10 +85,8 @@ extension NewClass {
         let isoDate = classRepresentation.classDateCD
         let dateFormatter = ISO8601DateFormatter()
         let classDate = dateFormatter.date(from:isoDate)!
-        let instructorID = classRepresentation.instructorID ?? 0
-        let classID = classRepresentation.classID ?? 0
 
-        self.init(classDateCD: classDate, classDurationCD: Int16(classRepresentation.classDurationCD) ?? 0, classLevelCD: classRepresentation.classLevelCD, classLocationCD: classRepresentation.classLocationCD, classMaxSizeCD: Int16(classRepresentation.classMaxSizeCD), classCurrentSizeCD: Int16(classRepresentation.classCurrentSizeCD), classNameCD: classRepresentation.classNameCD, classTypeCD: classRepresentation.classTypeCD, classIdentifierCD: classRepresentation.classIdentifierCD ?? UUID(), instructorID: Int16(instructorID), classID: Int16(classID))
+        self.init(classDateCD: classDate, classDurationCD: Int16(classRepresentation.classDurationCD) ?? 0, classLevelCD: classRepresentation.classLevelCD, classLocationCD: classRepresentation.classLocationCD, classMaxSizeCD: Int16(classRepresentation.classMaxSizeCD), classCurrentSizeCD: Int16(classRepresentation.classCurrentSizeCD), classNameCD: classRepresentation.classNameCD, classTypeCD: classRepresentation.classTypeCD, classIdentifierCD: classRepresentation.classIdentifierCD ?? UUID(), instructorID: Int16(classRepresentation.instructorID), classID: Int16(classRepresentation.classID ?? 0))
     }
 }
 
