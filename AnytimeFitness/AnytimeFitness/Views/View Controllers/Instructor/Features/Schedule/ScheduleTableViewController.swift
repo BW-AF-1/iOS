@@ -26,7 +26,6 @@ class ScheduleTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchAllAvailableClasses()
     }
     
     func run(after seconds: Int, completion: @escaping () -> Void) {
@@ -43,7 +42,7 @@ class ScheduleTableViewController: UITableViewController {
             } else {
                 for document in snapshot!.documents {
                     if document == document {
-                        var currentDoc = document.documentID
+                        let currentDoc = document.documentID
                         self.classesArray.append(currentDoc)
                         let classNames = self.db.collection("classes").document(currentDoc)
                         classNames.getDocument(source: .cache) { (document, error) in
@@ -60,16 +59,25 @@ class ScheduleTableViewController: UITableViewController {
                                 self.classAboutArray.append("\(classAbout)")
                             }
                         }
-                        print("end")
                         self.tableView.reloadData()
                     }
                 }
             }
         }
     }
+    
+    func removeAllLocalArrayInfo(){
+        classesArray.removeAll()
+        classNameArray.removeAll()
+        classLevelArray.removeAll()
+        classCategoryArray.removeAll()
+        classLocationArray.removeAll()
+        classAboutArray.removeAll()
+    }
 
     override func viewWillAppear(_ animated: Bool) {
-        #warning("need to fetch NEW classes only")
+        removeAllLocalArrayInfo()
+        fetchAllAvailableClasses()
         tableView.reloadData()
     }
     

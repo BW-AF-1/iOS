@@ -21,8 +21,15 @@ class InstructorProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        insName.text = ""
+        insEmailLabel.text = ""
         getUserDetails()
     }
+    
+    @IBAction func signOutPressed(_ sender: Any) {
+        UserController.currentUserUUID = ""
+    }
+    
     
     func getUserDetails() {
         self.db.collection("instructors").whereField("uid", isEqualTo: UserController.currentUserUUID).getDocuments { (snapshot, err) in

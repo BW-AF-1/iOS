@@ -79,7 +79,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nr1-u7-aUM"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Client Sign Up" id="Hc7-cA-hS7"/>
+                    <navigationItem key="navigationItem" title="Client Sign Up" largeTitleDisplayMode="always" id="Hc7-cA-hS7"/>
                     <connections>
                         <outlet property="email" destination="szN-0a-n5G" id="hso-hL-OzC"/>
                         <outlet property="errorLabel" destination="9hB-nT-oOs" id="xhd-Bi-YYL"/>
@@ -101,7 +101,7 @@
             </objects>
             <point key="canvasLocation" x="2414" y="-106"/>
         </scene>
-        <!--Make Your Selection-->
+        <!--Account Type-->
         <scene sceneID="UPW-Jz-NfJ">
             <objects>
                 <viewController id="I3c-YS-aI1" customClass="SignUpSelectionViewController" customModule="AnytimeFitness" customModuleProvider="target" sceneMemberID="viewController">
@@ -171,7 +171,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="COt-le-gPN"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Make Your Selection" id="2nm-Lt-ftf"/>
+                    <navigationItem key="navigationItem" title="Account Type" largeTitleDisplayMode="always" id="2nm-Lt-ftf"/>
                     <connections>
                         <outlet property="collectionView" destination="LrE-0c-wTp" id="y4g-Wi-BvW"/>
                         <segue destination="vGW-y6-RQh" kind="show" identifier="clientSignUp" id="Ukj-vq-rkD"/>
@@ -253,7 +253,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QJE-N1-3G1"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Instructor Sign Up" id="jxS-Il-YO2"/>
+                    <navigationItem key="navigationItem" title="Instructor Sign Up" largeTitleDisplayMode="always" id="jxS-Il-YO2"/>
                     <connections>
                         <outlet property="email" destination="WMX-eF-yFY" id="1U0-vl-gyJ"/>
                         <outlet property="errorLabel" destination="u8e-Ms-VTD" id="1aP-sP-uAr"/>

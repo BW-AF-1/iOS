@@ -15,6 +15,7 @@ class CreateClassViewController: UIViewController {
     @IBOutlet var classLevel: UITextField!
     @IBOutlet var classCategory: UITextField!
     @IBOutlet var classLocation: UITextField!
+    @IBOutlet var classCapacity: UITextField!
     @IBOutlet var aboutClass: UITextView!
     
     
@@ -29,17 +30,17 @@ class CreateClassViewController: UIViewController {
         guard let classLevel = classLevel.text else { return }
         guard let classCategory = classCategory.text else { return }
         guard let classLocation = classLocation.text else { return }
+        guard let classCapacity = classCapacity.text else { return }
         guard let aboutClass = aboutClass.text else { return }
+        let attendentsArray: [String] = []
 
         
         let db = Firestore.firestore()
-        
-        db.collection("classes").addDocument(data: ["className": className, "classLevel": classLevel, "classCategory": classCategory, "classLocation": classLocation, "aboutClass": aboutClass, "uid": UserController.currentUserUUID]) { (error) in
+        db.collection("classes").addDocument(data: ["className": className, "classLevel": classLevel, "classCategory": classCategory, "classLocation": classLocation, "aboutClass": aboutClass, "currentAttendents": "0", "capacityCount": classCapacity, "uid": UserController.currentUserUUID, "attendentsArray": attendentsArray]) { (error) in
         
         if error != nil {
         print(error)
         }
-        self.performSegue(withIdentifier: "classCreationSuccess", sender: self)
-        }
     }
+}
 }

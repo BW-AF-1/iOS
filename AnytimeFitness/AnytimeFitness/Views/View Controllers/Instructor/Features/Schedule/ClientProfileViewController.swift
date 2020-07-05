@@ -27,6 +27,9 @@ class ClientProfileViewController: UIViewController {
         getUserDetails()
     }
     
+    @IBAction func signOutPressed(_ sender: Any) {
+        UserController.currentUserUUID = ""
+    }
     func getUserDetails() {
         self.db.collection("clients").whereField("uid", isEqualTo: UserController.currentUserUUID).getDocuments { (snapshot, err) in
             if let err = err {

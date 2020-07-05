@@ -11,5 +11,5 @@ import Foundation
 
 class UserController {
     static var currentUserUUID: String = ""
-    
+    static var currentClassIndex: Int = 0
 }

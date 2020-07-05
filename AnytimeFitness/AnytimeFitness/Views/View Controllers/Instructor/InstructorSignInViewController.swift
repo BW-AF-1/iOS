@@ -8,6 +8,8 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
+import Firebase
 
 class InstructorSignInViewController: UIViewController {
 
@@ -15,14 +17,18 @@ class InstructorSignInViewController: UIViewController {
     @IBOutlet var password: UITextField!
     @IBOutlet var errorLabel: UILabel!
     
+    let db = Firestore.firestore()
+    var state: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         errorLabel.alpha = 0
     }
     
     @IBAction func signInTapped(_ sender: Any){
+        #warning("Need to auth user from instructor to client")
         Auth.auth().signIn(withEmail: email.text!, password: password.text!) { (result, error) in
-            if error != nil{
+            if error != nil {
                 self.errorLabel.alpha = 1
                 return
             } else {
@@ -34,4 +40,5 @@ class InstructorSignInViewController: UIViewController {
         }
         
     }
+
 }

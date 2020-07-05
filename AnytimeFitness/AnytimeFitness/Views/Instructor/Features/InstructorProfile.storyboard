@@ -35,6 +35,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDv-dn-k4l">
+                                <rect key="frame" x="157" y="733" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.96971672769999995" green="0.61454814670000002" blue="0.14207831030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="x4v-jM-VF6"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Sign Out"/>
+                                <connections>
+                                    <action selector="signOutPressed:" destination="gDY-Wz-5f1" eventType="touchUpInside" id="fwS-AS-RYl"/>
+                                    <segue destination="sCK-hI-RUv" kind="presentation" modalPresentationStyle="fullScreen" id="xgH-os-G33"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -42,7 +55,9 @@
                             <constraint firstItem="9PS-9I-it6" firstAttribute="top" secondItem="YlY-l2-Oee" secondAttribute="top" constant="20" id="ESY-wH-p7I"/>
                             <constraint firstItem="YlY-l2-Oee" firstAttribute="trailing" secondItem="J2Y-ka-8oX" secondAttribute="trailing" constant="20" id="H3x-fj-poi"/>
                             <constraint firstItem="wfQ-RL-1uv" firstAttribute="top" secondItem="J2Y-ka-8oX" secondAttribute="bottom" constant="30" id="RIW-KR-FJA"/>
+                            <constraint firstItem="YlY-l2-Oee" firstAttribute="bottom" secondItem="pDv-dn-k4l" secondAttribute="bottom" constant="50" id="RtK-fE-mbL"/>
                             <constraint firstItem="9PS-9I-it6" firstAttribute="centerX" secondItem="HWT-dl-7RB" secondAttribute="centerX" id="V6O-99-GU9"/>
+                            <constraint firstItem="pDv-dn-k4l" firstAttribute="centerX" secondItem="HWT-dl-7RB" secondAttribute="centerX" id="WIw-V9-jK4"/>
                             <constraint firstItem="J2Y-ka-8oX" firstAttribute="top" secondItem="9PS-9I-it6" secondAttribute="bottom" constant="20" id="evW-Wm-USW"/>
                             <constraint firstItem="wfQ-RL-1uv" firstAttribute="leading" secondItem="YlY-l2-Oee" secondAttribute="leading" constant="20" id="gfy-2g-c4m"/>
                             <constraint firstItem="J2Y-ka-8oX" firstAttribute="leading" secondItem="YlY-l2-Oee" secondAttribute="leading" constant="20" id="ygT-dP-A0G"/>
@@ -59,6 +74,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YLy-CQ-Thv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="931.88405797101461" y="100.44642857142857"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="5Yh-Cq-V0H">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="sCK-hI-RUv" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bUT-Kn-8eh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1519" y="100"/>
         </scene>
         <!--Profile-->
         <scene sceneID="Kr4-KX-Nm2">

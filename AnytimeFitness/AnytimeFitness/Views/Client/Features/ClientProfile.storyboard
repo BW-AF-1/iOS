@@ -35,6 +35,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eph-w3-4ql">
+                                <rect key="frame" x="157" y="733" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.96971672769999995" green="0.61454814670000002" blue="0.14207831030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="myn-CO-XDd"/>
+                                </constraints>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOutPressed:" destination="zst-2p-aBd" eventType="touchUpInside" id="qbI-Ha-XcP"/>
+                                    <segue destination="EWt-WG-dnc" kind="presentation" modalPresentationStyle="fullScreen" id="kxS-zi-XRZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -42,8 +56,10 @@
                             <constraint firstItem="MBv-JG-yof" firstAttribute="centerX" secondItem="2MR-0i-jSZ" secondAttribute="centerX" id="7Ng-iq-OC1"/>
                             <constraint firstItem="k61-f3-g02" firstAttribute="top" secondItem="MBv-JG-yof" secondAttribute="bottom" constant="30" id="DAz-h9-6bc"/>
                             <constraint firstItem="MBv-JG-yof" firstAttribute="top" secondItem="HUI-P8-kXc" secondAttribute="bottom" constant="20" id="RHg-9y-peH"/>
+                            <constraint firstItem="Ix3-G0-ppq" firstAttribute="bottom" secondItem="eph-w3-4ql" secondAttribute="bottom" constant="50" id="RZc-X0-L2e"/>
                             <constraint firstItem="k61-f3-g02" firstAttribute="centerX" secondItem="2MR-0i-jSZ" secondAttribute="centerX" id="ph4-7F-RiS"/>
                             <constraint firstItem="HUI-P8-kXc" firstAttribute="centerX" secondItem="2MR-0i-jSZ" secondAttribute="centerX" id="uEj-u6-sL9"/>
+                            <constraint firstItem="eph-w3-4ql" firstAttribute="centerX" secondItem="2MR-0i-jSZ" secondAttribute="centerX" id="vI4-pb-4lY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ix3-G0-ppq"/>
                     </view>
@@ -57,6 +73,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U3A-Ev-7PV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076.8115942028987" y="-46.205357142857139"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="oW1-jg-fr8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="EWt-WG-dnc" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kln-OU-P9X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1635" y="-48"/>
         </scene>
         <!--Account-->
         <scene sceneID="RBp-9T-9ZL">
