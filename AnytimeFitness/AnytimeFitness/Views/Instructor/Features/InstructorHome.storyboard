@@ -75,7 +75,7 @@
         <scene sceneID="80U-7o-cVs">
             <objects>
                 <navigationController storyboardIdentifier="InstructorHome" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jZV-3w-ZXI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="E16-hB-2eo"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home" id="E16-hB-2eo"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="jop-XY-zas">
@@ -94,6 +94,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="Home" width="27" height="21"/>
     </resources>
 </document>

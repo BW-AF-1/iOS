@@ -66,8 +66,9 @@ class UpcomingInstructorClassesTableViewController: UITableViewController {
         let imageView = UIImage(named: newClass.classTypeCD)
         let blackCover: UIView = UIView(frame: cell.contentView.frame)
         blackCover.backgroundColor = UIColor.black
-        blackCover.layer.opacity = 0.75
+        blackCover.layer.opacity = 0.80
         cell.backgroundView = UIImageView(image: imageView)
+        cell.backgroundView?.contentMode = .scaleAspectFill
         cell.backgroundView?.addSubview(blackCover)
         return cell
     }

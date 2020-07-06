@@ -72,11 +72,11 @@
             </objects>
             <point key="canvasLocation" x="1507" y="-13"/>
         </scene>
-        <!--Favorites-->
+        <!--Home-->
         <scene sceneID="ZxK-9p-ITC">
             <objects>
                 <navigationController storyboardIdentifier="ClientFavorites" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="s44-bU-RrY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorites" image="star.fill" catalog="system" id="dbz-5p-iC0"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home" id="dbz-5p-iC0"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="8D9-ck-z3C">
@@ -95,6 +95,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <image name="Home" width="27" height="21"/>
     </resources>
 </document>

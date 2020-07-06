@@ -580,7 +580,7 @@
             </objects>
             <point key="canvasLocation" x="4357" y="114"/>
         </scene>
-        <!--Confirm Class Search View Controller-->
+        <!--Booking Confirmation-->
         <scene sceneID="ScZ-SK-vcr">
             <objects>
                 <viewController id="P5h-5n-E19" customClass="ConfirmClassSearchViewController" customModule="AnytimeFitness" customModuleProvider="target" sceneMemberID="viewController">
@@ -589,16 +589,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="XTL-3O-mJt">
-                                <rect key="frame" x="20" y="160" width="374" height="118"/>
+                                <rect key="frame" x="20" y="160" width="374" height="157"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OiY-PF-rgn">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="41"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="AtL-lF-CWf"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZtQ-HR-AFT">
-                                        <rect key="frame" x="0.0" y="60" width="374" height="58"/>
+                                        <rect key="frame" x="0.0" y="99" width="374" height="58"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hj-8i-jJU">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
@@ -638,7 +641,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sE4-Hc-ahZ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="dIP-q5-uAx"/>
+                    <navigationItem key="navigationItem" title="Booking Confirmation" id="dIP-q5-uAx"/>
                     <connections>
                         <outlet property="classDateText" destination="8hj-8i-jJU" id="TyH-TF-kKu"/>
                         <outlet property="classTimeText" destination="xvr-GM-pgf" id="yeY-6n-8Dh"/>
@@ -654,7 +657,7 @@
         <scene sceneID="Pk0-Dj-EeD">
             <objects>
                 <navigationController storyboardIdentifier="ClientSearch" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="c57-G6-ZpM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="gDX-Jd-Xdn"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="Search" id="gDX-Jd-Xdn"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="YAO-ta-uSp">
@@ -673,6 +676,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="Search" width="27" height="27"/>
     </resources>
 </document>

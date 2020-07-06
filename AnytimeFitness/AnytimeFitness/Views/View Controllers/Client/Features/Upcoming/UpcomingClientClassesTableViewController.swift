@@ -50,8 +50,6 @@ var currentClientClasses: [NewClass] = [] {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UpcomingClientClass", for: indexPath)
-
-      // let newClass = fetchedResultsController.object(at: indexPath)
         let newClass = currentClientClasses[indexPath.row]
 
         cell.textLabel?.text = newClass.classNameCD
@@ -59,8 +57,9 @@ var currentClientClasses: [NewClass] = [] {
         let imageView = UIImage(named: newClass.classTypeCD)
         let blackCover: UIView = UIView(frame: cell.contentView.frame)
         blackCover.backgroundColor = UIColor.black
-        blackCover.layer.opacity = 0.75
+        blackCover.layer.opacity = 0.80
         cell.backgroundView = UIImageView(image: imageView)
+        cell.backgroundView?.contentMode = .scaleAspectFill
         cell.backgroundView?.addSubview(blackCover)
         return cell
     }

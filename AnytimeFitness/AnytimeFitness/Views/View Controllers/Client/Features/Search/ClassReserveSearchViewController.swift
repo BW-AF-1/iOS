@@ -36,7 +36,7 @@ class ClassReserveSearchViewController: UIViewController {
         super.viewDidLoad()
         reserveButton.setDarkButtonColor(toButtonNamed: reserveButton)
         guard let finalClass = finalClass else { return }
-        classImageView.image = UIImage(named: finalClass.classTypeCD)
+        classImageView.setBackground(toImageNamed: finalClass.classTypeCD)
         classNameText.text = finalClass.classNameCD
         classDateText.text = classManagementController.formatClassDate(with: finalClass)
         classTimeText.text = classManagementController.formatClassTime(with: finalClass)

@@ -73,7 +73,7 @@ enum ClassTypeInt: Int, TableViewSelectable, Codable {
         case .functionalFitness:
             return "Functional Fitness"
         case .ect:
-            return "Ect."
+            return "Etc."
         }
     }
 
