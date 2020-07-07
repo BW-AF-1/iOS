@@ -10,6 +10,8 @@ import UIKit
 
 class LocationsTableViewController: UITableViewController {
     
+    #warning("Instead of a single location we need to create a whole list of locations for that single category and branch off from there")
+    
     var currentLocation: String = ""
     let staticArray = ClientSearchTableViewController.fullClassDataArray
     var locationsArray: [String] = []

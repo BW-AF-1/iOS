@@ -102,13 +102,11 @@ override func tableView(_ tableView: UITableView, numberOfRowsInSection section:
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ClassReview" {
             guard let classDetailsVC = segue.destination as? ClassReviewViewController, let indexPath = tableView.indexPathForSelectedRow else { return }
-            run(after: 1) {
-                classDetailsVC.classNameLabel.text = self.classNameArray[indexPath.row]
-                classDetailsVC.classLevelLabel.text = self.classLevelArray[indexPath.row]
-                classDetailsVC.classCategoryLabel.text = self.classCategoryArray[indexPath.row]
-                classDetailsVC.classLocationLabel.text = self.classLocationArray[indexPath.row]
-                classDetailsVC.classAboutLabel.text = self.classAboutArray[indexPath.row]
-            }
+                classDetailsVC.className = classNameArray[indexPath.row]
+                classDetailsVC.classLevel = classLevelArray[indexPath.row]
+                classDetailsVC.classCategory = classCategoryArray[indexPath.row]
+                classDetailsVC.classLocation = classLocationArray[indexPath.row]
+                classDetailsVC.classAbout = classAboutArray[indexPath.row]
         }
     }
 }

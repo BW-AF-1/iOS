@@ -12,6 +12,8 @@ import Firebase
 
 class ClientSearchTableViewController: UITableViewController {
     
+    #warning("Need to create a local array to work with to avoid user weird categories and then branch off from there")
+    
     let db = Firestore.firestore()
     
     static var fullClassDataArray: [Classes] = []

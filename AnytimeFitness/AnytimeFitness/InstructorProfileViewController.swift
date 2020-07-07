@@ -11,6 +11,8 @@ import FirebaseFirestore
 import Firebase
 
 class InstructorProfileViewController: UIViewController {
+    
+    #warning("Takes a moment to load before the users info is loaded. Might be best to load user data as soon as the sign in is tapped")
 
     @IBOutlet var profileImage: UIImageView!
     @IBOutlet var insName: UILabel!

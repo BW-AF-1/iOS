@@ -11,6 +11,13 @@ import FirebaseFirestore
 import Firebase
 
 class ClassReviewViewController: UIViewController {
+        
+    var className: String = ""
+    var classLevel: String = ""
+    var classCategory: String = ""
+    var classLocation: String = ""
+    var classAbout: String = ""
+
 
     @IBOutlet var classNameLabel: UILabel!
     @IBOutlet var classLevelLabel: UILabel!
@@ -27,11 +34,23 @@ class ClassReviewViewController: UIViewController {
     }
     
     func setUpViews() {
-        classNameLabel.text = ""
-        classLevelLabel.text = ""
-        classCategoryLabel.text = ""
-        classLocationLabel.text = ""
-        classAboutLabel.text = ""
+        classNameLabel.text = className
+        classLevelLabel.text = classLevel
+        classCategoryLabel.text = classCategory
+        classLocationLabel.text = classLocation
+        classAboutLabel.text = classAbout
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "editClassSegue"{
+            guard let editClassVC = segue.destination as? EditClassViewController else { return }
+            editClassVC.className = className
+            editClassVC.classLevel = classLevel
+            editClassVC.classCategory = classCategory
+            editClassVC.classLocation = classLocation
+            editClassVC.classAbout = classAbout
+
+        }
     }
 
 }
