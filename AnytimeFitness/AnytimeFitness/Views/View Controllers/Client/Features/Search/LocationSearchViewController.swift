@@ -69,6 +69,11 @@ class LocationSearchViewController: UIViewController, UISearchBarDelegate {
         }
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        searchedClassLocations.removeAll()
+    }
+
 
     func searchForLocation(with searchTerm: String) {
         for element in classLocations {

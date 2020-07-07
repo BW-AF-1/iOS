@@ -172,7 +172,7 @@
         <!--Class Search-->
         <scene sceneID="39W-ag-e9b">
             <objects>
-                <viewController id="RW0-78-Pa2" customClass="ClassDetailSearchViewController" customModule="AnytimeFitness" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="RW0-78-Pa2" customClass="ClassDetailSearchViewController" customModule="AnytimeFitness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="21d-RY-twC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -347,7 +347,7 @@
         <!--Class Search-->
         <scene sceneID="mqp-bu-saa">
             <objects>
-                <viewController id="GSV-to-a3L" customClass="ClassSearchResultsViewController" customModule="AnytimeFitness" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="GSV-to-a3L" customClass="ClassSearchResultsViewController" customModule="AnytimeFitness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QwE-ba-7fW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -421,7 +421,7 @@
         <!--Class Details-->
         <scene sceneID="aOg-yc-dTc">
             <objects>
-                <viewController id="3Kk-jG-y18" customClass="ClassReserveSearchViewController" customModule="AnytimeFitness" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="3Kk-jG-y18" customClass="ClassReserveSearchViewController" customModule="AnytimeFitness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tfu-V1-Hpg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -583,7 +583,7 @@
         <!--Booking Confirmation-->
         <scene sceneID="ScZ-SK-vcr">
             <objects>
-                <viewController id="P5h-5n-E19" customClass="ConfirmClassSearchViewController" customModule="AnytimeFitness" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="P5h-5n-E19" customClass="ConfirmClassSearchViewController" customModule="AnytimeFitness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vpc-vk-9zw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
