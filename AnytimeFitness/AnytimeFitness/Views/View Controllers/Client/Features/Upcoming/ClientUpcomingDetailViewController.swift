@@ -28,6 +28,7 @@ class ClientUpcomingDetailViewController: UIViewController {
         
     }
     @IBAction func cancelClassReservationLabel(_ sender: Any) {
+        deleteFromFirebaseArray()
         dismiss(animated: true) {
             print("Dismissed")
         }
@@ -52,10 +53,17 @@ class ClientUpcomingDetailViewController: UIViewController {
         }
     }
     
+    #warning("Delete works but we need to check the whole array and where we are instead of hardcoding")
+    
     func deleteFromFirebaseArray() {
-        let arrayRef = db.collection("classes").document()
+        let intAttenantsCount: Int = Int(staticArray[UserController.currentClassIndex].currentAttendents)!
+        
+        let newAttendantCount = intAttenantsCount - 1
+        
+        let arrayRef = db.collection("classes").document("pkTzwC7NOtcpXWzJhyhD")
         arrayRef.updateData([
-            "attendentsArray": FieldValue.arrayRemove(["current uuid"])
+            "attendentsArray": FieldValue.arrayRemove(["\(UserController.currentUserUUID)"]),
+            "currentAttendents": "\(newAttendantCount)"
         ])
     }
 }

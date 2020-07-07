@@ -374,7 +374,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="CNp-fd-nwi">
-                                <rect key="frame" x="20" y="272" width="374" height="254"/>
+                                <rect key="frame" x="20" y="272" width="374" height="453"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKO-wv-xAs">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
@@ -412,6 +412,20 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Class:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oy-Xp-8eb">
+                                        <rect key="frame" x="0.0" y="276" width="374" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vnb-mw-SOw">
+                                        <rect key="frame" x="0.0" y="322" width="374" height="131"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="ho9-fm-743" secondAttribute="trailing" id="5aM-gw-ttc"/>
@@ -420,9 +434,12 @@
                                     <constraint firstAttribute="trailing" secondItem="yKO-wv-xAs" secondAttribute="trailing" id="JhH-Nl-jGV"/>
                                     <constraint firstAttribute="trailing" secondItem="iIV-dx-RBJ" secondAttribute="trailing" id="OPY-DP-aVY"/>
                                     <constraint firstItem="yKO-wv-xAs" firstAttribute="leading" secondItem="CNp-fd-nwi" secondAttribute="leading" id="Sah-4F-MKz"/>
+                                    <constraint firstAttribute="trailing" secondItem="3oy-Xp-8eb" secondAttribute="trailing" id="TUh-yT-hDt"/>
                                     <constraint firstItem="g94-n9-7Lh" firstAttribute="leading" secondItem="CNp-fd-nwi" secondAttribute="leading" id="WE6-T3-Ic6"/>
+                                    <constraint firstItem="Vnb-mw-SOw" firstAttribute="leading" secondItem="CNp-fd-nwi" secondAttribute="leading" id="eQG-n8-v96"/>
                                     <constraint firstAttribute="trailing" secondItem="4IR-2O-Wmg" secondAttribute="trailing" id="eZy-hb-MH2"/>
                                     <constraint firstItem="HtX-aA-w5r" firstAttribute="leading" secondItem="CNp-fd-nwi" secondAttribute="leading" id="hHU-Hp-MS3"/>
+                                    <constraint firstAttribute="trailing" secondItem="Vnb-mw-SOw" secondAttribute="trailing" id="lCf-UL-s77"/>
                                     <constraint firstAttribute="trailing" secondItem="HtX-aA-w5r" secondAttribute="trailing" id="qvS-ky-sO4"/>
                                     <constraint firstItem="4IR-2O-Wmg" firstAttribute="leading" secondItem="CNp-fd-nwi" secondAttribute="leading" id="uoj-1o-nHi"/>
                                     <constraint firstAttribute="trailing" secondItem="g94-n9-7Lh" secondAttribute="trailing" id="w8P-7I-Fya"/>
@@ -432,6 +449,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="oV4-iQ-wL0" firstAttribute="trailing" secondItem="IDR-N0-b6q" secondAttribute="trailing" constant="20" id="0EE-th-Wof"/>
+                            <constraint firstItem="IDR-N0-b6q" firstAttribute="top" secondItem="CNp-fd-nwi" secondAttribute="bottom" constant="20" id="6J3-2s-svN"/>
                             <constraint firstItem="oV4-iQ-wL0" firstAttribute="trailing" secondItem="hYx-2r-xKq" secondAttribute="trailing" constant="20" id="DJe-Dy-quA"/>
                             <constraint firstItem="CNp-fd-nwi" firstAttribute="top" secondItem="hYx-2r-xKq" secondAttribute="bottom" constant="30" id="GcE-2s-bNy"/>
                             <constraint firstItem="hYx-2r-xKq" firstAttribute="top" secondItem="oV4-iQ-wL0" secondAttribute="top" constant="200" id="WZv-kz-2Jg"/>
@@ -445,6 +463,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Class Details" id="Hsv-Jz-1TD"/>
                     <connections>
+                        <outlet property="aboutClassLabel" destination="Vnb-mw-SOw" id="VOH-2E-83s"/>
                         <outlet property="availableSpotsLabel" destination="1lR-Fk-anN" id="rHg-YW-IZr"/>
                         <outlet property="classCategoryLabel" destination="iIV-dx-RBJ" id="vKY-dE-IBJ"/>
                         <outlet property="classLevelLabel" destination="HtX-aA-w5r" id="3um-Rl-Vsa"/>
