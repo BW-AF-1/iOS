@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		021000D124A84ED4006094A8 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021000D024A84ED4006094A8 /* NetworkController.swift */; };
+		021000D324A84F68006094A8 /* ClassRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021000D224A84F68006094A8 /* ClassRepresentation.swift */; };
+		021000D524A8510F006094A8 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021000D424A8510F006094A8 /* Token.swift */; };
 		023344DA249D8327001BABB3 /* LocationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023344D9249D8327001BABB3 /* LocationSearchViewController.swift */; };
 		023344EB249DD420001BABB3 /* CreateClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023344EA249DD420001BABB3 /* CreateClassViewController.swift */; };
 		023344ED249F17C3001BABB3 /* CreateClassNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023344EC249F17C3001BABB3 /* CreateClassNameViewController.swift */; };
@@ -18,29 +21,22 @@
 		023344FF24A17573001BABB3 /* ConfirmClassSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023344FE24A17573001BABB3 /* ConfirmClassSearchViewController.swift */; };
 		0233451124A1C924001BABB3 /* ManageInstructorClassConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233451024A1C924001BABB3 /* ManageInstructorClassConfirmViewController.swift */; };
 		023B14DF24A51F2C003BCD29 /* ClassManagementController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023B14DE24A51F2C003BCD29 /* ClassManagementController.swift */; };
+		024C579524AFFE3600724392 /* InstructorHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024C579424AFFE3600724392 /* InstructorHomeViewController.swift */; };
+		0255180524AC32210068DEF0 /* Client+CoreDataProperties copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025517FF24AC32200068DEF0 /* Client+CoreDataProperties copy.swift */; };
+		0255180624AC32210068DEF0 /* Instructor+CoreDataProperties copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0255180024AC32200068DEF0 /* Instructor+CoreDataProperties copy.swift */; };
+		0255180724AC32210068DEF0 /* NewClass+CoreDataProperties copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0255180124AC32200068DEF0 /* NewClass+CoreDataProperties copy.swift */; };
+		0255180824AC32210068DEF0 /* Client+CoreDataClass copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0255180224AC32210068DEF0 /* Client+CoreDataClass copy.swift */; };
+		0255180924AC32210068DEF0 /* Instructor+CoreDataClass copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0255180324AC32210068DEF0 /* Instructor+CoreDataClass copy.swift */; };
+		0255180A24AC32210068DEF0 /* NewClass+CoreDataClass copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0255180424AC32210068DEF0 /* NewClass+CoreDataClass copy.swift */; };
 		02569B69249C61F800B819EB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02569B68249C61F800B819EB /* SearchViewController.swift */; };
 		02569B6B249C737400B819EB /* SetBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02569B6A249C737400B819EB /* SetBackground.swift */; };
-
-		5276FC2524A4346C00EF4DC8 /* InstructorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276FC2424A4346C00EF4DC8 /* InstructorProfileViewController.swift */; };
-		5276FC2724A4355600EF4DC8 /* ClientFavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276FC2624A4355600EF4DC8 /* ClientFavoritesViewController.swift */; };
-		5276FC2924A4357100EF4DC8 /* ClientProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276FC2824A4357100EF4DC8 /* ClientProfileViewController.swift */; };
-		5276FC2B24A58B0F00EF4DC8 /* ClientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276FC2A24A58B0F00EF4DC8 /* ClientTableViewController.swift */; };
-
 		0288ED1124A3147000819E3E /* UpcomingClientClassDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0288ED1024A3147000819E3E /* UpcomingClientClassDetailViewController.swift */; };
 		0288ED1324A31F8500819E3E /* InstructorCreateClassController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0288ED1224A31F8500819E3E /* InstructorCreateClassController.swift */; };
-		0288ED1524A401AF00819E3E /* ClientClassSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0288ED1424A401AF00819E3E /* ClientClassSearchController.swift */; };
-		A6F578244A860195450FBF85 /* Pods_AnytimeFitness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E433E8E0FD223E9201BEB6E /* Pods_AnytimeFitness.framework */; };
-
-		02E6EBA124A53F2A00E0FE25 /* NewClass+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E6EB9B24A53F2A00E0FE25 /* NewClass+CoreDataClass.swift */; };
-		02E6EBA224A53F2A00E0FE25 /* NewClass+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E6EB9C24A53F2A00E0FE25 /* NewClass+CoreDataProperties.swift */; };
-		02E6EBA324A53F2A00E0FE25 /* Instructor+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E6EB9D24A53F2A00E0FE25 /* Instructor+CoreDataClass.swift */; };
-		02E6EBA424A53F2A00E0FE25 /* Instructor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E6EB9E24A53F2A00E0FE25 /* Instructor+CoreDataProperties.swift */; };
-		02E6EBA524A53F2A00E0FE25 /* Client+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E6EB9F24A53F2A00E0FE25 /* Client+CoreDataClass.swift */; };
-		02E6EBA624A53F2A00E0FE25 /* Client+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E6EBA024A53F2A00E0FE25 /* Client+CoreDataProperties.swift */; };
 		02E6EBA824A55F0A00E0FE25 /* RichFetchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E6EBA724A55F0A00E0FE25 /* RichFetchRequest.swift */; };
 		02E6EBAC24A596D900E0FE25 /* UpcomingInstructorClassesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E6EBAB24A596D900E0FE25 /* UpcomingInstructorClassesTableViewController.swift */; };
 		02E6EBAE24A5C38700E0FE25 /* UpcomingClientClassesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E6EBAD24A5C38700E0FE25 /* UpcomingClientClassesTableViewController.swift */; };
-
+		5276FC2724A4355600EF4DC8 /* ClientFavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276FC2624A4355600EF4DC8 /* ClientFavoritesViewController.swift */; };
+		A6F578244A860195450FBF85 /* Pods_AnytimeFitness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E433E8E0FD223E9201BEB6E /* Pods_AnytimeFitness.framework */; };
 		C350B70624A1915200F2FE7B /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = C350B70524A1915200F2FE7B /* Config.plist */; };
 		C350B70824A1924300F2FE7B /* ClientSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C350B70724A1924300F2FE7B /* ClientSignUpViewController.swift */; };
 		C350B70A24A1926000F2FE7B /* InstructorSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C350B70924A1926000F2FE7B /* InstructorSignUpViewController.swift */; };
@@ -52,7 +48,6 @@
 		C350B72224A308B000F2FE7B /* AnytimeFitness+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = C350B72124A308B000F2FE7B /* AnytimeFitness+Convenience.swift */; };
 		C350B72424A308F700F2FE7B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C350B72324A308F700F2FE7B /* CoreDataStack.swift */; };
 		C350B73424A455D400F2FE7B /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = C350B73324A455D400F2FE7B /* HTTPMethod.swift */; };
-
 		C35C6FED249AF9D800A23367 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35C6FEC249AF9D800A23367 /* AppDelegate.swift */; };
 		C35C6FEF249AF9D800A23367 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35C6FEE249AF9D800A23367 /* SceneDelegate.swift */; };
 		C35C6FF4249AF9D800A23367 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35C6FF2249AF9D800A23367 /* Main.storyboard */; };
@@ -63,9 +58,7 @@
 		C35C700B249B017600A23367 /* ClientSignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35C700A249B017600A23367 /* ClientSignIn.storyboard */; };
 		C35C700D249B01C100A23367 /* InstructorSignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35C700C249B01C100A23367 /* InstructorSignIn.storyboard */; };
 		C35C7011249B050D00A23367 /* InstructorMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35C7010249B050D00A23367 /* InstructorMain.storyboard */; };
-		C35C7013249B07CD00A23367 /* InstructorProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35C7012249B07CD00A23367 /* InstructorProfile.storyboard */; };
 		C35C7015249B084D00A23367 /* ClientMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35C7014249B084D00A23367 /* ClientMain.storyboard */; };
-		C35C7017249B09CF00A23367 /* ClientProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35C7016249B09CF00A23367 /* ClientProfile.storyboard */; };
 		C35C7019249B09E200A23367 /* ClientSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35C7018249B09E200A23367 /* ClientSearch.storyboard */; };
 		C35C701B249B09EF00A23367 /* ClientUpcoming.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35C701A249B09EF00A23367 /* ClientUpcoming.storyboard */; };
 		C35C701D249B09F900A23367 /* ClientFavorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35C701C249B09F900A23367 /* ClientFavorites.storyboard */; };
@@ -79,6 +72,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		021000D024A84ED4006094A8 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		021000D224A84F68006094A8 /* ClassRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassRepresentation.swift; sourceTree = "<group>"; };
+		021000D424A8510F006094A8 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		023344D9249D8327001BABB3 /* LocationSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationSearchViewController.swift; path = "AnytimeFitness/Views/View Controllers/Client/Features/Search/LocationSearchViewController.swift"; sourceTree = SOURCE_ROOT; };
 		023344EA249DD420001BABB3 /* CreateClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateClassViewController.swift; sourceTree = "<group>"; };
 		023344EC249F17C3001BABB3 /* CreateClassNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateClassNameViewController.swift; sourceTree = "<group>"; };
@@ -90,31 +86,25 @@
 		023344FE24A17573001BABB3 /* ConfirmClassSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmClassSearchViewController.swift; sourceTree = "<group>"; };
 		0233451024A1C924001BABB3 /* ManageInstructorClassConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageInstructorClassConfirmViewController.swift; sourceTree = "<group>"; };
 		023B14DE24A51F2C003BCD29 /* ClassManagementController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassManagementController.swift; sourceTree = "<group>"; };
+		024C579424AFFE3600724392 /* InstructorHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorHomeViewController.swift; sourceTree = SOURCE_ROOT; };
+		025517FF24AC32200068DEF0 /* Client+CoreDataProperties copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Client+CoreDataProperties copy.swift"; sourceTree = "<group>"; };
+		0255180024AC32200068DEF0 /* Instructor+CoreDataProperties copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Instructor+CoreDataProperties copy.swift"; sourceTree = "<group>"; };
+		0255180124AC32200068DEF0 /* NewClass+CoreDataProperties copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NewClass+CoreDataProperties copy.swift"; sourceTree = "<group>"; };
+		0255180224AC32210068DEF0 /* Client+CoreDataClass copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Client+CoreDataClass copy.swift"; sourceTree = "<group>"; };
+		0255180324AC32210068DEF0 /* Instructor+CoreDataClass copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Instructor+CoreDataClass copy.swift"; sourceTree = "<group>"; };
+		0255180424AC32210068DEF0 /* NewClass+CoreDataClass copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NewClass+CoreDataClass copy.swift"; sourceTree = "<group>"; };
 		02569B68249C61F800B819EB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = "AnytimeFitness/Views/View Controllers/Client/Features/Search/SearchViewController.swift"; sourceTree = SOURCE_ROOT; };
 		02569B6A249C737400B819EB /* SetBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBackground.swift; sourceTree = "<group>"; };
-
-		5276FC2424A4346C00EF4DC8 /* InstructorProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InstructorProfileViewController.swift; path = AnytimeFitness/InstructorProfileViewController.swift; sourceTree = SOURCE_ROOT; };
-		5276FC2624A4355600EF4DC8 /* ClientFavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClientFavoritesViewController.swift; path = AnytimeFitness/ClientFavoritesViewController.swift; sourceTree = SOURCE_ROOT; };
-		5276FC2824A4357100EF4DC8 /* ClientProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClientProfileViewController.swift; path = AnytimeFitness/ClientProfileViewController.swift; sourceTree = SOURCE_ROOT; };
-		5276FC2A24A58B0F00EF4DC8 /* ClientTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClientTableViewController.swift; path = AnytimeFitness/ClientTableViewController.swift; sourceTree = SOURCE_ROOT; };
-
 		0288ED1024A3147000819E3E /* UpcomingClientClassDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingClientClassDetailViewController.swift; sourceTree = "<group>"; };
 		0288ED1224A31F8500819E3E /* InstructorCreateClassController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorCreateClassController.swift; sourceTree = "<group>"; };
-		0288ED1424A401AF00819E3E /* ClientClassSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientClassSearchController.swift; sourceTree = "<group>"; };
-
-		360F5BCFAE16695DFFDF8EC8 /* Pods-AnytimeFitness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnytimeFitness.release.xcconfig"; path = "Target Support Files/Pods-AnytimeFitness/Pods-AnytimeFitness.release.xcconfig"; sourceTree = "<group>"; };
-		8E433E8E0FD223E9201BEB6E /* Pods_AnytimeFitness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnytimeFitness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B0C12A45289A0957FDA23816 /* Pods-AnytimeFitness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnytimeFitness.debug.xcconfig"; path = "Target Support Files/Pods-AnytimeFitness/Pods-AnytimeFitness.debug.xcconfig"; sourceTree = "<group>"; };
 		02E6EB9A24A539D200E0FE25 /* AnytimeFitness 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "AnytimeFitness 2.xcdatamodel"; sourceTree = "<group>"; };
-		02E6EB9B24A53F2A00E0FE25 /* NewClass+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "NewClass+CoreDataClass.swift"; path = "AnytimeFitness/NewClass+CoreDataClass.swift"; sourceTree = "<group>"; };
-		02E6EB9C24A53F2A00E0FE25 /* NewClass+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "NewClass+CoreDataProperties.swift"; path = "AnytimeFitness/NewClass+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		02E6EB9D24A53F2A00E0FE25 /* Instructor+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Instructor+CoreDataClass.swift"; path = "AnytimeFitness/Instructor+CoreDataClass.swift"; sourceTree = "<group>"; };
-		02E6EB9E24A53F2A00E0FE25 /* Instructor+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Instructor+CoreDataProperties.swift"; path = "AnytimeFitness/Instructor+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		02E6EB9F24A53F2A00E0FE25 /* Client+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Client+CoreDataClass.swift"; path = "AnytimeFitness/Client+CoreDataClass.swift"; sourceTree = "<group>"; };
-		02E6EBA024A53F2A00E0FE25 /* Client+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Client+CoreDataProperties.swift"; path = "AnytimeFitness/Client+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		02E6EBA724A55F0A00E0FE25 /* RichFetchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichFetchRequest.swift; sourceTree = "<group>"; };
 		02E6EBAB24A596D900E0FE25 /* UpcomingInstructorClassesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingInstructorClassesTableViewController.swift; sourceTree = "<group>"; };
 		02E6EBAD24A5C38700E0FE25 /* UpcomingClientClassesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingClientClassesTableViewController.swift; sourceTree = "<group>"; };
+		360F5BCFAE16695DFFDF8EC8 /* Pods-AnytimeFitness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnytimeFitness.release.xcconfig"; path = "Target Support Files/Pods-AnytimeFitness/Pods-AnytimeFitness.release.xcconfig"; sourceTree = "<group>"; };
+		5276FC2624A4355600EF4DC8 /* ClientFavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClientFavoritesViewController.swift; path = AnytimeFitness/ClientFavoritesViewController.swift; sourceTree = SOURCE_ROOT; };
+		8E433E8E0FD223E9201BEB6E /* Pods_AnytimeFitness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnytimeFitness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0C12A45289A0957FDA23816 /* Pods-AnytimeFitness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnytimeFitness.debug.xcconfig"; path = "Target Support Files/Pods-AnytimeFitness/Pods-AnytimeFitness.debug.xcconfig"; sourceTree = "<group>"; };
 		C350B70524A1915200F2FE7B /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		C350B70724A1924300F2FE7B /* ClientSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSignUpViewController.swift; sourceTree = "<group>"; };
 		C350B70924A1926000F2FE7B /* InstructorSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorSignUpViewController.swift; sourceTree = "<group>"; };
@@ -126,7 +116,6 @@
 		C350B72124A308B000F2FE7B /* AnytimeFitness+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnytimeFitness+Convenience.swift"; sourceTree = "<group>"; };
 		C350B72324A308F700F2FE7B /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		C350B73324A455D400F2FE7B /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-
 		C35C6FE9249AF9D800A23367 /* AnytimeFitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnytimeFitness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C35C6FEC249AF9D800A23367 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C35C6FEE249AF9D800A23367 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,13 +128,11 @@
 		C35C700A249B017600A23367 /* ClientSignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ClientSignIn.storyboard; sourceTree = "<group>"; };
 		C35C700C249B01C100A23367 /* InstructorSignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InstructorSignIn.storyboard; sourceTree = "<group>"; };
 		C35C7010249B050D00A23367 /* InstructorMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InstructorMain.storyboard; sourceTree = "<group>"; };
-		C35C7012249B07CD00A23367 /* InstructorProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InstructorProfile.storyboard; sourceTree = "<group>"; };
 		C35C7014249B084D00A23367 /* ClientMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ClientMain.storyboard; sourceTree = "<group>"; };
-		C35C7016249B09CF00A23367 /* ClientProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ClientProfile.storyboard; sourceTree = "<group>"; };
 		C35C7018249B09E200A23367 /* ClientSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ClientSearch.storyboard; sourceTree = "<group>"; };
 		C35C701A249B09EF00A23367 /* ClientUpcoming.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ClientUpcoming.storyboard; sourceTree = "<group>"; };
 		C35C701C249B09F900A23367 /* ClientFavorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ClientFavorites.storyboard; sourceTree = "<group>"; };
-		C35C701F249B0B4400A23367 /* InstructorHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InstructorHome.storyboard; sourceTree = "<group>"; };
+		C35C701F249B0B4400A23367 /* InstructorHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = InstructorHome.storyboard; path = AnytimeFitness/Views/Instructor/Features/InstructorHome.storyboard; sourceTree = SOURCE_ROOT; };
 		C35C7021249B0B5D00A23367 /* InstructorSchedule.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InstructorSchedule.storyboard; sourceTree = "<group>"; };
 		C35C7023249B0B6B00A23367 /* InstructorCreate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InstructorCreate.storyboard; sourceTree = "<group>"; };
 		C35C7026249C750700A23367 /* ClientFlowSignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ClientFlowSignIn.storyboard; sourceTree = "<group>"; };
@@ -180,7 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				023344E6249DAC03001BABB3 /* Favorites */,
-				023344E5249DAC00001BABB3 /* Profile */,
 				023344E4249DABFD001BABB3 /* Search */,
 				023344E3249DABF9001BABB3 /* Upcoming */,
 			);
@@ -200,7 +186,6 @@
 		023344DE249DAB98001BABB3 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				023344E2249DABD5001BABB3 /* Profile */,
 				023344E1249DABD2001BABB3 /* Home */,
 				023344E0249DABC8001BABB3 /* Schedule */,
 				023344DF249DABC5001BABB3 /* Create */,
@@ -231,16 +216,9 @@
 		023344E1249DABD2001BABB3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				024C579424AFFE3600724392 /* InstructorHomeViewController.swift */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		023344E2249DABD5001BABB3 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				5276FC2424A4346C00EF4DC8 /* InstructorProfileViewController.swift */,
-			);
-			path = Profile;
 			sourceTree = "<group>";
 		};
 		023344E3249DABF9001BABB3 /* Upcoming */ = {
@@ -262,24 +240,14 @@
 				023344F624A152FE001BABB3 /* ClassSearchResultsViewController.swift */,
 				023344FC24A17056001BABB3 /* ClassReserveSearchViewController.swift */,
 				023344FE24A17573001BABB3 /* ConfirmClassSearchViewController.swift */,
-				0288ED1424A401AF00819E3E /* ClientClassSearchController.swift */,
 			);
 			path = Search;
-			sourceTree = "<group>";
-		};
-		023344E5249DAC00001BABB3 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				5276FC2824A4357100EF4DC8 /* ClientProfileViewController.swift */,
-			);
-			path = Profile;
 			sourceTree = "<group>";
 		};
 		023344E6249DAC03001BABB3 /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
 				5276FC2624A4355600EF4DC8 /* ClientFavoritesViewController.swift */,
-				5276FC2A24A58B0F00EF4DC8 /* ClientTableViewController.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -313,12 +281,12 @@
 		C35C6FE0249AF9D800A23367 = {
 			isa = PBXGroup;
 			children = (
-				02E6EB9B24A53F2A00E0FE25 /* NewClass+CoreDataClass.swift */,
-				02E6EB9C24A53F2A00E0FE25 /* NewClass+CoreDataProperties.swift */,
-				02E6EB9D24A53F2A00E0FE25 /* Instructor+CoreDataClass.swift */,
-				02E6EB9E24A53F2A00E0FE25 /* Instructor+CoreDataProperties.swift */,
-				02E6EB9F24A53F2A00E0FE25 /* Client+CoreDataClass.swift */,
-				02E6EBA024A53F2A00E0FE25 /* Client+CoreDataProperties.swift */,
+				025517FF24AC32200068DEF0 /* Client+CoreDataProperties copy.swift */,
+				0255180024AC32200068DEF0 /* Instructor+CoreDataProperties copy.swift */,
+				0255180124AC32200068DEF0 /* NewClass+CoreDataProperties copy.swift */,
+				0255180224AC32210068DEF0 /* Client+CoreDataClass copy.swift */,
+				0255180324AC32210068DEF0 /* Instructor+CoreDataClass copy.swift */,
+				0255180424AC32210068DEF0 /* NewClass+CoreDataClass copy.swift */,
 				C35C6FEB249AF9D800A23367 /* AnytimeFitness */,
 				C35C7007249AFE8E00A23367 /* Resources */,
 				C35C6FEA249AF9D800A23367 /* Products */,
@@ -354,6 +322,8 @@
 				C350B71B24A1BA6D00F2FE7B /* Selection.swift */,
 				C350B72124A308B000F2FE7B /* AnytimeFitness+Convenience.swift */,
 				C350B72324A308F700F2FE7B /* CoreDataStack.swift */,
+				021000D224A84F68006094A8 /* ClassRepresentation.swift */,
+				021000D424A8510F006094A8 /* Token.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -389,6 +359,7 @@
 			children = (
 				C350B71924A1B91A00F2FE7B /* SelectionController.swift */,
 				023B14DE24A51F2C003BCD29 /* ClassManagementController.swift */,
+				021000D024A84ED4006094A8 /* NetworkController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -430,7 +401,6 @@
 			isa = PBXGroup;
 			children = (
 				C35C701C249B09F900A23367 /* ClientFavorites.storyboard */,
-				C35C7016249B09CF00A23367 /* ClientProfile.storyboard */,
 				C35C7018249B09E200A23367 /* ClientSearch.storyboard */,
 				C35C701A249B09EF00A23367 /* ClientUpcoming.storyboard */,
 			);
@@ -440,7 +410,6 @@
 		C35C7025249B0B7100A23367 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				C35C7012249B07CD00A23367 /* InstructorProfile.storyboard */,
 				C35C701F249B0B4400A23367 /* InstructorHome.storyboard */,
 				C35C7021249B0B5D00A23367 /* InstructorSchedule.storyboard */,
 				C35C7023249B0B6B00A23367 /* InstructorCreate.storyboard */,
@@ -513,12 +482,10 @@
 				C35C701B249B09EF00A23367 /* ClientUpcoming.storyboard in Resources */,
 				C35C7020249B0B4400A23367 /* InstructorHome.storyboard in Resources */,
 				C35C7024249B0B6B00A23367 /* InstructorCreate.storyboard in Resources */,
-				C35C7013249B07CD00A23367 /* InstructorProfile.storyboard in Resources */,
 				C35C700D249B01C100A23367 /* InstructorSignIn.storyboard in Resources */,
 				C35C7022249B0B5D00A23367 /* InstructorSchedule.storyboard in Resources */,
 				C35C701D249B09F900A23367 /* ClientFavorites.storyboard in Resources */,
 				C35C7019249B09E200A23367 /* ClientSearch.storyboard in Resources */,
-				C35C7017249B09CF00A23367 /* ClientProfile.storyboard in Resources */,
 				C350B70624A1915200F2FE7B /* Config.plist in Resources */,
 				C35C700B249B017600A23367 /* ClientSignIn.storyboard in Resources */,
 				C35C6FF9249AF9D900A23367 /* assets.xcassets in Resources */,
@@ -598,58 +565,52 @@
 			buildActionMask = 2147483647;
 			files = (
 				C350B71C24A1BA6D00F2FE7B /* Selection.swift in Sources */,
+				021000D524A8510F006094A8 /* Token.swift in Sources */,
 				C350B70A24A1926000F2FE7B /* InstructorSignUpViewController.swift in Sources */,
-				02E6EBA624A53F2A00E0FE25 /* Client+CoreDataProperties.swift in Sources */,
 				C350B71A24A1B91A00F2FE7B /* SelectionController.swift in Sources */,
 				0233451124A1C924001BABB3 /* ManageInstructorClassConfirmViewController.swift in Sources */,
 				C35C6FED249AF9D800A23367 /* AppDelegate.swift in Sources */,
 				023344F724A152FE001BABB3 /* ClassSearchResultsViewController.swift in Sources */,
-				02E6EBA224A53F2A00E0FE25 /* NewClass+CoreDataProperties.swift in Sources */,
 				023344DA249D8327001BABB3 /* LocationSearchViewController.swift in Sources */,
 				023344EB249DD420001BABB3 /* CreateClassViewController.swift in Sources */,
 				02E6EBAC24A596D900E0FE25 /* UpcomingInstructorClassesTableViewController.swift in Sources */,
 				0288ED1324A31F8500819E3E /* InstructorCreateClassController.swift in Sources */,
+				0255180524AC32210068DEF0 /* Client+CoreDataProperties copy.swift in Sources */,
+				024C579524AFFE3600724392 /* InstructorHomeViewController.swift in Sources */,
 				C36DBDF724A590CB00B5AB69 /* ClientSignInViewController.swift in Sources */,
+				0255180A24AC32210068DEF0 /* NewClass+CoreDataClass copy.swift in Sources */,
 				023344F1249FD44E001BABB3 /* CompleteClassViewController.swift in Sources */,
 				C36DBDF924A5B64400B5AB69 /* InstructorSignInViewController.swift in Sources */,
 				0288ED1124A3147000819E3E /* UpcomingClientClassDetailViewController.swift in Sources */,
 				023344F524A142CF001BABB3 /* ClassDetailSearchViewController.swift in Sources */,
-				02E6EBA524A53F2A00E0FE25 /* Client+CoreDataClass.swift in Sources */,
-				02E6EBA424A53F2A00E0FE25 /* Instructor+CoreDataProperties.swift in Sources */,
 				023344FD24A17057001BABB3 /* ClassReserveSearchViewController.swift in Sources */,
 				C35C6FF7249AF9D800A23367 /* AnytimeFitness.xcdatamodeld in Sources */,
 				C350B70824A1924300F2FE7B /* ClientSignUpViewController.swift in Sources */,
 				023344FD24A17057001BABB3 /* ClassReserveSearchViewController.swift in Sources */,
 				023B14DF24A51F2C003BCD29 /* ClassManagementController.swift in Sources */,
+				0255180724AC32210068DEF0 /* NewClass+CoreDataProperties copy.swift in Sources */,
 				02E6EBAE24A5C38700E0FE25 /* UpcomingClientClassesTableViewController.swift in Sources */,
+				0255180824AC32210068DEF0 /* Client+CoreDataClass copy.swift in Sources */,
 				C350B72424A308F700F2FE7B /* CoreDataStack.swift in Sources */,
 				C35C6FF7249AF9D800A23367 /* AnytimeFitness.xcdatamodeld in Sources */,
-				02E6EBA124A53F2A00E0FE25 /* NewClass+CoreDataClass.swift in Sources */,
 				02E6EBA824A55F0A00E0FE25 /* RichFetchRequest.swift in Sources */,
 				C350B70824A1924300F2FE7B /* ClientSignUpViewController.swift in Sources */,
 				C350B73424A455D400F2FE7B /* HTTPMethod.swift in Sources */,
+				0255180624AC32210068DEF0 /* Instructor+CoreDataProperties copy.swift in Sources */,
 				02569B69249C61F800B819EB /* SearchViewController.swift in Sources */,
-
-				5276FC2B24A58B0F00EF4DC8 /* ClientTableViewController.swift in Sources */,
-				5276FC2524A4346C00EF4DC8 /* InstructorProfileViewController.swift in Sources */,
-
+				021000D124A84ED4006094A8 /* NetworkController.swift in Sources */,
 				C350B72224A308B000F2FE7B /* AnytimeFitness+Convenience.swift in Sources */,
 				C350B71824A1B52D00F2FE7B /* SignUpSelectionViewController.swift in Sources */,
 				C350B70C24A1A0A600F2FE7B /* MainViewController.swift in Sources */,
-
+				021000D324A84F68006094A8 /* ClassRepresentation.swift in Sources */,
 				02569B6B249C737400B819EB /* SetBackground.swift in Sources */,
 				C350B71624A1B4BA00F2FE7B /* CellSignUpCollectionViewCell.swift in Sources */,
-				0288ED1524A401AF00819E3E /* ClientClassSearchController.swift in Sources */,
+				0255180924AC32210068DEF0 /* Instructor+CoreDataClass copy.swift in Sources */,
 				C35C6FEF249AF9D800A23367 /* SceneDelegate.swift in Sources */,
-
 				5276FC2724A4355600EF4DC8 /* ClientFavoritesViewController.swift in Sources */,
-				5276FC2924A4357100EF4DC8 /* ClientProfileViewController.swift in Sources */,
-
 				023344ED249F17C3001BABB3 /* CreateClassNameViewController.swift in Sources */,
-				02E6EBA324A53F2A00E0FE25 /* Instructor+CoreDataClass.swift in Sources */,
 				023344F324A00EDA001BABB3 /* FitnessTypeCollectionViewCell.swift in Sources */,
 				023344FF24A17573001BABB3 /* ConfirmClassSearchViewController.swift in Sources */,
-
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,9 +1,8 @@
 //
 //  Client+CoreDataProperties.swift
-//  AnytimeFitness
+//  
 //
-//  Created by Morgan Smith on 6/25/20.
-//  Copyright © 2020 Jarren Campos. All rights reserved.
+//  Created by Morgan Smith on 6/30/20.
 //
 //
 
@@ -17,11 +16,9 @@ extension Client {
         return NSFetchRequest<Client>(entityName: "Client")
     }
 
-    @NSManaged public var email: String?
-    @NSManaged public var firstName: String?
-    @NSManaged public var identifier: UUID
-    @NSManaged public var lastName: String?
-    @NSManaged public var phoneNumber: String?
+    @NSManaged public var clientID: Int16
+    @NSManaged public var email: String
+    @NSManaged public var password: String
     @NSManaged public var registeredClasses: NSSet?
 
 }

@@ -7,8 +7,7 @@
 //
 
 import UIKit
-import FirebaseAuth
-import FirebaseFirestore
+import CoreData
 
 class ClientSignUpViewController: UIViewController {
     
@@ -25,30 +24,21 @@ class ClientSignUpViewController: UIViewController {
     }
     
     @IBAction func createClient(_ sender: Any) {
-        guard let firstName = firstName.text else { return }
-        guard let lastName = lastName.text else { return }
         guard let email = email.text else { return }
         guard let password = password.text else { return }
-        
-        
-        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
-            
-            if error != nil {
-                self.errorLabel.alpha = 1
-                print(error)
-            } else {
-                
-                let db = Firestore.firestore()
-                
-                db.collection("clients").addDocument(data: ["first_name": firstName, "last_name": lastName, "uid": result!.user.uid]) { (error) in
-                    
-                    if error != nil {
-                        print(error)
-                    }
-                    self.errorLabel.alpha = 0
-                    self.performSegue(withIdentifier: "clientSignIn", sender: self)
-                }
+
+        let client = ClientRepresentation(email: email, password: password)
+
+
+        NetworkController.sharedNetworkController.registerClient(with: client) { (error) in
+            if let error = error {
+                print("Error for client registering: \(error)")
+            }
+            DispatchQueue.main.async {
+                self.errorLabel.alpha = 0
+                self.performSegue(withIdentifier: "clientSignIn", sender: self)
             }
         }
     }
+
 }

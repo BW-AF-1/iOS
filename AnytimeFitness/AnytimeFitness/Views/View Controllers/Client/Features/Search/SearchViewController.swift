@@ -26,6 +26,7 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         fitnessCollection.delegate = self
         fitnessCollection.dataSource = self
+        fitnessCollection.allowsMultipleSelection = true
         view.setLightButtonColor(toButtonNamed: nextButton)
     }
 
@@ -34,6 +35,14 @@ class SearchViewController: UIViewController {
         fitnessCollection.reloadData()
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let nextVC = segue.destination as? LocationSearchViewController else { return }
+        if selectedFitnessTypes.count > 1 {
+            nextVC.selectedFitness = selectedFitnessTypes
+        } else {
+            nextVC.selectedFitness = ClassTypeInt.allFitnessTypeNames
+        }
+    }
 }
 
 extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -45,20 +54,26 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "fitnessType", for: indexPath) as? FitnessTypeCollectionViewCell else { return UICollectionViewCell() }
+        cell.layer.borderWidth = 4.0
+        cell.layer.borderColor = UIColor.gray.cgColor
         cell.fitnessImageView.image = UIImage(named: ClassTypeInt.allFitnessTypeNames[indexPath.item])
         return cell
     }
 
-    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.layer.borderWidth = 4.0
+        cell?.layer.borderColor = UIColor.systemOrange.cgColor
+        selectedFitnessTypes.append(ClassTypeInt.allFitnessTypeNames[indexPath.item])
+        print("New added array: \(selectedFitnessTypes)")
     }
 
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if selectedFitnessTypes.contains(ClassTypeInt.allFitnessTypeNames [indexPath.item]) { selectedFitnessTypes.removeAll{ $0 == ClassTypeInt.allFitnessTypeNames[indexPath.item]}
-        } else {
-            selectedFitnessTypes.append(ClassTypeInt.allFitnessTypeNames[indexPath.item])
-        }
-        
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.layer.borderWidth = 4.0
+        cell?.layer.borderColor = UIColor.gray.cgColor
+        print("New added array: \(selectedFitnessTypes)")
+        selectedFitnessTypes.removeAll{ $0 == ClassTypeInt.allFitnessTypeNames[indexPath.item]}
         print("New added array: \(selectedFitnessTypes)")
     }
 

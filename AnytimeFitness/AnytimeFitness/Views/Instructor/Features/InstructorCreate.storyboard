@@ -456,7 +456,7 @@
         <!--InstructorScheduleTableViewController-->
         <scene sceneID="Aeu-13-h0n">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="InstructorScheduleViewController" storyboardName="InstructorSchedule" referencedIdentifier="InstructorScheduleTableViewController" id="gcz-NY-oIs" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="InstructorSchedule" referencedIdentifier="InstructorScheduleTableViewController" id="gcz-NY-oIs" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="tcx-V0-vLA"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bam-1k-xhL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -467,7 +467,7 @@
         <scene sceneID="KCX-0n-PLs">
             <objects>
                 <navigationController storyboardIdentifier="InstructorCreate" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NOf-x7-W1O" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Create" image="plus" catalog="system" id="Xzs-kv-5Yv"/>
+                    <tabBarItem key="tabBarItem" title="Create" image="Create" id="Xzs-kv-5Yv"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="xpt-k3-Fi4">
@@ -486,6 +486,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="Create" width="20" height="20"/>
     </resources>
 </document>

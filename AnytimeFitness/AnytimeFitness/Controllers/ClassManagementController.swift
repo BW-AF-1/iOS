@@ -53,7 +53,7 @@ enum ClassTypeInt: Int, TableViewSelectable, Codable {
         case .boxing:
             return "Boxing"
         case .dancing:
-            return "Dancing"
+            return "Biking"
         case .biking:
             return "Dancing"
         case .pilates:
@@ -73,10 +73,18 @@ enum ClassTypeInt: Int, TableViewSelectable, Codable {
         case .functionalFitness:
             return "Functional Fitness"
         case .ect:
-            return "Ect."
+            return "Etc."
         }
     }
 
+}
+extension String {
+    func contains(find: String) -> Bool{
+        return self.range(of: find) != nil
+    }
+    func containsIgnoringCase(find: String) -> Bool{
+        return self.range(of: find, options: .caseInsensitive) != nil
+    }
 }
 
 class ClassManagementController {
@@ -85,7 +93,7 @@ class ClassManagementController {
         let timeString = newClass.classDateCD
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm a"
-        formatter.timeZone = TimeZone(secondsFromGMT: 0)
+        //formatter.timeZone = TimeZone(secondsFromGMT: 0)
         return formatter.string(from: timeString)
     }
 
@@ -101,12 +109,86 @@ class ClassManagementController {
         newClass.classNameCD = name
         newClass.classLocationCD = address
         newClass.classDateCD = newDate
+        NetworkController.sharedNetworkController.updateClass(for: newClass) { (error) in
+            if let error = error {
+                print("Error for updating Instructor class: \(error)")
+            }
+        }
         let moc = CoreDataStack.shared.mainContext
         do {
             try moc.save()
         } catch {
             moc.reset()
             NSLog("Error saving managed object context: \(error)")
+        }
+    }
+
+    func updateClassCount(with newClass: NewClass) {
+        if newClass.classMaxSizeCD == newClass.classCurrentSizeCD {
+            return
+        }
+        newClass.classCurrentSizeCD += 1
+        NetworkController.sharedNetworkController.updateClass(for: newClass) { (error) in
+            if let error = error {
+                print("Error for adding Instructor class count: \(error)")
+            }
+        }
+        let moc = CoreDataStack.shared.mainContext
+        do {
+            try moc.save()
+        } catch {
+            moc.reset()
+            NSLog("Error saving managed object context: \(error)")
+        }
+    }
+
+    func deleteClassCount(with newClass: NewClass) {
+        if newClass.classCurrentSizeCD < 1 {
+            return
+        } else {
+            newClass.classCurrentSizeCD -= 1
+        }
+        NetworkController.sharedNetworkController.updateClass(for: newClass) { (error) in
+            if let error = error {
+                print("Error for subtracting Instructor class count: \(error)")
+            }
+        }
+        let moc = CoreDataStack.shared.mainContext
+        do {
+            try moc.save()
+        } catch {
+            moc.reset()
+            NSLog("Error saving managed object context: \(error)")
+        }
+    }
+
+    func createClientClass(with newClass: NewClass) {
+        let currentClient = NetworkController.sharedNetworkController.currentCDClient
+        guard let currentClients = currentClient else {
+            return
+        }
+        newClass.addToRegisteredClients(currentClients)
+        let moc = CoreDataStack.shared.mainContext
+        do {
+            try moc.save()
+        } catch {
+            moc.reset()
+            NSLog("Error saving client to the class: \(error)")
+        }
+    }
+
+    func deleteClientClass(with newClass: NewClass) {
+        let currentClient = NetworkController.sharedNetworkController.currentCDClient
+        guard let currentClients = currentClient else {
+            return
+        }
+        newClass.removeFromRegisteredClients(currentClients)
+        let moc = CoreDataStack.shared.mainContext
+        do {
+            try moc.save()
+        } catch {
+            moc.reset()
+            NSLog("Error deleting client from the class: \(error)")
         }
     }
 

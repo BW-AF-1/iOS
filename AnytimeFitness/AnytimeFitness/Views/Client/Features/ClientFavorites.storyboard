@@ -10,36 +10,73 @@
         <!--Favorites-->
         <scene sceneID="MiV-Be-NN6">
             <objects>
-                <viewController id="yOw-bn-DOD" sceneMemberID="viewController">
+                <viewController id="yOw-bn-DOD" customClass="ClientFavoritesViewController" customModule="AnytimeFitness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t0E-wW-b2q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PEv-u8-pqz">
-                                <rect key="frame" x="0.0" y="160" width="414" height="633"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Select the icons below to search or view your classes." textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7g-6I-kXI">
+                                <rect key="frame" x="75" y="389" width="247" height="48"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HF7-7C-tBC">
+                                <rect key="frame" x="311" y="175" width="75" height="30"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutClicked:" destination="yOw-bn-DOD" eventType="touchUpInside" id="98V-hi-BQE"/>
+                                    <segue destination="Kn0-RZ-qce" kind="showDetail" identifier="ClientLogout" id="ZUa-OC-ils"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjN-tY-ncu">
+                                <rect key="frame" x="12" y="293" width="374" height="60"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="PEv-u8-pqz" firstAttribute="top" secondItem="IvA-jZ-O7e" secondAttribute="top" constant="20" id="E38-wr-edh"/>
-                            <constraint firstItem="IvA-jZ-O7e" firstAttribute="trailing" secondItem="PEv-u8-pqz" secondAttribute="trailing" id="FbQ-a5-6BT"/>
-                            <constraint firstItem="IvA-jZ-O7e" firstAttribute="bottom" secondItem="PEv-u8-pqz" secondAttribute="bottom" constant="20" id="Nxt-ic-fvA"/>
-                            <constraint firstItem="PEv-u8-pqz" firstAttribute="leading" secondItem="IvA-jZ-O7e" secondAttribute="leading" id="na6-Fe-YHG"/>
+                            <constraint firstItem="IvA-jZ-O7e" firstAttribute="trailing" secondItem="HF7-7C-tBC" secondAttribute="trailing" constant="28" id="Aiy-8l-I6V"/>
+                            <constraint firstItem="w7g-6I-kXI" firstAttribute="top" secondItem="bjN-tY-ncu" secondAttribute="bottom" constant="36" id="Dw5-YP-9xc"/>
+                            <constraint firstItem="bjN-tY-ncu" firstAttribute="top" secondItem="HF7-7C-tBC" secondAttribute="bottom" constant="88" id="M1G-Wd-xAf"/>
+                            <constraint firstItem="HF7-7C-tBC" firstAttribute="top" secondItem="IvA-jZ-O7e" secondAttribute="top" constant="35" id="Oqw-LB-VYd"/>
+                            <constraint firstItem="HF7-7C-tBC" firstAttribute="leading" secondItem="IvA-jZ-O7e" secondAttribute="leading" constant="311" id="OsQ-EE-Heq"/>
+                            <constraint firstItem="bjN-tY-ncu" firstAttribute="leading" secondItem="IvA-jZ-O7e" secondAttribute="leading" constant="12" id="Rfs-2E-O3h"/>
+                            <constraint firstItem="IvA-jZ-O7e" firstAttribute="trailing" secondItem="bjN-tY-ncu" secondAttribute="trailing" constant="28" id="Vaz-NR-SJQ"/>
+                            <constraint firstItem="IvA-jZ-O7e" firstAttribute="trailing" secondItem="w7g-6I-kXI" secondAttribute="trailing" constant="92" id="atz-se-IaA"/>
+                            <constraint firstItem="w7g-6I-kXI" firstAttribute="leading" secondItem="IvA-jZ-O7e" secondAttribute="leading" constant="75" id="f4e-uR-C5d"/>
+                            <constraint firstItem="bjN-tY-ncu" firstAttribute="top" secondItem="HF7-7C-tBC" secondAttribute="bottom" constant="88" id="gIw-ZC-Sug"/>
+                            <constraint firstItem="w7g-6I-kXI" firstAttribute="top" secondItem="bjN-tY-ncu" secondAttribute="bottom" constant="36" id="i6x-I8-xBk"/>
+                            <constraint firstItem="bjN-tY-ncu" firstAttribute="top" secondItem="HF7-7C-tBC" secondAttribute="bottom" constant="88" id="mE1-cg-Sut"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IvA-jZ-O7e"/>
                     </view>
                     <navigationItem key="navigationItem" title="Favorites" id="fvZ-Yp-Xx8"/>
+                    <connections>
+                        <outlet property="logoutButton" destination="HF7-7C-tBC" id="COh-7h-qlI"/>
+                        <outlet property="welcomeDes" destination="w7g-6I-kXI" id="0bv-5r-1em"/>
+                        <outlet property="welcomeText" destination="bjN-tY-ncu" id="qFV-WM-SmG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bth-1a-1Db" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="973.91304347826099" y="109.82142857142857"/>
         </scene>
-        <!--Favorites-->
+        <!--MainStoryboard-->
+        <scene sceneID="1ed-iU-5rF">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="MainStoryboard" id="Kn0-RZ-qce" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hRf-vq-qnP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1507" y="-13"/>
+        </scene>
+        <!--Home-->
         <scene sceneID="ZxK-9p-ITC">
             <objects>
                 <navigationController storyboardIdentifier="ClientFavorites" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="s44-bU-RrY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorites" image="star.fill" catalog="system" id="dbz-5p-iC0"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home" id="dbz-5p-iC0"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="8D9-ck-z3C">
@@ -58,6 +95,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <image name="Home" width="27" height="21"/>
     </resources>
 </document>

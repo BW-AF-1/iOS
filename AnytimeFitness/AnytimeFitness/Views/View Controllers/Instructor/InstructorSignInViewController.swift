@@ -7,29 +7,43 @@
 //
 
 import UIKit
-import FirebaseAuth
+import CoreData
 
 class InstructorSignInViewController: UIViewController {
 
     @IBOutlet var email: UITextField!
     @IBOutlet var password: UITextField!
     @IBOutlet var errorLabel: UILabel!
+
+    var instructorAuth: InstructorRepresentation?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NetworkController.sharedNetworkController.fetchAllInstructors()
+        NetworkController.sharedNetworkController.fetchCDInstructor()
         errorLabel.alpha = 0
     }
     
     @IBAction func signInTapped(_ sender: Any){
-        Auth.auth().signIn(withEmail: email.text!, password: password.text!) { (result, error) in
-            if error != nil{
+        guard let email = email.text, let password = password.text else {
+            self.errorLabel.alpha = 1
+            return }
+
+        let instructorAuth = InstructorRepresentation(email: email, password: password)
+
+        NetworkController.sharedNetworkController.loginInstructor(with: instructorAuth) { (error) in
+            if let error = error {
+                print("Error for instructor logging in: \(error)")
+                DispatchQueue.main.async {
                 self.errorLabel.alpha = 1
+                }
                 return
-            } else {
+            }
+            DispatchQueue.main.async {
                 self.errorLabel.alpha = 0
                 self.performSegue(withIdentifier: "instructorMain", sender: self)
             }
+
         }
-        
-    }
+}
 }

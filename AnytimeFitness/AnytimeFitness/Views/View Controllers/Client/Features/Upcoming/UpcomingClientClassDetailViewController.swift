@@ -27,7 +27,7 @@ class UpcomingClientClassDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let updateClass = updateClass {
-            classImageView.setDarkBackground(toImageNamed: updateClass.classTypeCD)
+            classImageView.setBackground(toImageNamed: updateClass.classTypeCD)
             classNameText.text = updateClass.classNameCD
             classTimeText.text = classManagementController.formatClassTime(with: updateClass)
             classDateText.text = classManagementController.formatClassDate(with: updateClass)

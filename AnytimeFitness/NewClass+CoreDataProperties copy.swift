@@ -1,9 +1,8 @@
 //
 //  NewClass+CoreDataProperties.swift
-//  AnytimeFitness
+//  
 //
-//  Created by Morgan Smith on 6/25/20.
-//  Copyright © 2020 Jarren Campos. All rights reserved.
+//  Created by Morgan Smith on 6/30/20.
 //
 //
 
@@ -17,17 +16,19 @@ extension NewClass {
         return NSFetchRequest<NewClass>(entityName: "NewClass")
     }
 
+    @NSManaged public var classCurrentSizeCD: Int16
     @NSManaged public var classDateCD: Date
     @NSManaged public var classDurationCD: Int16
+    @NSManaged public var classID: Int16
+    @NSManaged public var classIdentifierCD: UUID?
     @NSManaged public var classLevelCD: String
     @NSManaged public var classLocationCD: String
     @NSManaged public var classMaxSizeCD: Int16
     @NSManaged public var classNameCD: String
     @NSManaged public var classTypeCD: String
-    @NSManaged public var classCurrentSizeCD: Int16
-    @NSManaged public var classIdentifierCD: UUID
-    @NSManaged public var registeredClients: NSSet
+    @NSManaged public var instructorID: Int16
     @NSManaged public var classInstructor: Instructor?
+    @NSManaged public var registeredClients: NSSet?
 
 }
 

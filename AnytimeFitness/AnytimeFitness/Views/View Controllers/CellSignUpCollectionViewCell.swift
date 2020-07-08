@@ -12,7 +12,7 @@ class CellSignUpCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var selectionBackground: UIImageView!
     @IBOutlet var selectiontitle: UILabel!
-    
+
     var selection: Selection? {
         didSet{
             updateViews()
