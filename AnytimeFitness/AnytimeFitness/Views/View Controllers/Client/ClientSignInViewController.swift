@@ -15,10 +15,12 @@ class ClientSignInViewController: UIViewController {
     @IBOutlet var password: UITextField!
     @IBOutlet var errorLabel: UILabel!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         errorLabel.alpha = 0
+        email.delegate = self
+        password.delegate = self
     }
     
     @IBAction func signInTapped(_ sender: Any) {
@@ -34,5 +36,12 @@ class ClientSignInViewController: UIViewController {
             }
         }
         
+    }
+}
+
+extension ClientSignInViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

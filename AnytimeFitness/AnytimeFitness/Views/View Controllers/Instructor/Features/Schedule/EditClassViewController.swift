@@ -10,6 +10,8 @@ import UIKit
 
 class EditClassViewController: UIViewController {
     
+    #warning("Does not push to the data base with changes yet")
+    
     var className: String = ""
     var classLevel: String = ""
     var classCategory: String = ""

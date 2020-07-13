@@ -12,7 +12,7 @@ import FirebaseFirestore
 import Firebase
 
 class InstructorSignInViewController: UIViewController {
-
+    
     @IBOutlet var email: UITextField!
     @IBOutlet var password: UITextField!
     @IBOutlet var errorLabel: UILabel!
@@ -23,6 +23,8 @@ class InstructorSignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         errorLabel.alpha = 0
+        email.delegate = self
+        password.delegate = self
     }
     
     @IBAction func signInTapped(_ sender: Any){
@@ -40,5 +42,12 @@ class InstructorSignInViewController: UIViewController {
         }
         
     }
+    
+}
 
+extension InstructorSignInViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
