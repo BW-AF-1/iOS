@@ -11,49 +11,66 @@ import XCTest
 class AnytimeFitnessUITests: XCTestCase {
     
     func testValidClientLoginSuccess() {
-        let validInstructorEmail = "p@p.com"
-        let validInstructorPassword = "password"
-        
         let app = XCUIApplication()
         app.launch()
         
-        app.buttons["Client Sign In"].tap()
-        
-        app.textFields["Email"].tap()
-        app.textFields["Email"].typeText(validInstructorEmail)
-        app/*@START_MENU_TOKEN@*/.buttons["Return"]/*[[".keyboards",".buttons[\"return\"]",".buttons[\"Return\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
-        
-        let passwordSecureTextField = app.secureTextFields["Password"]
-        passwordSecureTextField.tap()
-        passwordSecureTextField.typeText(validInstructorPassword)
-        app/*@START_MENU_TOKEN@*/.buttons["Return"]/*[[".keyboards",".buttons[\"return\"]",".buttons[\"Return\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
-
-        app.buttons["Confirm"].tap()
+        loginUser(userType: "Client Sign In", username: "p@p.com", password: "password", app: app)
         
         
     }
     
     func testValidInstructorLoginSuccess() {
-        let validInstructorEmail = "t@t.com"
-        let validInstructorPassword = "password"
         
         let app = XCUIApplication()
         app.launch()
         
-        app.buttons["Instructor Sign In"].tap()
+        loginUser(userType: "Instructor Sign In", username: "t@t.com", password: "password", app: app)
+    }
+    
+    func testClientAppWalkthrough() {
         
-        app.textFields["Email"].tap()
-        app.textFields["Email"].typeText(validInstructorEmail)
-        app/*@START_MENU_TOKEN@*/.buttons["Return"]/*[[".keyboards",".buttons[\"return\"]",".buttons[\"Return\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
+        let app = XCUIApplication()
+        app.launch()
+        
+        loginUser(userType: "Client Sign In", username: "p@p.com", password: "password", app: app)
+        
+        let tabBarsQuery = app.tabBars
+        tabBarsQuery.buttons["Search"].twoFingerTap()
+        tabBarsQuery.buttons["Account"].twoFingerTap()
+        
+        let signOutButton = app.buttons["Sign Out"]
+        signOutButton.twoFingerTap()
+    }
+    
+    func testInstructorAppWalkthrough() {
+        let app = XCUIApplication()
+        app.launch()
+        
+        loginUser(userType: "Instructor Sign In", username: "t@t.com", password: "password", app: app)
+        
+        let tabBarsQuery = app.tabBars
+        tabBarsQuery.buttons["Create"].twoFingerTap()
+        tabBarsQuery.buttons["Profile"].twoFingerTap()
+        let signOutButton = app.buttons["Sign Out"]
+        signOutButton.twoFingerTap()
+        
+    }
+    
+    func loginUser(userType: String, username: String, password: String, app: XCUIApplication){
+            app.buttons[userType].tap()
+            
+            app.textFields["Email"].tap()
+            app.textFields["Email"].typeText(username)
+        
+            app.buttons["Return"].tap()
 
-        let passwordSecureTextField = app.secureTextFields["Password"]
-        passwordSecureTextField.tap()
-        passwordSecureTextField.typeText(validInstructorPassword)
-        app/*@START_MENU_TOKEN@*/.buttons["Return"]/*[[".keyboards",".buttons[\"return\"]",".buttons[\"Return\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
+            let passwordSecureTextField = app.secureTextFields["Password"]
+            passwordSecureTextField.tap()
+            passwordSecureTextField.typeText(password)
+            
+            app.buttons["Return"].tap()
 
-        app.buttons["Sign In"].tap()
-        
-        
-        
+            app.buttons["Sign In"].tap()
+            return
     }
 }
