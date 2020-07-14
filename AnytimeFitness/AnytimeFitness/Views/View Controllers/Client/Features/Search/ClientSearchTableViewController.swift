@@ -49,7 +49,16 @@ class ClientSearchTableViewController: UITableViewController {
                     guard let classAttendents = document.get("currentAttendents") else { return }
                     guard let capacityCount = document.get("capacityCount") else { return }
                     
-                    ClientSearchTableViewController.self.fullClassDataArray.append(Classes(className: "\(className)", classLevel: "\(classLevel)", classLocation: "\(classLocation)", classCategory: "\(classCategory)", aboutClass: "\(aboutClass)", currentAttendents: "\(classAttendents)", capacityCount: "\(capacityCount)"))
+                    ClientSearchTableViewController.self.fullClassDataArray.append(
+                        Classes(
+                            className: "\(className)",
+                            classLevel: "\(classLevel)",
+                            classLocation: "\(classLocation)",
+                            classCategory: "\(classCategory)",
+                            aboutClass: "\(aboutClass)",
+                            currentAttendents: "\(classAttendents)",
+                            capacityCount: "\(capacityCount)")
+                    )
                 }
             }
             self.pullOutData()
@@ -58,8 +67,8 @@ class ClientSearchTableViewController: UITableViewController {
     }
     
     func pullOutData(){
-        for n in ClientSearchTableViewController.fullClassDataArray{
-            classCategoryArray.append(n.classCategory)
+        for categories in ClientSearchTableViewController.fullClassDataArray{
+            classCategoryArray.append(categories.classCategory)
         }
     }
     

@@ -9,4 +9,5 @@ target 'AnytimeFitness' do
 	pod 'Firebase/Core'
 	pod 'FirebaseUI/Auth'
 	pod 'Firebase/Firestore'
+	pod 'SwiftLint'
 end

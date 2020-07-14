@@ -51,7 +51,16 @@ class UpcomingClassesTableViewController: UITableViewController {
                                 guard let classAttendents = document.get("currentAttendents") else { return }
                                 guard let capacityCount = document.get("capacityCount") else { return }
                                 
-                                UpcomingClassesTableViewController.self.fullClassDataArray.append(Classes(className: "\(className)", classLevel: "\(classLevel)", classLocation: "\(classLocation)", classCategory: "\(classCategory)", aboutClass: "\(aboutClass)", currentAttendents: "\(classAttendents)", capacityCount: "\(capacityCount)"))
+                                UpcomingClassesTableViewController.self.fullClassDataArray.append(
+                                    Classes(
+                                        className: "\(className)",
+                                        classLevel: "\(classLevel)",
+                                        classLocation: "\(classLocation)",
+                                        classCategory: "\(classCategory)",
+                                        aboutClass: "\(aboutClass)",
+                                        currentAttendents: "\(classAttendents)",
+                                        capacityCount: "\(capacityCount)")
+                                )
                                 
                                 self.classNameArray.append("\(className)")
                             }

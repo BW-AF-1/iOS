@@ -34,10 +34,19 @@ class CreateClassViewController: UIViewController {
         guard let aboutClass = aboutClass.text else { return }
         let attendentsArray: [String] = []
 
-        
         let db = Firestore.firestore()
-        db.collection("classes").addDocument(data: ["className": className, "classLevel": classLevel, "classCategory": classCategory, "classLocation": classLocation, "aboutClass": aboutClass, "currentAttendents": "0", "capacityCount": classCapacity, "uid": UserController.currentUserUUID, "attendentsArray": attendentsArray]) { (error) in
-        
+        db.collection("classes").addDocument(data:
+            [
+            "className": className,
+            "classLevel": classLevel,
+            "classCategory": classCategory,
+            "classLocation": classLocation,
+            "aboutClass": aboutClass,
+            "currentAttendents": "0",
+            "capacityCount": classCapacity,
+            "uid": UserController.currentUserUUID,
+            "attendentsArray": attendentsArray
+        ]) { (error) in
         if error != nil {
         print(error)
         }

@@ -12,25 +12,38 @@ class MainViewController: UIViewController {
     
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
-    
+
     @IBOutlet var firstButtonOutlet: UIButton!
     @IBOutlet var secondButtonOutlet: UIButton!
     @IBOutlet var thirdButtonOutlet: UIButton!
     @IBOutlet var fourthButtonOutlet: UIButton!
     
-    var firstButton = buttonConfig(active: true)
-    var secondButton = buttonConfig(active: false)
-    var thirdButton = buttonConfig(active: false)
-    var fourthButton = buttonConfig(active: false)
-
-        
-    var titleArray: [String] = ["The world is your gym", "Browse Classes", "Register/Cancel Classes", "Become Your Own Boss"]
-    var descriptionArray: [String] = ["Welcome.", "Our expert instructors conduct classes literally anywhere. Take a yoga class on a mountaintop. Do boot camp on the beach. Go to an abandoned mansion for mat pilates. The options are limitless.", "Signing up for classes is easy. And you can cancel and reschedule classes with little to no cancellation fee.", "Instead of needing a gym to attract clients, instructors can be their own boss and set up their fitness classes with a minimal start up fee."]
+    var firstButton = ButtonConfig(active: true)
+    var secondButton = ButtonConfig(active: false)
+    var thirdButton = ButtonConfig(active: false)
+    var fourthButton = ButtonConfig(active: false)
     
-    struct buttonConfig{
+    var titleArray: [String] = ["The world is your gym",
+                                "Browse Classes",
+                                "Register/Cancel Classes",
+                                "Become Your Own Boss"]
+    var descriptionArray: [String] = [
+        "Welcome.",
+        "Our expert instructors conduct classes literally anywhere." +
+            "Take a yoga class on a mountaintop." +
+            "Do boot camp on the beach." +
+            "Go to an abandoned mansion for mat pilates." +
+        "The options are limitless.",
+        "Signing up for classes is easy." +
+        "And you can cancel and reschedule classes with little to no cancellation fee.",
+        "Instead of needing a gym to attract clients," +
+        "instructors can be their own boss and set up their fitness classes with a minimal start up fee."
+    ]
+
+    struct ButtonConfig {
         var active: Bool
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpViews()
@@ -63,52 +76,52 @@ class MainViewController: UIViewController {
         turnOffBools(index: 3)
         setUpViews()
     }
-    
+
     func changeText(index: Int) {
         titleLabel.text = titleArray[index]
         descriptionLabel.text = descriptionArray[index]
     }
-    
-    func setUpViews(){
-        if firstButton.active == true{
+
+    func setUpViews() {
+        if firstButton.active == true {
             firstButtonOutlet.tintColor = .orange
-        } else{
+        } else {
             firstButtonOutlet.tintColor = .white
         }
-        if secondButton.active == true{
+        if secondButton.active == true {
             secondButtonOutlet.tintColor = .orange
-        } else{
+        } else {
             secondButtonOutlet.tintColor = .white
         }
-        if thirdButton.active == true{
+        if thirdButton.active == true {
             thirdButtonOutlet.tintColor = .orange
-        } else{
+        } else {
             thirdButtonOutlet.tintColor = .white
         }
-        if fourthButton.active == true{
+        if fourthButton.active == true {
             fourthButtonOutlet.tintColor = .orange
-        } else{
+        } else {
             fourthButtonOutlet.tintColor = .white
         }
     }
 
-    func turnOffBools(index: Int){
-        if index == 0{
+    func turnOffBools(index: Int) {
+        if index == 0 {
             secondButton.active = false
             thirdButton.active = false
             fourthButton.active = false
         }
-        if index == 1{
+        if index == 1 {
             firstButton.active = false
             thirdButton.active = false
             fourthButton.active = false
         }
-        if index == 2{
+        if index == 2 {
             secondButton.active = false
             firstButton.active = false
             fourthButton.active = false
         }
-        if index == 3{
+        if index == 3 {
             secondButton.active = false
             thirdButton.active = false
             firstButton.active = false
